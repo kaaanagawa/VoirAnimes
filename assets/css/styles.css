@@ -504,8 +504,8 @@ nav {
     background: var(--third);
     width: 38.25px;
     height: 38.25px;
-    -webkit-mask: url(/assets/images/twitter.svg) no-repeat center;
-    mask: url(/assets/images/twitter.svg) no-repeat center;
+    -webkit-mask: url(../images/twitter.svg) no-repeat center;
+    mask: url(../images/twitter.svg) no-repeat center;
     -webkit-mask-size: calc(var(--icon-size) - 2px);
     mask-size: calc(var(--icon-size) - 2px);
     padding: 7.63px;
