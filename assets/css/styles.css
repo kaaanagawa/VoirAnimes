@@ -1,0 +1,1373 @@
+/* General */
+
+:root {
+    --link-cursor: url(/assets/cursors/Link.cur), pointer;
+    --default-cursor: url(/assets/cursors/Normal.cur), default;
+    --text-cursor: text;
+    --unavailable-cursor: not-allowed !important;
+    --thumbnail-width: 290px;
+    --video-width: calc(82.5vh * 1.6667);
+    --video-height: 720px;
+    --accent-color: var(--second);
+    --boxshadow: 0 0 5px var(--accent-color);
+    --videocontainer-gap: 10px;
+    --sidebar-width: calc(250px + var(--videocontainer-gap));
+    --border-radius: 1px;
+    --searchbar-width: 570px;
+    --middle-width: 620px;
+    --searchbar-height: 40px;
+    --header-height: 60px;
+    --nav-gap: 17.5px;
+    --nav-item-size: 38.25px;
+    --anime-list-padding: 10px 12px;
+    --fixed-border-spacing: 15px;
+    --logo-img-size: 32px;
+    --searchbar-max-items: 8;
+    --searchbar-item-height: 43px;
+    --card-info-height: 65px;
+    --scrollbar-horizontal-width: 5px;
+    --season-width: 65vw;
+    --season-height: 410px;
+    --container-gap: 12.5px;
+    --scrollbar-width: 10px;
+    --epselect-overlay-card-width: 375px;
+    --icon-size: 25px;
+}
+
+/* Disabling Features */
+
+#leftmenu-center-1 a:nth-child(1) {
+    display: none !important;
+}
+
+/* a[href="/naruto/"] {
+    display: none !important;
+} */
+
+#settings {
+    display: none !important;
+}
+
+.barconfirm {
+    display: none !important;
+}
+
+#pop-up-container {
+    display: none !important;
+}
+
+.epselector p {
+    display: none !important;
+}
+
+.switch {
+    display: none !important;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 420px) {
+    .othersinvideo {
+        flex-direction: column !important;
+    }
+
+    nav *:nth-child(1),
+    nav *:nth-child(2) {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .infostop {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    header {
+        padding: 0 15px !important;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    :root {
+        --epselect-overlay-card-width: 100%;
+    }
+
+    .othersinvideo {
+        align-items: flex-start !important;
+    }
+
+    .cardinside {
+        width: 95vw !important;
+    }
+
+    #epselect-overlay {
+        padding: 12.5px !important;
+    }
+
+    .epselect-overlay-top {
+        justify-content: flex-end !important;
+    }
+
+    .epselect-overlay-top h1 {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    :root {
+        --video-width: 95vw !important;
+    }
+
+    /* button#reset-watched, */
+    button#code {
+        display: none !important;
+    }
+
+    .othersinvideo {
+        width: var(--video-width) !important;
+        padding-bottom: 0 !important;
+    }
+
+    .othersinvideo .others {
+        display: flex !important;
+    }
+
+    .object {
+        margin: 0 !important;
+    }
+
+    .container {
+        padding-top: 15px !important;
+    }
+
+    #presentation {
+        flex-direction: column !important;
+    }
+
+    #presentation-about {
+        width: 80vw !important;
+    }
+
+    #cover {
+        height: 375px !important;
+    }
+
+    #presentation-about {
+        align-items: center !important;
+    }
+
+    #presentation-about p {
+        text-align: center !important;
+    }
+
+    #pop-up-container {
+        display: none !important;
+    }
+
+    .videopagecontent {
+        flex-direction: column-reverse !important;
+    }
+
+    .top {
+        align-items: center !important;
+    }
+
+    #seasons-content h1 {
+        text-align: center !important;
+        margin: 15px 0 !important;
+    }
+
+    #seasons-content {
+        justify-content: center !important;
+    }
+
+    .card,
+    .cardinside {
+        width: 95vw !important;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .top {
+        margin-right: unset !important;
+    }
+
+    .videocontainer {
+        flex-direction: column-reverse !important;
+    }
+
+    .infobox {
+        width: 350px !important;
+        height: 350px !important;
+    }
+
+    .infoboxcontent .parts {
+        flex-direction: column !important;
+    }
+
+    .container,
+    #presentation {
+        max-width: 95% !important;
+        height: fit-content !important;
+    }
+
+    .othersinvideo {
+        height: fit-content !important;
+    }
+
+    .otherscontainer {
+        padding: 0 8px;
+    }
+
+    .othersinvideo .otherscontainer {
+        justify-content: flex-start !important;
+        gap: 8px !important;
+    }
+
+    .othersinvideo .others {
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        max-width: 100vw;
+        background: var(--main) !important;
+        border-top: 1px solid var(--fourth) !important;
+        border-right: 1px solid var(--fourth) !important;
+    }
+
+    .otherscontainer {
+        flex-direction: row !important;
+        align-items: center !important;
+        padding: 0 !important;
+    }
+
+    #seasons,
+    .seasons-image {
+        width: 95vw !important;
+    }
+
+    #seasons {
+        overflow-y: scroll !important;
+    }
+
+    .seasons-image {
+        transform: translateX(calc(var(--scrollbar-width) / 2)) !important;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .container a {
+        max-width: 75% !important;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .others {
+        align-items: center !important;
+    }
+
+    .otherscontainer {
+        padding: 0 var(--scrollbar-horizontal-width) !important;
+        padding-left: var(--scrollbar-horizontal-width) !important;
+    }
+}
+
+/* Imports */
+
+@font-face {
+    font-family: Cera Pro;
+    src: url(/assets/fonts/Cera-Pro-Medium.otf);
+}
+
+/* Global */
+
+* {
+    box-sizing: border-box;
+    font-family: "Cera Pro", system-ui, Arial, sans-serif;
+    font-weight: 400;
+    transition: 0.2s;
+    line-height: 1.3;
+    -webkit-font-smoothing: subpixel-antialiased;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+*:hover {
+    transition: 0.3s;
+}
+
+*:not(:hover) {
+    transition: 0.2s;
+}
+
+*:focus-visible {
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bodybg);
+    overflow-x: hidden !important;
+    color: var(--second);
+    cursor: var(--default-cursor);
+    padding-bottom: 20px;
+}
+
+body.no-overflow {
+    overflow: hidden !important;
+}
+
+p {
+    cursor: var(--default-cursor);
+    width: fit-content;
+    margin: 0;
+}
+
+a[href=""],
+a[href="#"] {
+    display: none;
+}
+
+h1 {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    font-weight: 500 !important;
+    width: fit-content;
+}
+
+a p {
+    cursor: var(--link-cursor);
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+    cursor: var(--link-cursor);
+}
+
+header {
+    background-color: var(--main-transparent);
+    height: var(--header-height);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    position: sticky;
+    top: 0;
+    z-index: 11;
+}
+
+button {
+    color: var(--second);
+    border: 1px solid var(--fourth);
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 14px;
+    cursor: var(--link-cursor);
+    background: linear-gradient(to right, var(--second) 50%, var(--main) 50%);
+    background-size: 202% 101%;
+    background-position: right bottom;
+    border-radius: var(--border-radius);
+}
+
+button:hover {
+    color: var(--main);
+    background-position: left bottom;
+    transition: 0.5s ease-in-out;
+}
+
+button:not(:hover) {
+    transition: 0.5s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+.line {
+    background: var(--fourth);
+    width: 100%;
+    min-height: 1px;
+}
+
+/* Navbar */
+.left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 5px;
+    border-radius: var(--border-radius);
+}
+
+.logo-container p {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.logo-container p:after {
+    content: "FR";
+    color: var(--third);
+    font-size: 0.6rem;
+    height: calc(var(--header-height) / 2.25);
+    display: inline-block;
+}
+
+div.logo-container {
+    height: var(--header-height);
+}
+
+a.logo-container:hover {
+    background: var(--fourth);
+}
+
+.logo {
+    margin: 0;
+    font-weight: 500;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.logo p {
+    font-size: 0.95rem;
+    color: var(--second);
+}
+
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.back:after {
+    content: "Retour";
+    font-size: 1.25rem;
+    color: var(--third);
+}
+
+.back ion-icon {
+    color: var(--third);
+    font-size: 2rem;
+    display: flex;
+}
+
+.logo svg,
+.logo img {
+    width: var(--logo-img-size);
+    height: var(--logo-img-size);
+    border-radius: var(--border-radius);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: var(--nav-gap);
+}
+
+/* nav * {
+    height: var(--nav-item-size);
+} */
+
+#buttondarkmode {
+    font-size: calc(var(--icon-size) - 2px);
+    cursor: var(--link-cursor);
+    color: var(--third);
+    padding: 7.63px;
+}
+
+#contact {
+    background: var(--third);
+    width: 38.25px;
+    height: 38.25px;
+    -webkit-mask: url(/assets/images/twitter.svg) no-repeat center;
+    mask: url(/assets/images/twitter.svg) no-repeat center;
+    -webkit-mask-size: calc(var(--icon-size) - 2px);
+    mask-size: calc(var(--icon-size) - 2px);
+    padding: 7.63px;
+}
+
+#settings,
+#apps {
+    font-size: calc(var(--icon-size) - 2px);
+    color: var(--third);
+    padding: 7.63px;
+    cursor: var(--link-cursor);
+}
+
+/* Quick Navbar */
+
+.others {
+    max-width: 100vw;
+    min-height: calc(var(--header-height) - 10px);
+    position: sticky;
+    top: var(--header-height);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    border-top: 1px solid var(--fourth);
+    border-bottom: 1px solid var(--fourth);
+    background: var(--main-transparent);
+    z-index: 10;
+    overflow-y: hidden;
+}
+
+.otherscontainer {
+    display: flex;
+    padding-top: var(--scrollbar-horizontal-width);
+    padding-left: var(--scrollbar-horizontal-width);
+    gap: 4px;
+}
+
+.others::-webkit-scrollbar {
+    height: var(--scrollbar-horizontal-width);
+}
+
+.othersinvideo {
+    width: var(--sidebar-width);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 5px;
+}
+
+.othersinvideo .others {
+    background: none;
+    border: 0;
+}
+
+.copyright-anime {
+    color: var(--accent-color);
+}
+
+.copyright-anime a {
+    text-decoration: underline;
+}
+
+.othersinvideo .otherscontainer {
+    align-items: flex-start;
+}
+
+.otherscontainer::before {
+    content: "Autres Animes :";
+    display: none;
+}
+
+.object {
+    border: 1px solid #535353;
+    background: var(--fifth);
+    width: max-content;
+    align-items: center;
+    padding: 7px 13px;
+    border-radius: 100px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    cursor: var(--link-cursor);
+    gap: 5px;
+}
+
+.object:hover {
+    background: var(--sixth);
+}
+
+/* .active {
+background: var(--second);
+color: var(--main);
+} */
+
+.opened-panel-button {
+    border-radius: 100%;
+    background: var(--fifth) !important;
+}
+
+.opened-panel {
+    opacity: 100 !important;
+    z-index: 13 !important;
+}
+
+.topvideo {
+    display: flex;
+}
+
+.videocontainer {
+    display: flex;
+    flex-direction: row;
+    gap: var(--videocontainer-gap);
+    z-index: 1;
+}
+
+.videocontainer .others {
+    height: fit-content !important;
+    top: unset !important;
+    width: fit-content;
+}
+
+.videocontainer .otherscontainer {
+    flex-direction: column;
+}
+
+.videocontainer .otherscontainer::before {
+    content: "Saisons :";
+    display: block;
+    width: max-content;
+}
+
+#video-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: var(--video-width);
+    /* height: var(--video-height); */
+    background: linear-gradient(to top, var(--bodybg), var(--bodybg));
+    border: 1px solid var(--fourth);
+    border-radius: var(--border-radius);
+    max-width: 97.5vw;
+    max-height: 79vh;
+}
+
+.top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: var(--video-width);
+    max-width: 97.5vw;
+    gap: 5px;
+    align-items: flex-end;
+    margin-right: calc(var(--sidebar-width) + var(--videocontainer-gap));
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.epselector {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+}
+
+select[name="Episodes"] {
+    padding: 4px 8px !important;
+    cursor: var(--link-cursor);
+    height: 31px;
+}
+
+select[name="Episodes"]:hover,
+.buttons button:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+option {
+    background: var(--main);
+}
+
+.buttons button,
+select[name="Episodes"] {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #535353;
+    border-radius: var(--border-radius);
+    padding: 6px 8px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    gap: 2px;
+    z-index: 2;
+    color: var(--second);
+    height: 33px;
+}
+
+.buttons button ion-icon {
+    font-size: 1.025rem;
+}
+
+.buttons button:hover {
+    filter: brightness(1.2);
+    transform: none !important;
+}
+
+.videopagecontent {
+    padding: 10px 0;
+    align-items: center;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.infos {
+    display: flex;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
+}
+
+.infostop {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 0.7em;
+}
+
+.infostop .title {
+    font-size: 1.05em;
+    font-weight: 500;
+}
+
+.infostop .epnumber {
+    font-size: 0.9em;
+    color: var(--third);
+    font-weight: 500;
+}
+
+.locked {
+    background-color: rgba(50, 50, 50, 0.3) !important;
+    text-decoration: line-through;
+    color: var(--third) !important;
+    filter: none !important;
+    cursor: var(--unavailable-cursor);
+}
+
+.special {
+    border-color: var(--third);
+    background: linear-gradient(120deg, rgb(109, 14, 14) 0%, rgb(78, 13, 131));
+}
+
+.special:hover {
+    background: linear-gradient(120deg, rgb(109, 14, 14) 0%, rgb(78, 13, 131));
+}
+
+.active {
+    background: var(--second);
+    color: var(--main);
+    pointer-events: none;
+}
+
+/* Browsing Pages */
+
+.card {
+    width: fit-content;
+    max-width: 95vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: var(--border-radius);
+    background: var(--bodybg-transparent);
+    border: 0.1px solid var(--fourth);
+    flex-basis: 292px;
+}
+
+.card-info {
+    height: var(--card-info-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+}
+
+.card-info .cardtitle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: underline transparent;
+}
+
+.card-info .cardtitle:hover {
+    text-decoration: underline var(--second);
+}
+
+.card:hover {
+    transform: scale(1.120);
+    transition-delay: 750ms;
+    z-index: 5;
+}
+
+.cardinside {
+    width: var(--thumbnail-width);
+    aspect-ratio: 0.7;
+    border-radius: 3px 3px 0 0;
+    border-bottom: 1px solid var(--fourth);
+    background: var(--bodybg);
+    background-position: center !important;
+    background-size: cover !important;
+    max-width: calc(95vw - 2px);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    padding-top: 35px;
+    gap: var(--container-gap);
+    max-width: calc((8px + 4 * var(--thumbnail-width)) + (3 * var(--container-gap))) !important;
+}
+
+.card-info p {
+    padding-left: 10px;
+}
+
+.container .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Presentation Part */
+
+#presentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    max-width: 70%;
+    margin: 0 auto;
+    padding-top: 35px;
+    padding-bottom: 70px;
+}
+
+#presentation button ion-icon {
+    font-size: 1.5em;
+}
+
+#cover {
+    height: 450px;
+    width: auto;
+    aspect-ratio: 0.7111;
+    background-size: cover !important;
+    border: 1px solid var(--fourth);
+    border-radius: var(--border-radius);
+}
+
+#presentation-about {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+a[href="#container"] {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+#scrolldown {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--fourth);
+    border-radius: 300px;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+}
+
+.scrolldown {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+}
+
+.scrolldown * {
+    cursor: var(--link-cursor);
+}
+
+#presentation-about h1 {
+    font-size: 1.3rem;
+}
+
+.type {
+    color: var(--third);
+}
+
+#href,
+.href {
+    display: none !important;
+}
+
+#presentation .a {
+    justify-content: center;
+    display: flex;
+}
+
+#infosvg {
+    font-size: 28px;
+    color: var(--third);
+    cursor: var(--link-cursor);
+}
+
+/* Download Button */
+
+ion-icon.download-button {
+    border: 1px solid var(--fourth);
+    position: fixed;
+    bottom: var(--fixed-border-spacing);
+    right: var(--fixed-border-spacing);
+    background: var(--main);
+    border-radius: 500px;
+    padding: 12px;
+    font-size: var(--icon-size);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    transition: 0.5s;
+}
+
+ion-icon.download-button:hover::before {
+    content: "Ordre des Episodes";
+    font-size: 15px;
+    width: 100%;
+    white-space: pre;
+}
+
+ion-icon.download-button:hover {
+    width: 180px;
+    padding: 12px 20px;
+    gap: 12px;
+}
+
+button#code {
+    padding: 10px;
+    border: 1px solid var(--fourth);
+    position: fixed;
+    bottom: var(--fixed-border-spacing);
+    left: var(--fixed-border-spacing);
+}
+
+button#code:hover {
+    color: var(--main);
+    background-position: left bottom;
+}
+
+button#reset-watched {
+    padding: 10px;
+    border: 1px solid var(--fourth);
+    position: fixed;
+    bottom: var(--fixed-border-spacing);
+    right: var(--fixed-border-spacing);
+}
+
+button#reset-watched:hover {
+    color: var(--main);
+    background-position: left bottom;
+}
+
+/* Legals */
+
+#legals:before {
+    content: "Mentions Legales";
+    text-decoration: underline;
+    width: fit-content;
+    background: transparent;
+    color: var(--third);
+    font-size: 0.95rem;
+    margin-bottom: 7px;
+}
+
+#legals button#back-to-home {
+    padding: 5px 7px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--fourth);
+    font-size: 0.975rem;
+}
+
+#legals button#back-to-home:hover {
+    background: var(--second);
+    color: var(--main);
+}
+
+a[href="/black-clover/"]:before {
+    content: "";
+    background: url(../images/icons/black-clover.png), center;
+    background-size: cover;
+    width: 26px;
+    height: 26px;
+}
+
+a[href="/blend-s/"]:before {
+    content: "";
+    background: url(../images/icons/blend-s.png), center;
+    background-size: cover;
+    width: 26px;
+    height: 26px;
+}
+
+a[href="/demon-slayer/"]:before {
+    content: "";
+    background: url(../images/icons/demon-slayer.png), center;
+    background-size: cover;
+    width: 26px;
+    height: 26px;
+}
+
+a[href="/dr-stone/"]:before {
+    content: "";
+    background: url(../images/icons/dr-stone.png), center;
+    background-size: cover;
+    width: 26px;
+    height: 26px;
+}
+
+a[href="/haikyu/"]:before {
+    content: "";
+    background: url(../images/icons/haikyuu.png), center;
+    background-size: cover;
+    width: 26px;
+    height: 26px;
+}
+
+a[href="/horimiya/"]:before {
+    content: "";
+    background: url(../images/icons/horimiya.png), center;
+    background-size: cover;
+    width: 26px;
+    height: 26px;
+}
+
+a[href="/hunter-x-hunter/"]:before {
+    content: "";
+    background: url(../images/icons/hunter-x-hunter.png), center;
+    background-size: cover;
+    width: 26px;
+    height: 26px;
+}
+
+a[href="/initial-d/"]:before {
+    content: "";
+    background: url(../images/icons/initial-d.png), center;
+    background-size: cover;
+    width: 26px;
+    height: 26px;
+}
+
+a[href="/jojos-bizarre-adventure/"]:before {
+    content: "";
+    background: url(../images/icons/jojos-bizarre-adventure.png), center;
+    background-size: cover;
+    width: 26px;
+    height: 26px;
+}
+
+a[href="/jujutsu-kaisen/"]:before {
+    content: "";
+    background: url(../images/icons/jujutsu-kaisen.png), center;
+    background-size: cover;
+    width: 26px;
+    height: 26px;
+}
+
+a[href="/my-hero-academia/"]:before {
+    content: "";
+    background: url(../images/icons/my-hero-academia.png), center;
+    background-size: cover;
+    width: 26px;
+    height: 26px;
+}
+
+a[href="/naruto/"]:before {
+    content: "";
+    background: url(../images/icons/naruto.png), center;
+    background-size: cover;
+    width: 26px;
+    height: 26px;
+}
+
+a[href="/one-piece/"]:before {
+    content: "";
+    background: url(../images/icons/one-piece.png), center;
+    background-size: cover;
+    width: 26px;
+    height: 26px;
+}
+
+a[href="/shingeki-no-kyojin/"]:before {
+    content: "";
+    background: url(../images/icons/shingeki-no-kyojin.png), center;
+    background-size: cover;
+    width: 26px;
+    height: 26px;
+}
+
+a[href="/spy-x-family/"]:before {
+    content: "";
+    background: url(../images/icons/spy-x-family.png), center;
+    background-size: cover;
+    width: 26px;
+    height: 26px;
+}
+
+a[href="/vinland-saga/"]:before {
+    content: "";
+    background: url(../images/icons/vinland-saga.webp), center;
+    background-size: cover;
+    width: 26px;
+    height: 26px;
+}
+
+.new:after {
+    content: "Nouveau!";
+    background: #3c90ff;
+    font-weight: 300;
+    border-radius: var(--border-radius);
+    padding: 3px 6px;
+    font-size: 10px;
+}
+
+.watching:after {
+    content: "Vous regardez";
+    background: #ff4f5e;
+    font-weight: 300;
+    border-radius: var(--border-radius);
+    padding: 3px 6px;
+    font-size: 10px;
+    text-align: center;
+}
+
+#seasons {
+    margin: 0 auto;
+    width: var(--season-width);
+    height: var(--season-height);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--fourth);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seasons-image {
+    position: absolute;
+    width: var(--season-width);
+    height: var(--season-height);
+    background-size: cover !important;
+    background-position: center !important;
+    filter: brightness(0.35);
+    z-index: -1;
+}
+
+#seasons-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2% 0;
+    gap: 15px 10px;
+    max-width: 90%;
+    width: 100%;
+}
+
+#seasons-content h1 {
+    font-size: 2.25rem;
+    width: 100%;
+}
+
+.season {
+    min-width: 300px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--fourth);
+    padding: 9px 24px;
+    font-size: 1.05rem;
+    background: linear-gradient(to right, var(--second) 50%, var(--bodybg-transparent) 50%);
+    background-size: 202% 100%;
+    background-position: right bottom;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.season-indicator {
+    color: var(--third);
+    font-size: 0.95rem;
+    opacity: 0.75;
+}
+
+.season:hover {
+    color: var(--main);
+    background-position: left bottom;
+    transition: 0.5s ease-in-out;
+}
+
+.season:not(:hover) {
+    transition: 0.5s ease-in-out;
+}
+
+/* Ep Selector Overlay */
+
+#epselect-overlay {
+    position: fixed;
+    background: rgba(30, 30, 30, 0.975);
+    border: 1px solid var(--fourth);
+    border-radius: var(--border-radius);
+    z-index: -1;
+    opacity: 0;
+    padding: 25px 40px;
+    width: calc(100vw - 40px);
+    top: calc(var(--header-height) + (var(--header-height) - 10px) + 20px);
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#epselect-overlay h1 {
+    font-size: 1.875rem;
+}
+
+.epselect-overlay-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+}
+
+#epselect-overlay *[name="close-outline"] {
+    font-size: 40px;
+    cursor: var(--link-cursor);
+}
+
+.epselect-overlay-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.epselect-overlay-card {
+    width: var(--epselect-overlay-card-width);
+    aspect-ratio: 1.6667;
+    display: flex;
+    flex-direction: column;
+    outline: 1px solid var(--fourth);
+    background: var(--main-transparent);
+}
+
+.epselect-overlay-card img {
+    width: var(--epselect-overlay-card-width);
+}
+
+.epselect-overlay-card p {
+    padding: 10px;
+}
+
+/* Apps */
+
+#apps-container {
+    position: fixed;
+    display: flex;
+    opacity: 0;
+    z-index: -1;
+    flex-direction: column;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--fourth);
+    background: var(--main-transparent);
+    right: calc((2 * var(--nav-item-size)) + (3 * var(--nav-gap)));
+    top: calc(var(--header-height) - 12px);
+}
+
+#apps-container a {
+    width: 100%;
+    padding: 7.5px 15px;
+}
+
+#apps-container a:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+/* Settings */
+
+#settings-container {
+    position: fixed;
+    display: flex;
+    opacity: 0;
+    z-index: -1;
+    flex-direction: column;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--fourth);
+    background: var(--main-transparent);
+    right: calc((1 * var(--nav-item-size)) + (2 * var(--nav-gap)));
+    top: calc(var(--header-height) - 12px);
+}
+
+/* Switch */
+
+.switch {
+    position: relative;
+    aspect-ratio: 1.775;
+    height: 20px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: var(--link-cursor);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--main);
+    transition: .4s;
+    outline: 1px solid var(--third);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: var(--second);
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: red;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+    /* outline: 1px solid var(--third); */
+}
+
+.slider.round {
+    border-radius: 20px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}

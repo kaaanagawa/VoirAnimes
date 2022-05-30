@@ -1,0 +1,15 @@
+:root {
+--accent-color: #d68c8c !important;
+}
+
+.videocontainer .otherscontainer:before {
+content: "Autres Animes:";
+}
+
+.othersinvideo {
+display: none !important;
+}
+
+.top {
+margin-right: 0 !important;
+}

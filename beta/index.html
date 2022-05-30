@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html translate="no" lang="fr">
+  <head>
+    <!-- HTML Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>VoirAnimes v2 - Accueil</title>
+    <meta name="description" content="VoirAnimes" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.webp"
+      type="image/x-icon"
+    />
+    <link rel="apple-touch-icon" href="assets/img/favicon.webp" />
+    <meta name="theme-color" content="#121212" />
+    <!-- <link rel="manifest" href="/manifest.json" /> -->
+
+    <!-- Register the service worker -->
+    <!-- <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("assets/js/service-worker.js");
+            });
+        }
+    </script> -->
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="description" content="VoirAnimes" />
+    <meta itemprop="image" content="assets/img/image.webp" />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://voiranimes.xyz" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="VoirAnimes" />
+    <meta property="og:description" content="VoirAnimes" />
+    <meta property="og:image" content="assets/img/image.webp" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="VoirAnimes" />
+    <meta name="twitter:description" content="VoirAnimes" />
+    <meta name="twitter:image" content="assets/img/image.webp" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/searchbar.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/context-menu.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/video.css" />
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="assets/js/animations.js"></script>
+    <script defer src="assets/js/searchbar.js"></script>
+    <script defer src="assets/js/context-menu.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- Custom Video Player -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+    <script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+  </head>
+
+  <body>
+    <div id="home">
+      <header>
+        <div class="logo"></div>
+        <nav>
+          <div id="searchbar-container">
+            <ion-icon name="search-outline" id="magnifier"></ion-icon>
+            <input
+              id="searchbar"
+              type="text"
+              name="search"
+              placeholder="Titre, genre, thème..."
+              autocomplete="off"
+            />
+          </div>
+          <div id="account"><button>S'identifier</button></div>
+        </nav>
+      </header>
+
+      <section id="top">
+        <div class="video-background"></div>
+        <h1>VOS <b>ANIMES GRATUITEMENT</b> ET <b>SANS PUB</b>.</h1>
+        <p>Un site fait par des passionnés, pour des passionnés.</p>
+        <span
+          >Parce que tout le monde n'a pas des centaines d'euros à mettre dans
+          l'intégrale de son manga préféré... mais n'oubliez pas de soutenir les
+          créateurs en achetant les originaux lorsque vous le pouvez !</span
+        >
+      </section>
+
+      <section id="original">
+        <h3>Les indétrônables</h3>
+        <div class="swiper1">
+          <div class="swipe-left hidden">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </div>
+          <div class="content">
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/black-clover.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/blend-s.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/demon-slayer.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/dr-stone.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/haikyu.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/horimiya.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/hunter-x-hunter.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/initial-d.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img
+                  src="assets/img/animes/cover/jojos-bizarre-adventure.webp"
+                />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/jujutsu-kaisen.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+          </div>
+          <div class="swipe-right">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+        </div>
+      </section>
+
+      <section id="top10">
+        <h3>Top 10 des mangas en France aujourd'hui</h3>
+        <div class="swiper2">
+          <div class="swipe-left hidden">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </div>
+          <div class="content">
+            <article id="#1">
+              <img src="assets/img/1.png" alt="#1" />
+              <div class="card">
+                <img src="assets/img/animes/cover/black-clover.webp" alt="#1" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article id="#2">
+              <img src="assets/img/2.png" alt="#2" />
+              <div class="card">
+                <img src="assets/img/animes/cover/blend-s.webp" alt="#2" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article id="#3">
+              <img src="assets/img/3.png" alt="#3" />
+              <div class="card">
+                <img src="assets/img/animes/cover/demon-slayer.webp" alt="#3" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article id="#4">
+              <img src="assets/img/4.png" alt="#4" />
+              <div class="card">
+                <img src="assets/img/animes/cover/dr-stone.webp" alt="#4" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article id="#5">
+              <img src="assets/img/5.png" alt="#5" />
+              <div class="card">
+                <img src="assets/img/animes/cover/haikyu.webp" alt="#5" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article id="#6">
+              <img src="assets/img/6.png" alt="#6" />
+              <div class="card">
+                <img src="assets/img/animes/cover/horimiya.webp" alt="#6" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article id="#7">
+              <img src="assets/img/7.png" alt="#7" />
+              <div class="card">
+                <img
+                  src="assets/img/animes/cover/hunter-x-hunter.webp"
+                  alt="#7"
+                />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article id="#8">
+              <img src="assets/img/8.png" alt="#8" />
+              <div class="card">
+                <img src="assets/img/animes/cover/initial-d.webp" alt="#8" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article id="#9">
+              <img src="assets/img/9.png" alt="#9" />
+              <div class="card">
+                <img
+                  src="assets/img/animes/cover/jojos-bizarre-adventure.webp"
+                  alt="#9"
+                />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article id="#10">
+              <img src="assets/img/10.png" alt="#10" />
+              <div class="card">
+                <img
+                  src="assets/img/animes/cover/jujutsu-kaisen.webp"
+                  alt="#10"
+                />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+          </div>
+          <div class="swipe-right">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+        </div>
+      </section>
+
+      <section id="shonen">
+        <h3>Shōnen</h3>
+        <div class="swiper3">
+          <div class="swipe-left hidden">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </div>
+          <div class="content">
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/black-clover.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/blend-s.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/demon-slayer.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/dr-stone.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/haikyu.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/horimiya.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/hunter-x-hunter.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/initial-d.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img
+                  src="assets/img/animes/cover/jojos-bizarre-adventure.webp"
+                />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/jujutsu-kaisen.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+          </div>
+          <div class="swipe-right">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+        </div>
+      </section>
+
+      <section id="shojo">
+        <h3>Shōjo</h3>
+        <div class="swiper4">
+          <div class="swipe-left hidden">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </div>
+          <div class="content">
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/black-clover.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/blend-s.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/demon-slayer.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/dr-stone.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/haikyu.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/horimiya.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/hunter-x-hunter.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/initial-d.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img
+                  src="assets/img/animes/cover/jojos-bizarre-adventure.webp"
+                />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/jujutsu-kaisen.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+          </div>
+          <div class="swipe-right">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+        </div>
+      </section>
+
+      <section id="seinen">
+        <h3>Seinen</h3>
+        <div class="swiper5">
+          <div class="swipe-left hidden">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </div>
+          <div class="content">
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/black-clover.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/blend-s.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/demon-slayer.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/dr-stone.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/haikyu.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/horimiya.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/hunter-x-hunter.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/initial-d.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img
+                  src="assets/img/animes/cover/jojos-bizarre-adventure.webp"
+                />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+            <article>
+              <div class="card">
+                <img src="assets/img/animes/cover/jujutsu-kaisen.webp" />
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia asperiores eius ea velit, ducimus corrupti!</span
+                >
+              </div>
+            </article>
+          </div>
+          <div class="swipe-right">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <span
+          >La loi française vous autorise à télécharger un fichier seulement si
+          vous en possédez l'original. Ni Mangaflix, ni nos hébergeurs, ni
+          personne ne pourront êtres tenu responsables d'une mauvaise
+          utilisation de ce site.</span
+        >
+        <p>© 2022 by Mangaflix. Aucun droit réservé.</p>
+      </footer>
+    </div>
+
+    <!-- <div id="seasons"></div> -->
+
+    <div id="player-container">
+      <ion-icon id="close-player" name="close-outline"></ion-icon>
+      <div id="player">
+        <div id="video-left">
+          <div id="video-top">
+            <p id="anime">Black Clover</p>
+            <p id="title">Mon nom est Asta!</p>
+            <p id="ep-number">1</p>
+            <p id="season">S1</p>
+          </div>
+          <video type="video/mp4" controls autoplay id="video">
+            <source
+              type="video/mp4"
+              size="1080"
+              src="https://link.eu1.storjshare.io/jx3cclsccqsz54obkdgwkddfjybq/animes-others/black-clover/1.mp4?wrap=0"
+            />
+            <track label="English" kind="subtitles" srclang="en" id="en-sub" />
+            <track label="Francais" kind="subtitles" srclang="fr" id="fr-sub" />
+          </video>
+          <div id="video-bottom"></div>
+        </div>
+        <div id="video-right">
+          <button>S1</button>
+          <button>S2</button>
+          <button>S3</button>
+          <button>S4</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- Pour le player, il faut : l'url, le titre, la saison, le nom de l'anime, le numero de l'ep,  -->

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html translate="no" lang="fr">
+
+<head>
+  <!-- HTML Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>VoirAnimes - Accueil</title>
+  <meta name="description" content="VoirAnimes" />
+  <link rel="shortcut icon" href="/assets/images/favicon.webp" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/assets/images/favicon.webp" />
+  <meta name="theme-color" content="#121212" />
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- Register the service worker -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/assets/js/service-worker.js");
+      });
+    }
+  </script>
+
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content="VoirAnimes" />
+  <meta itemprop="description" content="VoirAnimes" />
+  <meta itemprop="image" content="/assets/images/image.webp" />
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://voiranimes.xyz" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="VoirAnimes" />
+  <meta property="og:description" content="VoirAnimes" />
+  <meta property="og:image" content="/assets/images/image.webp" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="VoirAnimes" />
+  <meta name="twitter:description" content="VoirAnimes" />
+  <meta name="twitter:image" content="/assets/images/image.webp" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/dark.css" id="darkmodestylesheet" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/menu.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/right-click.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/scrollbar.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/searchbar.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/wayyx-video.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/custom.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/legals.css" />
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="/assets/js/common.js"></script>
+  <script defer src="/assets/js/darkmode.js"></script>
+  <script defer src="/assets/js/menu.js"></script>
+  <script defer src="/assets/js/searchbar.js"></script>
+  <script defer src="/assets/js/rightclick.js"></script>
+  <script defer src="../../assets/js/custom.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Custom Video Player -->
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+  <script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+</head>
+
+<body>
+  <!-- Context Menu -->
+  <div class="context-menu"></div>
+
+  <!-- Left Menu -->
+  <div id="leftmenu-container">
+    <div id="leftmenu"></div>
+    <div id="leftmenu-empty"></div>
+  </div>
+
+  <!-- Searchbar List -->
+  <ol id="anime-list"></ol>
+
+  <!-- Settings -->
+  <div id="settings-container"></div>
+
+  <!-- Apps -->
+  <div id="apps-container"></div>
+
+  <!-- Navbar -->
+  <header></header>
+
+  <!-- <div id="presentation"></div> -->
+  <div id="legals">
+    <p>Ce site n’existe que par pur passion des animes, et l’envie d’en faire découvrir.</p>
+    <p>Les animes et mangas utilises sur ce site ne respectent pas les droits d’auteurs Digital Millennium Copyright Act
+      ; toutefois, par respect pour le travail fourni par les mangakas/animateurs, en aucun cas ce site permet et ne
+      permettra aucune quelconque lucrativité.</p>
+    <a href="/"><button>Retour à l'accueil</button></a>
+  </div>
+</body>
+
+</html>

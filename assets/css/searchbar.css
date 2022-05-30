@@ -1,0 +1,253 @@
+@media screen and (max-width: 1080px) {
+    .middle {
+        display: none !important;
+    }
+}
+
+/* Bar */
+.middle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: sticky;
+    left: 50%;
+    transform: translateX(-50%);
+    width: var(--middle-width);
+    justify-content: space-between;
+}
+
+.middle input[type="text"] {
+    width: var(--searchbar-width);
+    height: var(--searchbar-height);
+    padding: 10px 13px;
+    display: flex;
+    align-items: center;
+    background: var(--bodybg);
+    border: 1px solid var(--fourth);
+    font-size: 0.95rem;
+    color: var(--third);
+    cursor: var(--text-cursor);
+    border-radius: var(--border-radius);
+}
+
+.middle input[type="text"]:focus {
+    border: 1px solid var(--accent-color);
+    border-radius: 1px 1px 0 0;
+}
+
+.barcontainer {
+    display: flex;
+    align-items: center;
+}
+
+.barconfirm {
+    width: 64px;
+    height: var(--searchbar-height);
+    background: var(--fourth);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 1px 1px 0;
+    transform: translateX(-20px);
+}
+
+.middle *[name="close-outline"] {
+    font-size: 20px;
+    cursor: var(--link-cursor);
+    transform: translateX(-30px);
+    opacity: 0;
+}
+
+.barconfirm * {
+    font-size: 20px;
+}
+
+#anime-list {
+    background: var(--bodybg-transparent);
+    padding: 0;
+    width: var(--searchbar-width);
+    position: fixed;
+    margin-top: calc(var(--header-height) - ((var(--header-height) - var(--searchbar-height)) / 2) - 0px);
+    left: 50%;
+    transform: translateX(calc(-50% - ((var(--middle-width) - var(--searchbar-width)) / 2)));
+    z-index: 100;
+    border-radius: 0 0 1px 1px;
+    border: 1px solid var(--fourth);
+    overflow-y: scroll;
+    max-height: calc(var(--searchbar-max-items) * var(--searchbar-item-height));
+    border-top: none;
+    display: none;
+}
+
+#anime-list::-webkit-scrollbar {
+    width: 7px;
+}
+
+#anime-list .anime-list {
+    padding: var(--anime-list-padding);
+    display: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: var(--searchbar-item-height);
+    /* border-top: 1px solid var(--fourth); */
+}
+
+#anime-list .anime-list:hover {
+    background: var(--fourth);
+}
+
+#anime-list .anime-list-hidden {
+    display: none !important;
+}
+
+#anime-list .anime-list-hidden-display {
+    display: flex !important;
+}
+
+#anime-list .anime-list li:before {
+    display: block;
+}
+
+a[href="/black-clover/"] li:before {
+    content: "";
+    background: url(../images/icons/black-clover.png), center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+
+a[href="/blend-s/"] li:before {
+    content: "";
+    background: url(../images/icons/blend-s.png), center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+
+a[href="/demon-slayer/"] li:before {
+    content: "";
+    background: url(../images/icons/demon-slayer.png), center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+
+a[href="/dr-stone/"] li:before {
+    content: "";
+    background: url(../images/icons/dr-stone.png), center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+
+a[href="/haikyu/"] li:before {
+    content: "";
+    background: url(../images/icons/haikyuu.png), center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+
+a[href="/horimiya/"] li:before {
+    content: "";
+    background: url(../images/icons/horimiya.png), center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+}
+
+a[href="/hunter-x-hunter/"] li:before {
+    content: "";
+    background: url(../images/icons/hunter-x-hunter.png), center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+
+a[href="/initial-d/"] li:before {
+    content: "";
+    background: url(../images/icons/initial-d.png), center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+
+a[href="/jojos-bizarre-adventure/"] li:before {
+    content: "";
+    background: url(../images/icons/jojos-bizarre-adventure.png), center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+
+a[href="/jujutsu-kaisen/"] li:before {
+    content: "";
+    background: url(../images/icons/jujutsu-kaisen.png), center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+
+a[href="/my-hero-academia/"] li:before {
+    content: "";
+    background: url(../images/icons/my-hero-academia.png), center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+
+a[href="/naruto/"] li:before {
+    content: "";
+    background: url(../images/icons/naruto.png), center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+
+a[href="/one-piece/"] li:before {
+    content: "";
+    background: url(../images/icons/one-piece.png), center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+
+a[href="/shingeki-no-kyojin/"] li:before {
+    content: "";
+    background: url(../images/icons/shingeki-no-kyojin.png), center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+
+a[href="/spy-x-family/"] li:before {
+    content: "";
+    background: url(../images/icons/spy-x-family.png), center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+
+a[href="/vinland-saga/"] li:before {
+    content: "";
+    background: url(../images/icons/vinland-saga.webp), center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    display: block;
+}

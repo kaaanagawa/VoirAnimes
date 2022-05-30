@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html translate="no" lang="fr">
+
+<head>
+  <!-- HTML Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>VoirAnimes - Horimiya</title>
+  <meta name="description" content="VoirAnimes - Horimiya" />
+  <link rel="shortcut icon" href="/assets/images/favicon.webp" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/assets/images/favicon.webp" />
+  <meta name="theme-color" content="#121212" />
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- Register the service worker -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/assets/js/service-worker.js");
+      });
+    }
+  </script>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content="VoirAnimes - Horimiya" />
+  <meta itemprop="description" content="VoirAnimes - Horimiya" />
+  <meta itemprop="image" content="/assets/images/image.webp" />
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://voiranimes.xyz" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="VoirAnimes - Horimiya" />
+  <meta property="og:description" content="VoirAnimes - Horimiya" />
+  <meta property="og:image" content="/assets/images/image.webp" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="VoirAnimes - Horimiya" />
+  <meta name="twitter:description" content="VoirAnimes - Horimiya" />
+  <meta name="twitter:image" content="/assets/images/image.webp" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/dark.css" id="darkmodestylesheet" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/menu.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/right-click.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/scrollbar.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/searchbar.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/wayyx-video.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/custom.css" />
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="/assets/js/common.js"></script>
+  <script defer src="/assets/js/darkmode.js"></script>
+  <script defer src="/assets/js/menu.js"></script>
+  <script defer src="/assets/js/searchbar.js"></script>
+  <script defer src="/assets/js/rightclick.js"></script>
+  <script defer src="/assets/js/anime-home.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Custom Video Player -->
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+  <script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+</head>
+
+<body>
+  <!-- Context Menu -->
+  <div class="context-menu"></div>
+
+  <!-- Left Menu -->
+  <div id="leftmenu-container">
+    <div id="leftmenu"></div>
+    <div id="leftmenu-empty"></div>
+  </div>
+
+  <!-- Searchbar List -->
+  <ol id="anime-list"></ol>
+
+  <!-- Settings -->
+  <div id="settings-container"></div>
+
+  <!-- Apps -->
+  <div id="apps-container"></div>
+
+  <!-- Navbar -->
+  <header></header>
+
+  <div class="others">
+    <div class="otherscontainer">
+      <a href="/black-clover/">
+        <div class="object">Black Clover</div>
+      </a>
+      <a href="/blend-s/">
+        <div class="object">Blend S</div>
+      </a>
+      <a href="/demon-slayer/">
+        <div class="object">Demon Slayer</div>
+      </a>
+      <a href="/dr-stone/">
+        <div class="object">Dr. Stone</div>
+      </a>
+      <a href="/haikyu/">
+        <div class="object">Haikyu!!</div>
+      </a>
+      <a href="/horimiya/">
+        <div class="object active">Horimiya</div>
+      </a>
+      <a href="/hunter-x-hunter/">
+        <div class="object">Hunter × Hunter</div>
+      </a>
+      <a href="/initial-d/">
+        <div class="object">Initial D</div>
+      </a>
+      <a href="/jojos-bizarre-adventure/">
+        <div class="object">Jojo's Bizarre Adventure</div>
+      </a>
+      <a href="/jujutsu-kaisen/">
+        <div class="object">Jujutsu Kaisen</div>
+      </a>
+      <a href="/my-hero-academia/">
+        <div class="object">My Hero Academia</div>
+      </a>
+      <a href="/naruto/">
+        <div class="object">Naruto</div>
+      </a>
+      <a href="/one-piece/">
+        <div class="object">One Piece</div>
+      </a>
+      <a href="/shingeki-no-kyojin/">
+        <div class="object">Shingeki No Kyojin</div>
+      </a>
+      <a href="/vinland-saga/">
+        <div class="object">Vinland Saga</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Ep Selector Overlay -->
+  <div id="epselect-overlay">
+    <div class="epselect-overlay-top">
+      <h1>Choisissez un episode :</h1>
+      <ion-icon id="epselect-overlay-close" name="close-outline"></ion-icon>
+    </div>
+    <div class="epselect-overlay-content">
+      <div class="epselect-overlay-card">
+        <a href="anime/1.html">
+          <img src="/assets/images/empty.png" alt="img">
+          <div class="separating-line"></div>
+          <p>Episode 1</p>
+        </a>
+      </div>
+      <div class="epselect-overlay-card">
+        <a href="anime/2.html">
+          <img src="/assets/images/empty.png" alt="img">
+          <div class="separating-line"></div>
+          <p>Episode 2</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="presentation">
+    <div id="cover" style="background: url(/assets/images/cover/horimiya.webp)"></div>
+    <div id="presentation-about">
+      <h1 class="title">Horimiya</h1>
+      <p>Shōjo</p>
+      <p>
+        Kyōko Hori est une lycéenne brillante et populaire, contrastant avec son camarade de classe, Izumi Miyamura, un
+        garçon lugubre et supposé otaku portant des lunettes. En dehors de l'école, Hori est une casanière qui s'habille
+        simplement et s'occupe de la maison et de son
+        jeune frère Sōta.
+      </p>
+      <p>★★★★☆ 4.1/5 - IMDb</p>
+      <p>2021 | 1 Saga</p>
+      <div class="scrolldown" onclick="window.scrollTo(0, document.body.scrollHeight);">
+        <div id="scrolldown">
+          <ion-icon name="chevron-down-outline" style="transform: translateY(3.5px)"></ion-icon>
+          <ion-icon name="chevron-down-outline" style="transform: translateY(-3.5px)"></ion-icon>
+        </div>
+        <p>Regarder</p>
+      </div>
+    </div>
+  </div>
+  <div id="seasons">
+    <div class="seasons-image" style="background: url('assets/images/horimiya.webp')"></div>
+    <div id="seasons-content">
+      <h1>Horimiya</h1>
+      <a href="/horimiya/anime/">
+        <button class="season">Saison 1</button>
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>

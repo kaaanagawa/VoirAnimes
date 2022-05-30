@@ -1,0 +1,45 @@
+{
+  "short_name": "VoirAnimes",
+  "name": "VoirAnimes - Streaming Website",
+  "icons": [
+    {
+      "src": "/assets/images/favicon.webp",
+      "type": "image/png",
+      "sizes": "256x256"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#121212",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#121212",
+  "shortcuts": [
+    {
+      "name": "VoirAnimes - Streaming Website",
+      "short_name": "VoirAnimes",
+      "description": "VoirAnimes - Streaming Website",
+      "url": "/index.html",
+      "icons": [{ "src": "/assets/images/favicon.webp", "sizes": "256x256" }]
+    },
+    {
+      "name": "VoirAnimes - VoirFilms",
+      "short_name": "VoirFilms",
+      "description": "VoirFilms (VoirAnimes) - Streaming Website",
+      "url": "/movies/index.html",
+      "icons": [{ "src": "/assets/images/favicon-movies.webp", "sizes": "256x255" }]
+    }
+  ],
+  "description": "VoirAnimes - Streaming Website",
+  "screenshots": [
+    {
+      "src": "/assets/images/screenshot-9-16.webp",
+      "type": "image/png",
+      "sizes": "430x767"
+    },
+    {
+      "src": "/assets/images/screenshot-16-9.webp",
+      "type": "image/jpg",
+      "sizes": "1436x824"
+    }
+  ]
+}

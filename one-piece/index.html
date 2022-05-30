@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html translate="no" lang="fr">
+
+<head>
+  <!-- HTML Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>VoirAnimes - One Piece</title>
+  <meta name="description" content="VoirAnimes - One Piece" />
+  <link rel="shortcut icon" href="/assets/images/favicon.webp" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/assets/images/favicon.webp" />
+  <meta name="theme-color" content="#121212" />
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- Register the service worker -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/assets/js/service-worker.js");
+      });
+    }
+  </script>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content="VoirAnimes - One Piece" />
+  <meta itemprop="description" content="VoirAnimes - One Piece" />
+  <meta itemprop="image" content="/assets/images/image.webp" />
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://voiranimes.xyz" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="VoirAnimes - One Piece" />
+  <meta property="og:description" content="VoirAnimes - One Piece" />
+  <meta property="og:image" content="/assets/images/image.webp" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="VoirAnimes - One Piece" />
+  <meta name="twitter:description" content="VoirAnimes - One Piece" />
+  <meta name="twitter:image" content="/assets/images/image.webp" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/dark.css" id="darkmodestylesheet" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/menu.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/right-click.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/scrollbar.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/searchbar.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/wayyx-video.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/custom.css" />
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="/assets/js/common.js"></script>
+  <script defer src="/assets/js/darkmode.js"></script>
+  <script defer src="/assets/js/menu.js"></script>
+  <script defer src="/assets/js/searchbar.js"></script>
+  <script defer src="/assets/js/rightclick.js"></script>
+  <script defer src="/assets/js/anime-home.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Custom Video Player -->
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+  <script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+
+  <style>
+    .container {
+      align-content: flex-start;
+      height: unset;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Context Menu -->
+  <div class="context-menu"></div>
+
+  <!-- Left Menu -->
+  <div id="leftmenu-container">
+    <div id="leftmenu"></div>
+    <div id="leftmenu-empty"></div>
+  </div>
+
+  <!-- Searchbar List -->
+  <ol id="anime-list"></ol>
+
+  <!-- Settings -->
+  <div id="settings-container"></div>
+
+  <!-- Apps -->
+  <div id="apps-container"></div>
+
+  <!-- Navbar -->
+  <header></header>
+
+  <div class="others">
+    <div class="otherscontainer">
+      <a href="/black-clover/">
+        <div class="object">Black Clover</div>
+      </a>
+      <a href="/blend-s/">
+        <div class="object">Blend S</div>
+      </a>
+      <a href="/demon-slayer/">
+        <div class="object">Demon Slayer</div>
+      </a>
+      <a href="/dr-stone/">
+        <div class="object">Dr. Stone</div>
+      </a>
+      <a href="/haikyu/">
+        <div class="object">Haikyu!!</div>
+      </a>
+      <a href="/horimiya/">
+        <div class="object">Horimiya</div>
+      </a>
+      <a href="/hunter-x-hunter/">
+        <div class="object">Hunter × Hunter</div>
+      </a>
+      <a href="/initial-d/">
+        <div class="object">Initial D</div>
+      </a>
+      <a href="/jojos-bizarre-adventure/">
+        <div class="object">Jojo's Bizarre Adventure</div>
+      </a>
+      <a href="/jujutsu-kaisen/">
+        <div class="object">Jujutsu Kaisen</div>
+      </a>
+      <a href="/my-hero-academia/">
+        <div class="object">My Hero Academia</div>
+      </a>
+      <a href="/naruto/">
+        <div class="object">Naruto</div>
+      </a>
+      <a href="/one-piece/">
+        <div class="object active">One Piece</div>
+      </a>
+      <a href="/shingeki-no-kyojin/">
+        <div class="object">Shingeki No Kyojin</div>
+      </a>
+      <a href="/vinland-saga/">
+        <div class="object">Vinland Saga</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Ep Selector Overlay -->
+  <div id="epselect-overlay">
+    <div class="epselect-overlay-top">
+      <h1>Choisissez un episode :</h1>
+      <ion-icon id="epselect-overlay-close" name="close-outline"></ion-icon>
+    </div>
+    <div class="epselect-overlay-content">
+      <div class="epselect-overlay-card">
+        <a href="anime/1.html">
+          <img src="/assets/images/empty.png" alt="img">
+          <div class="separating-line"></div>
+          <p>Episode 1</p>
+        </a>
+      </div>
+      <div class="epselect-overlay-card">
+        <a href="anime/2.html">
+          <img src="/assets/images/empty.png" alt="img">
+          <div class="separating-line"></div>
+          <p>Episode 2</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="presentation">
+    <div id="cover" style="background: url(/assets/images/cover/one-piece.webp)"></div>
+    <div id="presentation-about">
+      <h1 class="title">One Piece</h1>
+      <p>Shōnen</p>
+      <p>
+        L'histoire suit les aventures de Monkey D. Luffy, un garçon dont le corps a acquis les propriétés du caoutchouc
+        après avoir mangé par inadvertance un fruit du démon. Avec son équipage de pirates, appelé l'équipage de Chapeau
+        de paille, Luffy explore Grand Line à la
+        recherche du trésor ultime connu sous le nom de « One Piece » afin de devenir le prochain roi des pirates.
+      </p>
+      <p>★★★★☆ 4.5/5 - IMDb</p>
+      <p>1999 - 2027 | 9 Sagas</p>
+      <div class="scrolldown" onclick="window.scrollTo(0, document.body.scrollHeight);">
+        <div id="scrolldown">
+          <ion-icon name="chevron-down-outline" style="transform: translateY(3.5px)"></ion-icon>
+          <ion-icon name="chevron-down-outline" style="transform: translateY(-3.5px)"></ion-icon>
+        </div>
+        <p>Regarder</p>
+      </div>
+    </div>
+  </div>
+  <div id="seasons">
+    <div class="seasons-image" style="background: url('assets/images/one-piece.webp')"></div>
+    <div id="seasons-content">
+      <h1>One Piece</h1>
+      <a href="/one-piece/anime/1-east-blue/">
+        <button class="season">
+          East Blue
+          <p class="season-indicator">(Saison 1)</p>
+        </button>
+      </a>
+      <a href="/one-piece/anime/2-alabasta/">
+        <button class="season">
+          Alabasta
+          <p class="season-indicator">(Saison 2)</p>
+        </button>
+      </a>
+      <a href="/one-piece/anime/3-ile-celeste/">
+        <button class="season">
+          Ile Celeste
+          <p class="season-indicator">(Saison 3)</p>
+        </button>
+      </a>
+      <a href="/one-piece/anime/4-water-seven/">
+        <button class="season">
+          Water Seven
+          <p class="season-indicator">(Saison 4)</p>
+        </button>
+      </a>
+      <a href="/one-piece/anime/5-thriller-bark/">
+        <button class="season">
+          Thriller Bark
+          <p class="season-indicator">(Saison 5)</p>
+        </button>
+      </a>
+      <a href="/one-piece/anime/6-guerre-au-sommet/">
+        <button class="season">
+          Guerre au sommet
+          <p class="season-indicator">(Saison 6)</p>
+        </button>
+      </a>
+      <a href="/one-piece/anime/7-ile-des-hommes-poissons/">
+        <button class="season">
+          Ile des Hommes-Poissons
+          <p class="season-indicator">(Saison 7)</p>
+        </button>
+      </a>
+      <a href="/one-piece/anime/8-dressrosa/">
+        <button class="season">
+          Dressrosa
+          <p class="season-indicator">(Saison 8)</p>
+        </button>
+      </a>
+      <a href="/one-piece/anime/9-quatre-empereurs/">
+        <button class="season">
+          Quatre Empereurs
+          <p class="season-indicator">(Saison 9)</p>
+        </button>
+      </a>
+      <a href="/one-piece/anime/movies/">
+        <button class="season">
+          Films
+          <p class="season-indicator">(A part)</p>
+        </button>
+      </a>
+    </div>
+  </div>
+  <a href="assets/episodes.xlsx">
+    <ion-icon name="cloud-download-outline" class="download-button"></ion-icon>
+  </a>
+</body>
+
+</html>

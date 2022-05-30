@@ -1,0 +1,7 @@
+:root {
+--accent-color: #dcdf4b !important;
+}
+
+.videocontainer .otherscontainer:before {
+content: "Autres Animes:";
+}

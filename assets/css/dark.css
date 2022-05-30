@@ -1,0 +1,12 @@
+:root {
+    --bodybg: rgb(24, 24, 24);
+    --main: rgb(26, 26, 26);
+    --card-bg: rgb(28, 28, 28);
+    --fourth: rgb(42, 42, 42);
+    --fifth: rgb(57, 57, 57);
+    --sixth: rgb(77, 77, 77);
+    --third: rgb(189, 189, 189);
+    --second: rgb(236, 236, 236);
+    --bodybg-transparent: rgba(24, 24, 24, 0.95);
+    --main-transparent: rgb(26, 26, 26, 0.975);
+}

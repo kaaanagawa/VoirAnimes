@@ -1,0 +1,111 @@
+@media screen and (max-width: 1080px) {
+    #leftmenu {
+        width: 500px !important;
+    }
+}
+
+#leftmenu-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    background: linear-gradient(to right, var(--bodybg), transparent);
+    display: flex;
+}
+
+#leftmenu {
+    background: var(--bodybg-transparent);
+    border-right: 1px solid var(--fourth);
+    width: 340px;
+    height: 100vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateX(-500px);
+    padding-bottom: 10px;
+}
+
+#leftmenu div.logo-container {
+    border-bottom: 1px solid var(--fourth);
+}
+
+#leftmenu .logo-container a,
+#leftmenu .logo-container .logo {
+    width: fit-content;
+}
+
+#leftmenu .logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#close-leftmenu {
+    font-size: 30px;
+    cursor: var(--link-cursor);
+}
+
+#open-leftmenu {
+    font-size: 30px;
+    cursor: var(--link-cursor);
+}
+
+#leftmenu-empty {
+    width: 100%;
+    height: 100vh;
+}
+
+#alternative-sites {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+#alternative-sites a {
+    width: 95%;
+}
+
+#alternative-sites button {
+    width: 100%;
+}
+
+#alternative-sites a[href="https://mega.nz/folder/QsYEGLKC#PxSU43LJ_ddAb2KhgET5OQ"] button:before {
+    content: "⭐";
+}
+
+#alternative-sites a[href="https://mega.nz/folder/XZ8n0QSA#hTTi6m3xdE6_rkRNpkxSdQ"] button:before {
+    content: "❤️";
+}
+
+#leftmenu-center {
+    display: flex;
+    flex-direction: column;
+}
+
+#leftmenu-center ion-icon {
+    font-size: 23px;
+}
+
+#leftmenu-center section {
+    display: flex;
+    flex-direction: column;
+}
+
+#leftmenu-center section a {
+    font-size: 1.1rem;
+    padding: 12px 22px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+#leftmenu-center section a:hover {
+    background: rgba(255, 255, 255, 0.04);
+}

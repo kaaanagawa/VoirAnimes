@@ -1,0 +1,7 @@
+:root {
+--accent-color: #fbe407 !important;
+}
+
+.videocontainer .otherscontainer:before {
+content: "Saisons:";
+}

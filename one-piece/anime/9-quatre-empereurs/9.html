@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html translate="no" lang="fr">
+
+<head>
+  <!-- HTML Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>VoirAnimes - One Piece</title>
+  <meta name="description" content="VoirAnimes - One Piece" />
+  <link rel="shortcut icon" href="/assets/images/favicon.webp" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/assets/images/favicon.webp" />
+  <meta name="theme-color" content="#121212">
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- Register the service worker -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/assets/js/service-worker.js");
+      });
+    }
+  </script>
+  <link rel="apple-touch-icon" href="/assets/images/favicon.webp">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content="VoirAnimes - One Piece" />
+  <meta itemprop="description" content="VoirAnimes - One Piece" />
+  <meta itemprop="image" content="/assets/images/image.webp" />
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://voiranimes.xyz" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="VoirAnimes - One Piece" />
+  <meta property="og:description" content="VoirAnimes - One Piece" />
+  <meta property="og:image" content="/assets/images/image.webp" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="VoirAnimes - One Piece" />
+  <meta name="twitter:description" content="VoirAnimes - One Piece" />
+  <meta name="twitter:image" content="/assets/images/image.webp" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/dark.css" id="darkmodestylesheet" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/menu.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/right-click.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/scrollbar.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/searchbar.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/wayyx-video.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/custom.css">
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="/assets/js/common.js"></script>
+  <script defer src="/assets/js/video.js"></script>
+  <script defer src="/assets/js/darkmode.js"></script>
+  <script defer src="/assets/js/searchbar.js"></script>
+  <script defer src="/assets/js/menu.js"></script>
+  <script defer src="/assets/js/rightclick.js"></script>
+  <script defer src="../../assets/js/custom.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Custom Video Player -->
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+	<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+</head>
+
+<body>
+
+  <!-- Context Menu -->
+  <div class="context-menu"></div>
+
+  <!-- Left Menu -->
+	<div id="leftmenu-container">
+		<div id="leftmenu"></div>
+		<div id="leftmenu-empty"></div>
+	</div>
+
+  <!-- Searchbar List -->
+  <ol id="anime-list"></ol>
+
+  <!-- Settings -->
+  <div id="settings-container"></div>
+
+  <!-- Apps -->
+  <div id="apps-container"></div>
+
+  <!-- Navbar -->
+  <header></header>
+  
+  <!-- Top Bar -->
+  <div class="others">
+		<div class="otherscontainer"></div>
+	</div>
+
+  <div class="videopagecontent">
+    <div class="top">
+      <div class="infostop">
+        <p class="title">Quatre Empereurs</p>
+        <p class="epnumber">Mégot (809-817)</p>
+      </div>
+      <div class="buttons">
+        <div class="epselector">
+          <p>Select an episode:</p>
+          <select name="Episodes" onchange="location = this.value;">
+            <option value="Selection">Selection</option>
+            <option value="1.html">Ep. 1</option>
+            <option value="2.html">Ep. 2</option>
+            <option value="3.html">Ep. 3</option>
+            <option value="4.html">Ep. 4</option>
+            <option value="5.html">Ep. 5</option>
+            <option value="6.html">Ep. 6</option>
+            <option value="7.html">Ep. 7</option>
+            <option value="8.html">Ep. 8</option>
+            <option value="9.html">Ep. 9</option>
+            <option value="10.html">Ep. 10</option>
+            <option value="11.html">Ep. 11</option>
+            <option value="12.html">Ep. 12</option>
+            <option value="13.html">Ep. 13</option>
+            <option value="14.html">Ep. 14</option>
+            <option value="15.html">Ep. 15</option>
+            <option value="16.html">Ep. 16</option>
+            <option value="17.html">Ep. 17</option>
+            <option value="18.html">Ep. 18</option>
+            <option value="19.html">Ep. 19</option>
+            <option value="20.html">Ep. 20</option>
+            <option value="21.html">Ep. 21</option>
+            <option value="22.html">Ep. 22</option>
+            <option value="23.html">Ep. 23</option>
+            <option value="24.html">Ep. 24</option>
+            <option value="25.html">Ep. 25</option>
+            <option value="26.html">Ep. 26</option>
+            <option value="27.html">Ep. 27</option>
+            <option value="28.html">Ep. 28</option>
+            <option value="29.html">Ep. 29</option>
+            <option value="30.html">Ep. 30</option>
+          </select>
+        </div>
+        <a id="previous-ep"><button><ion-icon name="chevron-back-outline"></ion-icon> Ep. Précédent</button></a>
+        <a id="next-ep"><button>Ep. Suivant <ion-icon name="chevron-forward-outline"></ion-icon></button></a>
+      </div>
+    </div>
+    <div class="videocontainer">
+      <div id="video-box"></div>
+      <div class="othersinvideo">
+        <div class="others">
+          <div class="otherscontainer">
+            <a href="/one-piece/anime/1-east-blue/">
+              <div class="object">
+                East Blue
+              </div>
+            </a>
+            <a href="/one-piece/anime/2-alabasta/">
+              <div class="object">
+                Alabasta
+              </div>
+            </a>
+            <a href="/one-piece/anime/3-ile-celeste/">
+              <div class="object">
+                Ile Celeste
+              </div>
+            </a>
+            <a href="/one-piece/anime/4-water-seven/">
+              <div class="object">
+                Water Seven
+              </div>
+            </a>
+            <a href="/one-piece/anime/5-thriller-bark/">
+              <div class="object">
+                Thriller Bark
+              </div>
+            </a>
+            <a href="/one-piece/anime/6-guerre-au-sommet/">
+              <div class="object">
+                Guerre au sommet
+              </div>
+            </a>
+            <a href="/one-piece/anime/7-ile-des-hommes-poissons/">
+              <div class="object">
+                Ile des Hommes Poissons
+              </div>
+            </a>
+            <a href="/one-piece/anime/8-dressrosa/">
+              <div class="object">
+                Dressrosa
+              </div>
+            </a>
+            <a href="/one-piece/anime/9-quatre-empereurs/">
+              <div class="object active">
+                Quatre Empereurs
+              </div>
+            </a>
+            <a href="/one-piece/anime/movies/">
+              <div class="object">
+                Films
+              </div>
+            </a>
+          </div>
+        </div>
+        <p class="copyright-anime">par Eichiiro Oda, un grand merci a l'equipe de <a href="https://fankai.fr" target="_blank" rel="nofollow">Fan Kai</a> pour leur travail !</p>
+      </div>
+    </div>
+
+</body>
+
+</html>
