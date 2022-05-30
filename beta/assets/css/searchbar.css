@@ -1,0 +1,33 @@
+#searchbar-container {
+    display: flex;
+    align-items: center;
+}
+
+#searchbar {
+    width: var(--searchbar-width);
+    padding: 13px;
+    height: var(--nav-item-height);
+    border-radius: var(--border-radius);
+    background: var(--main);
+    border: 1px solid var(--fourth);
+    color: var(--second);
+}
+
+#searchbar.search{
+    display: block !important;
+}
+
+#searchbar:focus {
+    border-color: var(--second);
+}
+
+#magnifier {
+    transform: translateX(calc(var(--searchbar-width) - 12.5px));
+    font-size: 1.2rem;
+    color: var(--third);
+    cursor: var(--link-cursor);
+}
+
+ion-icon[name="close-outline"] {
+    color: var(--second) !important;
+}
