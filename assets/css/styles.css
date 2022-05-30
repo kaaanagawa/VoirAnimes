@@ -1,8 +1,8 @@
 /* General */
 
 :root {
-    --link-cursor: url(/assets/cursors/Link.cur), pointer;
-    --default-cursor: url(/assets/cursors/Normal.cur), default;
+    --link-cursor: url(../cursors/Link.cur), pointer;
+    --default-cursor: url(../cursors/Normal.cur), default;
     --text-cursor: text;
     --unavailable-cursor: not-allowed !important;
     --thumbnail-width: 290px;
