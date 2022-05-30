@@ -1,5 +1,7 @@
 ﻿# VoirAnimes
  
+ VoirAnimes est un site de streaming d'animes gratuit, garanti sans pub et avec une optimisation sans faille !
+<!--  
 # Foobar
 
 Foobar is a Python library for dealing with word pluralization.
@@ -33,4 +35,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://choosealicense.com/licenses/mit/) -->
