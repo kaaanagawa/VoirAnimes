@@ -13,7 +13,7 @@ animeName = "Shingeki No Kyojin";
 $(".title")[0].innerHTML = animeName;
 document.title = animeName + " - VoirAnimes";
 
-$('a[href="/shingeki-no-kyojin/"]')[2].innerHTML = "<div class='object active'> Shingeki No Kyojin </div>";
+$('a[href="/VoirAnimes/shingeki-no-kyojin/"]')[2].innerHTML = "<div class='object active'> Shingeki No Kyojin </div>";
 
 $("#previous-ep")[0].href = Number(pageNumber) - 1 + ".html";
 $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";

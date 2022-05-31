@@ -13,7 +13,7 @@ animeName = "Demon Slayer";
 $(".title")[0].innerHTML = animeName;
 document.title = animeName + " - VoirAnimes";
 
-$('a[href="/demon-slayer/"]')[2].innerHTML = "<div class='object active'> Demon Slayer </div>";
+$('a[href="/VoirAnimes/demon-slayer/"]')[2].innerHTML = "<div class='object active'> Demon Slayer </div>";
 
 $("#previous-ep")[0].href = Number(pageNumber) - 1 + ".html";
 $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";

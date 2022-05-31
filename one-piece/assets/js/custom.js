@@ -13,7 +13,7 @@ animeName = "One Piece";
 $(".title")[0].innerHTML = animeName;
 document.title = animeName + " - VoirAnimes";
 
-$('a[href="/one-piece/"]')[2].innerHTML = "<div class='object active'> One Piece </div>";
+$('a[href="/VoirAnimes/one-piece/"]')[2].innerHTML = "<div class='object active'> One Piece </div>";
 
 $("#previous-ep")[0].href = Number(pageNumber) - 1 + ".html";
 $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";

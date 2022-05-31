@@ -15,7 +15,7 @@ animeName = "Dr. Stone";
 $(".title")[0].innerHTML = animeName;
 document.title = animeName + " - VoirAnimes";
 
-$('a[href="/dr-stone/"]')[2].innerHTML = "<div class='object active'> Dr. Stone </div>";
+$('a[href="/VoirAnimes/dr-stone/"]')[2].innerHTML = "<div class='object active'> Dr. Stone </div>";
 
 $("#previous-ep")[0].href = Number(pageNumber) - 1 + ".html";
 $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";

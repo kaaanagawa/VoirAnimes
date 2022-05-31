@@ -10,7 +10,7 @@ animeName = "Vinland Saga";
 $(".title")[0].innerHTML = animeName;
 document.title = "Ep." + pageNumber + " - " + animeName + " - VoirAnimes";
 
-$('a[href="/vinland-saga/"]')[2].innerHTML = "<div class='object active'> Vinland Saga </div>";
+$('a[href="/VoirAnimes/vinland-saga/"]')[2].innerHTML = "<div class='object active'> Vinland Saga </div>";
 
 $("#previous-ep")[0].href = Number(pageNumber) - 1 + ".html";
 $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";

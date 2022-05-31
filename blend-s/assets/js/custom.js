@@ -11,7 +11,7 @@ animeName = "Blend S";
 $(".title")[0].innerHTML = animeName;
 document.title = "Ep." + pageNumber + " - " + animeName + " - VoirAnimes";
 
-$('a[href="/blend-s/"]')[2].innerHTML = "<div class='object active'> Blend S </div>";
+$('a[href="/VoirAnimes/blend-s/"]')[2].innerHTML = "<div class='object active'> Blend S </div>";
 
 $("#previous-ep")[0].href = Number(pageNumber) - 1 + ".html";
 $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";

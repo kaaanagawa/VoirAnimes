@@ -11,7 +11,7 @@ animeName = "Spy × Family";
 $(".title")[0].innerHTML = animeName;
 document.title = "Ep." + pageNumber + " - " + animeName + " - VoirAnimes";
 
-$('a[href="/spy-x-family/"]')[1].innerHTML = "<div class='object active'> Spy × Family </div>";
+$('a[href="/VoirAnimes/spy-x-family/"]')[1].innerHTML = "<div class='object active'> Spy × Family </div>";
 
 $("#previous-ep")[0].href = Number(pageNumber) - 1 + ".html";
 $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";

@@ -11,7 +11,7 @@ animeName = "Black Clover";
 $(".title")[0].innerHTML = animeName;
 document.title = "Ep." + pageNumber + " - " + animeName + " - VoirAnimes";
 
-$('a[href="/black-clover/"]')[2].innerHTML = "<div class='object active'> Black Clover </div>";
+$('a[href="/VoirAnimes/black-clover/"]')[2].innerHTML = "<div class='object active'> Black Clover </div>";
 
 $("#previous-ep")[0].href = Number(pageNumber) - 1 + ".html";
 $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";

@@ -13,7 +13,7 @@ animeName = "Haikyu";
 $(".title")[0].innerHTML = animeName;
 document.title = animeName + " - VoirAnimes";
 
-$('a[href="/haikyu/"]')[2].innerHTML = "<div class='object active'> Haikyu!! </div>";
+$('a[href="/VoirAnimes/haikyu/"]')[2].innerHTML = "<div class='object active'> Haikyu!! </div>";
 
 $("#previous-ep")[0].href = Number(pageNumber) - 1 + ".html";
 $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";

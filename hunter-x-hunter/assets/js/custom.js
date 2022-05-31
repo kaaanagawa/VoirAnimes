@@ -13,7 +13,7 @@ animeName = "Hunter × Hunter";
 $(".title")[0].innerHTML = animeName;
 document.title = animeName + " - VoirAnimes";
 
-$('a[href="/hunter-x-hunter/"]')[2].innerHTML = "<div class='object active'> Hunter × Hunter </div>";
+$('a[href="/VoirAnimes/hunter-x-hunter/"]')[2].innerHTML = "<div class='object active'> Hunter × Hunter </div>";
 
 $("#previous-ep")[0].href = Number(pageNumber) - 1 + ".html";
 $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";

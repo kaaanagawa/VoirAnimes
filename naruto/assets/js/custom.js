@@ -15,7 +15,7 @@ animeName = "Naruto";
 $(".title")[0].innerHTML = animeName;
 document.title = animeName + " - VoirAnimes";
 
-$('a[href="/naruto/"]')[2].innerHTML = "<div class='object active'> Naruto </div>";
+$('a[href="/VoirAnimes/naruto/"]')[2].innerHTML = "<div class='object active'> Naruto </div>";
 
 $("#previous-ep")[0].href = Number(pageNumber) - 1 + ".html";
 $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";

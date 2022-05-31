@@ -11,7 +11,7 @@ animeName = "Horimiya";
 $(".title")[0].innerHTML = animeName;
 document.title = "Ep." + pageNumber + " - " + animeName + " - VoirAnimes";
 
-$('a[href="/horimiya/"]')[2].innerHTML = "<div class='object active'> Horimiya </div>";
+$('a[href="/VoirAnimes/horimiya/"]')[2].innerHTML = "<div class='object active'> Horimiya </div>";
 
 $("#previous-ep")[0].href = Number(pageNumber) - 1 + ".html";
 $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";

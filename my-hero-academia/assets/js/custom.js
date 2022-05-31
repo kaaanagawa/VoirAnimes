@@ -15,7 +15,7 @@ animeName = "My Hero Academia";
 $(".title")[0].innerHTML = animeName;
 document.title = animeName + " - VoirAnimes";
 
-$('a[href="/my-hero-academia/"]')[2].innerHTML = "<div class='object active'> My Hero Academia </div>";
+$('a[href="/VoirAnimes/my-hero-academia/"]')[2].innerHTML = "<div class='object active'> My Hero Academia </div>";
 
 $("#previous-ep")[0].href = Number(pageNumber) - 1 + ".html";
 $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";

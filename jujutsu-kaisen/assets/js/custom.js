@@ -10,7 +10,7 @@ animeName = "Jujutsu Kaisen";
 $(".title")[0].innerHTML = animeName;
 document.title = "Ep." + pageNumber + " - " + animeName + " - VoirAnimes";
 
-$('a[href="/jujutsu-kaisen/"]')[2].innerHTML = "<div class='object active'> Jujutsu Kaisen </div>";
+$('a[href="/VoirAnimes/jujutsu-kaisen/"]')[2].innerHTML = "<div class='object active'> Jujutsu Kaisen </div>";
 
 $("#previous-ep")[0].href = Number(pageNumber) - 1 + ".html";
 $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";
