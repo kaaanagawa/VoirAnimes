@@ -4,13 +4,13 @@ const darkModeToggle = $("#buttondarkmode")[0];
 const theme = $("#darkmodestylesheet")[0];
 
 const enableDarkMode = () => {
-  theme.href = "/assets/css/light.css";
+  theme.href = "/VoirAnimes/assets/css/light.css";
   darkModeToggle.setAttribute("name", "contrast");
   localStorage.setItem("darkMode", "enabled");
 };
 
 const disableDarkMode = () => {
-  theme.href = "/assets/css/dark.css";
+  theme.href = "/VoirAnimes/assets/css/dark.css";
   darkModeToggle.setAttribute("name", "contrast-outline");
   localStorage.setItem("darkMode", null);
 };
