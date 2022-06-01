@@ -81,22 +81,6 @@ a[href="https://mega.nz/folder/iBNynCaa#YvTHYUnh6OyQ0o3n_y8o4g"] {
     }
 }
 
-@media screen and (max-width: 600px) {
-    .infostop {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-    }
-
-    header {
-        padding: 0 15px !important;
-    }
-
-    .card,
-    .cardinside {
-        width: 75vw !important;
-    }
-}
-
 @media screen and (max-width: 610px) {
     :root {
         --epselect-overlay-card-width: 100%;
@@ -194,6 +178,22 @@ a[href="https://mega.nz/folder/iBNynCaa#YvTHYUnh6OyQ0o3n_y8o4g"] {
     .card,
     .cardinside {
         width: 95vw !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .infostop {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    header {
+        padding: 0 15px !important;
+    }
+
+    .card,
+    .cardinside {
+        width: 75vw !important;
     }
 }
 
