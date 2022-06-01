@@ -48,7 +48,7 @@
     display: none !important;
 }
 
-a[href="https://mega.nz/folder/iBNynCaa#YvTHYUnh6OyQ0o3n_y8o4g"]{
+a[href="https://mega.nz/folder/iBNynCaa#YvTHYUnh6OyQ0o3n_y8o4g"] {
     display: none !important;
 }
 
@@ -78,6 +78,11 @@ a[href="https://mega.nz/folder/iBNynCaa#YvTHYUnh6OyQ0o3n_y8o4g"]{
     nav *:nth-child(1),
     nav *:nth-child(2) {
         display: none !important;
+    }
+
+    .card,
+    .cardinside {
+        width: 75vw !important;
     }
 }
 
