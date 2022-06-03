@@ -13,7 +13,7 @@ animeName = "Initial D";
 $(".title")[0].innerHTML = animeName;
 document.title = animeName + " - VoirAnimes";
 
-$('a[href="/VoirAnimes/initial-d/"]')[2].innerHTML = "<div class='object active'> Initial D </div>";
+$('a[href="/VoirAnimes/initial-d/"]')[1].innerHTML = "<div class='object active'> Initial D </div>";
 
 $("#previous-ep")[0].href = Number(pageNumber) - 1 + ".html";
 $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";
