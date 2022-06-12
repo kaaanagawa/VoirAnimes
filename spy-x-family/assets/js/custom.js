@@ -37,7 +37,7 @@ const episodes = {
   7: "https://link.eu1.storjshare.io/jxudbryb3bfb63ngvtm5bpat3u6a/animes-others%2Fspy-x-family%2F7.mp4",
   8: "https://link.eu1.storjshare.io/jvlkdhbkw4vzb2m6z4arzr7dgpzq/animes-others%2Fspy-x-family%2F8.mp4",
   9: "https://link.eu1.storjshare.io/jux6orlgo6osedqa5yxctqd4yzca/animes-others%2Fspy-x-family%2F9.mp4",
-  10: "",
+  10: "https://link.eu1.storjshare.io/jwmfc54vs7dwt7gy6x5ssyjcshwq/animes-others%2Fspy-x-family%2F10.mp4",
   11: "",
   12: "",
   13: "",
