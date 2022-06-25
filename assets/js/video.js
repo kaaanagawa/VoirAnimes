@@ -1,8 +1,8 @@
 $("#video-box")[0].innerHTML = "<video type='video/mp4' controls autoplay> <source type='video/mp4' size='1080'> <track label='English' kind='subtitles' srclang='en' id='en-sub'> <track label='Francais' kind='subtitles' srclang='fr' id='fr-sub' default> </video>";
 
 // Time at loading
-const loadTimeCookie = localStorage.getItem("currentTimeCookie");
-let currentTimeStatus = false;
+// const loadTimeCookie = localStorage.getItem("currentTimeCookie");
+// let currentTimeStatus = false;
 
 const player = new Plyr("video", {
   captions: {
@@ -62,9 +62,9 @@ player.on("exitfullscreen", (event) => {
 
 // Resume from last time
 
-video.addEventListener("timeupdate", () => {
-  localStorage.setItem("currentTimeCookie", player.currentTime);
-});
+// video.addEventListener("timeupdate", () => {
+//   localStorage.setItem("currentTimeCookie", player.currentTime);
+// });
 
 // Activer options en plus :
 

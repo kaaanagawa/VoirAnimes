@@ -1,6 +1,6 @@
 // Time at loading
-const loadTimeCookie = localStorage.getItem("currentTimeCookie");
-let currentTimeStatus = false;
+// const loadTimeCookie = localStorage.getItem("currentTimeCookie");
+// let currentTimeStatus = false;
 
 let video = $("#video")[0];
 
