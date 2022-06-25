@@ -7,7 +7,7 @@ pageNumber = page.slice(0, page.length - 5);
 shortUrl = pageNumber + ".html";
 length = shortUrl.length *= -1;
 var url = window.location.pathname + window.location.search;
-season = url.slice(19, length);
+season = url.slice(31, length);
 
 animeName = "One Piece";
 $(".title")[0].innerHTML = animeName;
