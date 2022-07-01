@@ -1,6 +1,8 @@
 ﻿# VoirAnimes
  
  VoirAnimes est un site de streaming d'animes gratuit, garanti sans pub et avec une optimisation sans faille !
+ 
+ Lien : https://kaaanagawa.github.io/VoirAnimes/
 <!--  
 # Foobar
 
