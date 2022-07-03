@@ -1,5 +1,3 @@
-localStorage.setItem("watchedSXF", "enabled");
-
 var path = window.location.pathname;
 var page = path.split("/").pop();
 var pageNumber = page.slice(0, page.length - 5);
@@ -26,6 +24,9 @@ if (pageNumber === "25") {
 
 $("#en-sub")[0].src = "../assets/sub/" + pageNumber + "-en.vtt";
 $("#fr-sub")[0].src = "../assets/sub/" + pageNumber + "-fr.vtt";
+
+localStorage.setItem("watchSxF", pageNumber);
+localStorage.setItem("PathWatchSxF", path);
 
 const episodes = {
   1: "https://link.eu1.storjshare.io/jxlm6na6ahag7fx2ktluvs3oqu4q/animes-others%2Fspy-x-family%2F1.mp4",

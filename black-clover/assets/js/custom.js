@@ -1,5 +1,3 @@
-localStorage.setItem("watchedBlackClover", "enabled");
-
 var path = window.location.pathname;
 var page = path.split("/").pop();
 var pageNumber = page.slice(0, page.length - 5);
@@ -26,6 +24,9 @@ if (pageNumber === "163") {
 
 $("#en-sub")[0].src = "../assets/sub/" + pageNumber + "-en.vtt";
 $("#fr-sub")[0].src = "../assets/sub/" + pageNumber + "-fr.vtt";
+
+localStorage.setItem("watchBla", pageNumber);
+localStorage.setItem("PathWatchBla", path);
 
 const episodes = {
   1: "https://link.eu1.storjshare.io/jx3cclsccqsz54obkdgwkddfjybq/animes-others/black-clover/1.mp4",

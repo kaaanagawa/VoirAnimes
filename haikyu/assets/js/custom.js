@@ -1,5 +1,3 @@
-localStorage.setItem("watchedHaikyu", "enabled");
-
 var path = window.location.pathname;
 var page = path.split("/").pop();
 pageNumber = page.slice(0, page.length - 5);
@@ -20,6 +18,9 @@ $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";
 
 $("#en-sub")[0].src = "../../assets/sub/" + season + pageNumber + "-en.vtt";
 $("#fr-sub")[0].src = "../../assets/sub/" + season + pageNumber + "-fr.vtt";
+
+localStorage.setItem("watchHai", pageNumber);
+localStorage.setItem("PathWatchHai", path);
 
 const episodesS1 = {
   1: "https://link.eu1.storjshare.io/jxxra4er2otsybrybt76tnenfhhq/animes-others/haikyu/s1/1.mp4",

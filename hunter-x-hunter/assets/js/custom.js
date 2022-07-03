@@ -1,5 +1,3 @@
-localStorage.setItem("watchedHXH", "enabled");
-
 var path = window.location.pathname;
 var page = path.split("/").pop();
 pageNumber = page.slice(0, page.length - 5);
@@ -20,6 +18,9 @@ $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";
 
 $("#en-sub")[0].src = "../../assets/sub/" + season + pageNumber + "-en.vtt";
 $("#fr-sub")[0].src = "../../assets/sub/" + season + pageNumber + "-fr.vtt";
+
+localStorage.setItem("watchHxH", pageNumber);
+localStorage.setItem("PathWatchHxh", path);
 
 const episodes = {
   1: "https://link.eu1.storjshare.io/jxy4az3qvppnnzxmljr7mkwr6f2q/animes-others/hunter-x-hunter/1.mp4",

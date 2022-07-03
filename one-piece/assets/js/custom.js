@@ -1,5 +1,3 @@
-localStorage.setItem("watchedOP", "enabled");
-
 var path = window.location.pathname;
 var page = path.split("/").pop();
 pageNumber = page.slice(0, page.length - 5);
@@ -19,6 +17,9 @@ $("#previous-ep")[0].href = Number(pageNumber) - 1 + ".html";
 $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";
 
 // $("#fr-sub")[0].src = "../../assets/sub/" + season + pageNumber + "-fr.vtt";
+
+localStorage.setItem("watchOP", pageNumber);
+localStorage.setItem("PathWatchOP", path);
 
 try {
   $.ajax({
@@ -342,7 +343,7 @@ if (seasonLessSlash === "quatre-empereurs") {
 }
 
 if (season === "vies/") {
-  seasonForMovies = url.slice(17, length);
+  seasonForMovies = url.slice(28, length);
   seasonForMoviesThen = seasonForMovies.slice(0, -1);
 
   $("#fr-sub")[0].src = "../../assets/sub/" + seasonForMovies + pageNumber + "-fr.vtt";

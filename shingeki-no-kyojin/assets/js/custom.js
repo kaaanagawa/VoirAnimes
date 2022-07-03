@@ -21,6 +21,9 @@ $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";
 $("#en-sub")[0].src = "../../assets/sub/" + season + pageNumber + "-en.vtt";
 $("#fr-sub")[0].src = "../../assets/sub/" + season + pageNumber + "-fr.vtt";
 
+localStorage.setItem("watchSNK", pageNumber);
+localStorage.setItem("PathWatchSNK", path);
+
 const episodesS1 = {
   1: "https://link.eu1.storjshare.io/jwnastithqtjrfhod4jg6yqapgoa/animes/shingeki-no-kyojin/s1/1.mp4",
   2: "https://link.eu1.storjshare.io/juxerfvi34hjax2jbgrcc6nwxeya/animes%2Fshingeki-no-kyojin%2Fs1%2F2.mp4",

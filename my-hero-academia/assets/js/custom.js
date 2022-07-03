@@ -1,5 +1,3 @@
-localStorage.setItem("watchedMHA", "enabled");
-
 var path = window.location.pathname;
 var page = path.split("/").pop();
 pageNumber = page.slice(0, page.length - 5);
@@ -22,6 +20,9 @@ $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";
 
 $("#en-sub")[0].src = "../../assets/sub/" + season + pageNumber + "-en.vtt";
 $("#fr-sub")[0].src = "../../assets/sub/" + season + pageNumber + "-fr.vtt";
+
+localStorage.setItem("watchMHA", pageNumber);
+localStorage.setItem("PathWatchMHA", path);
 
 const episodesS1 = {
 1: "https://link.eu1.storjshare.io/jxejsjab2evobvyfqi5ezuqoat4a/animes-others/my-hero-academia/s1/1.mp4",

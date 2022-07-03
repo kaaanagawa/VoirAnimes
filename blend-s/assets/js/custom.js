@@ -1,5 +1,3 @@
-localStorage.setItem("watchedBlendS", "enabled");
-
 var path = window.location.pathname;
 var page = path.split("/").pop();
 var pageNumber = page.slice(0, page.length - 5);
@@ -26,6 +24,9 @@ if (pageNumber === "12") {
 
 $("#en-sub")[0].src = "../assets/sub/" + pageNumber + "-en.vtt";
 $("#fr-sub")[0].src = "../assets/sub/" + pageNumber + "-fr.vtt";
+
+localStorage.setItem("watchBle", pageNumber);
+localStorage.setItem("PathWatchBle", path);
 
 const episodes = {
   1: "https://link.eu1.storjshare.io/jub6j63myuu5nvkn3h6xlb5y5yza/animes/blend-s/1.mp4",

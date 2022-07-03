@@ -1,5 +1,3 @@
-localStorage.setItem("watchedJOJO", "enabled");
-
 var path = window.location.pathname;
 var page = path.split("/").pop();
 pageNumber = page.slice(0, page.length - 5);
@@ -7,19 +5,22 @@ pageNumber = page.slice(0, page.length - 5);
 shortUrl = pageNumber + ".html";
 length = shortUrl.length *= -1;
 var url = window.location.pathname + window.location.search;
-season = url.slice(31, length);
+season = url.slice(42, length);
 
 animeName = "Jojo's Bizarre Adventure";
 $(".title")[0].innerHTML = animeName;
 document.title = animeName + " - VoirAnimes";
 
-$('a[href="/VoirAnimes/jojos-bizarre-adventure/"]')[2].innerHTML = "<div class='object active'> Jojo's Bizarre Adventure </div>";
+$('a[href="/VoirAnimes/jojos-bizarre-adventure/"]')[1].innerHTML = "<div class='object active'> Jojo's Bizarre Adventure </div>";
 
 $("#previous-ep")[0].href = Number(pageNumber) - 1 + ".html";
 $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";
 
 $("#en-sub")[0].src = "../../assets/sub/" + season + pageNumber + "-en.vtt";
 $("#fr-sub")[0].src = "../../assets/sub/" + season + pageNumber + "-fr.vtt";
+
+localStorage.setItem("watchJBA", pageNumber);
+localStorage.setItem("PathWatchJBA", path);
 
 const episodesS1 = {
   1: "https://link.eu1.storjshare.io/juyyjwmwt3iqzzy6a72dgtlvnhma/voiranimes/jojo/Jojo%20S01%20-%2001%20Vostfr%20%5B1080P%5D%5BX265%5D%5B10Bits%5D%5BSr-71%5D.mp4",

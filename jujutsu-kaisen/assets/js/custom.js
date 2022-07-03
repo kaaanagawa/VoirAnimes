@@ -1,5 +1,3 @@
-localStorage.setItem("watchedJJK", "enabled");
-
 var path = window.location.pathname;
 var page = path.split("/").pop();
 pageNumber = page.slice(0, page.length - 5);
@@ -25,6 +23,9 @@ $("#next-ep")[0].href = "javascript:void(0)";
 
 $("#en-sub")[0].src = "../assets/sub/" + pageNumber + "-en.vtt";
 $("#fr-sub")[0].src = "../assets/sub/" + pageNumber + "-fr.vtt";
+
+localStorage.setItem("watchJJK", pageNumber);
+localStorage.setItem("PathWatchJJK", path);
 
 const episodes = {
 1: "https://link.eu1.storjshare.io/jvu5j55xbiytkrok5p42ribqczjq/animes/jujutsu-kaisen/1.mp4",

@@ -26,7 +26,7 @@
     --searchbar-item-height: 43px;
     --card-info-height: 65px;
     --scrollbar-horizontal-width: 5px;
-    --season-width: 65vw;
+    --season-width: 50vw;
     --season-height: 410px;
     --container-gap: 12.5px;
     --scrollbar-width: 10px;
@@ -36,34 +36,13 @@
 
 /* Disabling Features */
 
-#leftmenu-center-1 a:nth-child(1) {
-    display: none !important;
-}
-
-/* a[href="/VoirAnimes/naruto/"] {
-    display: none !important;
-} */
-
-#settings {
-    display: none !important;
-}
-
-a[href="https://mega.nz/folder/iBNynCaa#YvTHYUnh6OyQ0o3n_y8o4g"] {
-    display: none !important;
-}
-
-.barconfirm {
-    display: none !important;
-}
-
-#pop-up-container {
-    display: none !important;
-}
-
-.epselector p {
-    display: none !important;
-}
-
+#leftmenu-center-1 a:nth-child(1),
+#settings,
+a[href="https://mega.nz/folder/iBNynCaa#YvTHYUnh6OyQ0o3n_y8o4g"],
+.scrolldown,
+.barconfirm,
+#pop-up-container,
+.epselector p,
 .switch {
     display: none !important;
 }
@@ -112,7 +91,6 @@ a[href="https://mega.nz/folder/iBNynCaa#YvTHYUnh6OyQ0o3n_y8o4g"] {
         --video-width: 95vw !important;
     }
 
-    /* button#reset-watched, */
     button#code {
         display: none !important;
     }
@@ -800,7 +778,7 @@ select[name="Episodes"] {
 
 .card-info .cardtitle {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     gap: 5px;
     text-decoration: underline transparent;
 }
@@ -979,19 +957,6 @@ button#code:hover {
     background-position: left bottom;
 }
 
-button#reset-watched {
-    padding: 10px;
-    border: 1px solid var(--fourth);
-    position: fixed;
-    bottom: var(--fixed-border-spacing);
-    right: var(--fixed-border-spacing);
-}
-
-button#reset-watched:hover {
-    color: var(--main);
-    background-position: left bottom;
-}
-
 /* Legals */
 
 #legals:before {
@@ -1144,23 +1109,21 @@ a[href="/VoirAnimes/vinland-saga/"]:before {
     height: 26px;
 }
 
-.new:after {
-    content: "Nouveau!";
-    background: #3c90ff;
-    font-weight: 300;
-    border-radius: var(--border-radius);
-    padding: 3px 6px;
-    font-size: 10px;
+.watch {
+    color: var(--third);
+    font-size: 0.9rem;
 }
 
-.watching:after {
-    content: "Vous regardez";
-    background: #ff4f5e;
-    font-weight: 300;
-    border-radius: var(--border-radius);
-    padding: 3px 6px;
-    font-size: 10px;
-    text-align: center;
+.lastSessionSeek button {
+    font-size: 0.875rem;
+}
+
+.lastSessionSeek ion-icon {
+    font-size: 1.125rem !important;
+}
+
+.lastSessionSeek[href = "null"]{
+    display: none;
 }
 
 #seasons {
@@ -1195,16 +1158,17 @@ a[href="/VoirAnimes/vinland-saga/"]:before {
 }
 
 #seasons-content h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
     width: 100%;
 }
 
 .season {
-    min-width: 300px;
+    min-width: 275px;
+    min-height: 40px;
     border-radius: var(--border-radius);
     border: 1px solid var(--fourth);
-    padding: 9px 24px;
-    font-size: 1.05rem;
+    padding: 5px 24px;
+    font-size: 0.95rem;
     background: linear-gradient(to right, var(--second) 50%, var(--bodybg-transparent) 50%);
     background-size: 202% 100%;
     background-position: right bottom;
@@ -1216,7 +1180,7 @@ a[href="/VoirAnimes/vinland-saga/"]:before {
 
 .season-indicator {
     color: var(--third);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     opacity: 0.75;
 }
 

@@ -11,12 +11,12 @@ const player = new Plyr("video", {
   },
 });
 
-player.on("playing", () => {
-  if (!currentTimeStatus) {
-    player.currentTime = parseInt(loadTimeCookie);
-    currentTimeStatus = true;
-  }
-});
+// player.on("playing", () => {
+//   if (!currentTimeStatus) {
+//     player.currentTime = parseInt(loadTimeCookie);
+//     currentTimeStatus = true;
+//   }
+// });
 
 let video = $("video")[0];
 

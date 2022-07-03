@@ -1,5 +1,3 @@
-localStorage.setItem("watchedNaruto", "enabled");
-
 var path = window.location.pathname;
 var page = path.split("/").pop();
 pageNumber = page.slice(0, page.length - 5);
@@ -22,6 +20,9 @@ $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";
 
 $("#en-sub")[0].src = "../../assets/sub/" + season + pageNumber + "-en.vtt";
 $("#fr-sub")[0].src = "../../assets/sub/" + season + pageNumber + "-fr.vtt";
+
+localStorage.setItem("watchNar", pageNumber);
+localStorage.setItem("PathWatchNar", path);
 
 const episodesS1 = {
 1: "",

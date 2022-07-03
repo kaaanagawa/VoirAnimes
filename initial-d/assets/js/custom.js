@@ -1,5 +1,3 @@
-localStorage.setItem("watchedInitialD", "enabled");
-
 var path = window.location.pathname;
 var page = path.split("/").pop();
 pageNumber = page.slice(0, page.length - 5);
@@ -7,7 +5,7 @@ pageNumber = page.slice(0, page.length - 5);
 shortUrl = pageNumber + ".html";
 length = shortUrl.length *= -1;
 var url = window.location.pathname + window.location.search;
-season = url.slice(16, length);
+season = url.slice(28, length);
 
 animeName = "Initial D";
 $(".title")[0].innerHTML = animeName;
@@ -20,6 +18,9 @@ $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";
 
 // $("#en-sub")[0].src = "../../assets/sub/" + season + pageNumber + "-en.vtt";
 // $("#fr-sub")[0].src = "../../assets/sub/" + season + pageNumber + "-fr.vtt";
+
+localStorage.setItem("watchIni", pageNumber);
+localStorage.setItem("PathWatchIni", path);
 
 try {
   $.ajax({
@@ -173,7 +174,7 @@ const episodesS12 = {
   1: "https://link.eu1.storjshare.io/jvmgsrisj7gdtogqjzn5z2wfs2bq/animes%2Finitial-d%2Fbattle-stage-3%2F1.mp4",
 };
 
-seasonLessSlash = season.slice(1, -1);
+seasonLessSlash = season.slice(0, -1);
 
 if (seasonLessSlash === "1-first-stage") {
   $(".epnumber")[0].innerHTML = "First Stage - Ep. " + pageNumber;

@@ -1,5 +1,3 @@
-localStorage.setItem("watchedDS", "enabled");
-
 var path = window.location.pathname;
 var page = path.split("/").pop();
 pageNumber = page.slice(0, page.length - 5);
@@ -20,6 +18,9 @@ $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";
 
 $("#en-sub")[0].src = "../../assets/sub/" + season + pageNumber + "-en.vtt";
 $("#fr-sub")[0].src = "../../assets/sub/" + season + pageNumber + "-fr.vtt";
+
+localStorage.setItem("watchDem", pageNumber);
+localStorage.setItem("PathWatchDem", path);
 
 const episodesS1 = {
   1: "https://link.eu1.storjshare.io/jxyq6ztx2s2vtc6j7fyywv7qz3qa/animes-others/demon-slayer/s1/1.mp4",
