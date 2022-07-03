@@ -5,7 +5,7 @@ pageNumber = page.slice(0, page.length - 5);
 shortUrl = pageNumber + ".html";
 length = shortUrl.length *= -1;
 var url = window.location.pathname + window.location.search;
-season = url.slice(15, length);
+season = url.slice(27, length);
 
 $(".epnumber")[0].innerHTML = "Ep. " + pageNumber;
 
@@ -65,7 +65,7 @@ const episodesS2 = {
   11: "https://link.eu1.storjshare.io/juhxmrjncjigiaotp33sx3h6qmvq/animes/dr-stone/stone-wars/11.mp4",
 };
 
-seasonLessSlash = season.slice(1, -1);
+seasonLessSlash = season.slice(0, -1);
 
 if (seasonLessSlash === "stone-world") {
   $(".epnumber")[0].innerHTML = "Stone World - Ep. " + pageNumber;

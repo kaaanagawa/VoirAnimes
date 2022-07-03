@@ -5,7 +5,7 @@ pageNumber = page.slice(0, page.length - 5);
 shortUrl = pageNumber + ".html";
 length = shortUrl.length *= -1;
 var url = window.location.pathname + window.location.search;
-season = url.slice(14, length);
+season = url.slice(25, length);
 
 animeName = "Haikyu";
 $(".title")[0].innerHTML = animeName;

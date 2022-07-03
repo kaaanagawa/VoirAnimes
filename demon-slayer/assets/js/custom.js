@@ -5,7 +5,7 @@ pageNumber = page.slice(0, page.length - 5);
 shortUrl = pageNumber + ".html";
 length = shortUrl.length *= -1;
 var url = window.location.pathname + window.location.search;
-season = url.slice(20, length);
+season = url.slice(31, length);
 
 animeName = "Demon Slayer";
 $(".title")[0].innerHTML = animeName;
@@ -59,9 +59,9 @@ const episodesS2 = {
   5: "https://link.eu1.storjshare.io/jv56fcg3cpvufrurzgcp7gzh7dla/voiranimes%2Fdemon%20slayer%2Fs2%20p1%2F05.mp4",
   6: "https://link.eu1.storjshare.io/jucfdiws7ltrlym7xbfjjk3odk2a/voiranimes%2Fdemon%20slayer%2Fs2%20p1%2F06.mp4",
   7: "https://link.eu1.storjshare.io/jxwtpkccd3sjqdonvbqnmbd5npea/voiranimes%2Fdemon%20slayer%2Fs2%20p1%2F07.mp4",
-  8: "",
-  9: "",
-  10: "",
+  8: "https://link.eu1.storjshare.io/jxv5txo4cpkazx5gjoiuqxdrml6q/animes-others%2Fdemon-slayer%2Fs2%2F8.mp4",
+  9: "https://link.eu1.storjshare.io/jwmife3t2fnyms3yh5u4esdwnv7a/animes-others%2Fdemon-slayer%2Fs2%2F9.mp4",
+  10: "https://link.eu1.storjshare.io/jwrgla7txb2oem4uxyqpbhmyks6q/animes-others%2Fdemon-slayer%2Fs2%2F10.mp4",
   11: "",
   12: "",
   13: "",
@@ -70,6 +70,10 @@ const episodesS2 = {
   16: "",
   17: "",
   18: "",
+};
+
+const episodesS3 = {
+  1: "https://link.eu1.storjshare.io/jul6xn7o2q3bi4gn2cb5tj7yrqqq/animes-others%2Fdemon-slayer%2Fmovies%2F1.mp4",
 };
 
 seasonLessSlash = season.slice(0, -1);
@@ -99,6 +103,21 @@ if (seasonLessSlash === "s2") {
 
   if (pageNumber === "11") {
     $("#next-ep")[0].innerHTML = "<button>Saison Suivante <ion-icon name='chevron-forward-outline'></ion-icon></button>";
+    $("#next-ep")[0].href = "javascript:void(0)";
+  }
+}
+
+if (seasonLessSlash === "movies") {
+  $(".epnumber")[0].innerHTML = "Films - Ep. " + pageNumber;
+  document.title = "Films - " + animeName + " - VoirAnimes";
+  $("video")[0].src = episodesS3[window["pageNumber"]] + "?wrap=0";
+  if (pageNumber === "1") {
+    $("#previous-ep")[0].innerHTML = "<button class='locked'><ion-icon name='chevron-back-outline'></ion-icon> Saison Précédente</button>";
+    $("#previous-ep")[0].href = "javascript:void(0)";
+  }
+
+  if (pageNumber === "11") {
+    $("#next-ep")[0].innerHTML = "<button class='locked'>Saison Suivante <ion-icon name='chevron-forward-outline'></ion-icon></button>";
     $("#next-ep")[0].href = "javascript:void(0)";
   }
 }

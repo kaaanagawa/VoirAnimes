@@ -5,7 +5,7 @@ pageNumber = page.slice(0, page.length - 5);
 shortUrl = pageNumber + ".html";
 length = shortUrl.length *= -1;
 var url = window.location.pathname + window.location.search;
-season = url.slice(23, length);
+season = url.slice(34, length);
 
 animeName = "Hunter × Hunter";
 $(".title")[0].innerHTML = animeName;
@@ -21,6 +21,8 @@ $("#fr-sub")[0].src = "../../assets/sub/" + season + pageNumber + "-fr.vtt";
 
 localStorage.setItem("watchHxH", pageNumber);
 localStorage.setItem("PathWatchHxh", path);
+
+console.log(season);
 
 const episodes = {
   1: "https://link.eu1.storjshare.io/jxy4az3qvppnnzxmljr7mkwr6f2q/animes-others/hunter-x-hunter/1.mp4",

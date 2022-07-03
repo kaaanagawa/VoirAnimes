@@ -11,7 +11,7 @@ animeName = "Jojo's Bizarre Adventure";
 $(".title")[0].innerHTML = animeName;
 document.title = animeName + " - VoirAnimes";
 
-$('a[href="/VoirAnimes/jojos-bizarre-adventure/"]')[1].innerHTML = "<div class='object active'> Jojo's Bizarre Adventure </div>";
+$('a[href="/VoirAnimes/jojos-bizarre-adventure/"]')[2].innerHTML = "<div class='object active'> Jojo's Bizarre Adventure </div>";
 
 $("#previous-ep")[0].href = Number(pageNumber) - 1 + ".html";
 $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";
