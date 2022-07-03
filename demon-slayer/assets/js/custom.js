@@ -62,14 +62,14 @@ const episodesS2 = {
   8: "https://link.eu1.storjshare.io/jxv5txo4cpkazx5gjoiuqxdrml6q/animes-others%2Fdemon-slayer%2Fs2%2F8.mp4",
   9: "https://link.eu1.storjshare.io/jwmife3t2fnyms3yh5u4esdwnv7a/animes-others%2Fdemon-slayer%2Fs2%2F9.mp4",
   10: "https://link.eu1.storjshare.io/jwrgla7txb2oem4uxyqpbhmyks6q/animes-others%2Fdemon-slayer%2Fs2%2F10.mp4",
-  11: "",
-  12: "",
-  13: "",
-  14: "",
-  15: "",
-  16: "",
-  17: "",
-  18: "",
+  11: "https://link.eu1.storjshare.io/ju74ivhaygdyydlbupakclvzq6kq/animes-others%2Fdemon-slayer%2Fs2%2F11.mp4",
+  12: "https://link.eu1.storjshare.io/jwkkrtlvxg434fouvxgemunfcgdq/animes-others%2Fdemon-slayer%2Fs2%2F12.mp4",
+  13: "https://link.eu1.storjshare.io/jvxerpdiiwaduar6ghgnt3ffe5jq/animes-others%2Fdemon-slayer%2Fs2%2F13.mp4",
+  14: "https://link.eu1.storjshare.io/juk7zu7tawyl5bgun43n3q2g66iq/animes-others%2Fdemon-slayer%2Fs2%2F14.mp4",
+  15: "https://link.eu1.storjshare.io/jvw3y67fxifncibced3g3fxk4xca/animes-others%2Fdemon-slayer%2Fs2%2F15.mp4",
+  16: "https://link.eu1.storjshare.io/julna27iotx4qz3tmkgpzcymp3dq/animes-others%2Fdemon-slayer%2Fs2%2F16.mp4",
+  17: "https://link.eu1.storjshare.io/jwaoztq5qtwpoqxiumuflcvfthsq/animes-others%2Fdemon-slayer%2Fs2%2F17.mp4",
+  18: "https://link.eu1.storjshare.io/jwdjlztdbxy523ah6m3vyfjuv5ua/animes-others%2Fdemon-slayer%2Fs2%2F18.mp4",
 };
 
 const episodesS3 = {
