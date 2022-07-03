@@ -1,5 +1,5 @@
 $(".context-menu")[0].innerHTML =
-  "<ul> <a href='/'> <li> <p>Accueil</p> </li> </a><a rel='noreferrer' target='_blank' href='https://mega.nz/folder/QsYEGLKC#PxSU43LJ_ddAb2KhgET5OQ'> <li> <p>Mangas</p> </li> </a> <a rel='noreferrer' target='_blank' href='https://twitter.com/kaaanagawa'> <li> <p>Contact</p> </li> </a> </ul>";
+  "<ul> <a href='/VoirAnimes/'> <li> <p>Accueil</p> </li> </a><a rel='noreferrer' target='_blank' href='https://mega.nz/folder/QsYEGLKC#PxSU43LJ_ddAb2KhgET5OQ'> <li> <p>Mangas</p> </li> </a> <a rel='noreferrer' target='_blank' href='https://twitter.com/kaaanagawa'> <li> <p>Contact</p> </li> </a> </ul>";
 
 $(document).on("contextmenu", function (e) {
   $(".context-menu").css({
