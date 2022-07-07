@@ -1,4 +1,4 @@
-$("#video-box")[0].innerHTML = "<video type='video/mp4' controls autoplay> <source type='video/mp4' size='1080'> <track label='English' kind='subtitles' srclang='en' id='en-sub'> <track label='Francais' kind='subtitles' srclang='fr' id='fr-sub' default> </video>";
+$("#video-box")[0].innerHTML = "<video type='video/mp4' playsinline controls autoplay> <source type='video/mp4' size='1080'> <track label='English' kind='subtitles' srclang='en' id='en-sub'> <track label='Francais' kind='subtitles' srclang='fr' id='fr-sub' default> </video>";
 
 // Time at loading
 // const loadTimeCookie = localStorage.getItem("currentTimeCookie");
