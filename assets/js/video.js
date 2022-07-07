@@ -60,12 +60,6 @@ player.on("exitfullscreen", (event) => {
   screen.orientation.lock("portrait");
 });
 
-// Resume from last time
-
-// video.addEventListener("timeupdate", () => {
-//   localStorage.setItem("currentTimeCookie", player.currentTime);
-// });
-
 // Activer options en plus :
 
 // const player = new Plyr("video", { controls: ["play-large", "play", "progress", "current-time", "mute", "volume", "captions", "settings", "download", "pip", "airplay", "fullscreen"], captions: { active: true }});

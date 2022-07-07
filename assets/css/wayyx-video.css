@@ -57,6 +57,7 @@
     z-index: 1000;
     transform-style: preserve-3d;
     --plyr-video-background: black !important;
+    position: static;
 }
 
 
