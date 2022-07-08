@@ -110,6 +110,15 @@
     background: rgba(255, 255, 255, 0.04);
 }
 
+/* #leftmenu-center-2 a[href="/VoirAnimes/assassination-classroom/"]:before {
+    content: "";
+    background: url(../images/icons/assassination-classroom.png), center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    display: block;
+} */
+
 #leftmenu-center-2 a[href="/VoirAnimes/black-clover/"]:before {
     content: "";
     background: url(../images/icons/black-clover.png), center;

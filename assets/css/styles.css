@@ -981,6 +981,14 @@ button#code:hover {
     color: var(--main);
 }
 
+a[href="/VoirAnimes/assassination-classroom/"]:before {
+    content: "";
+    background: url(../images/icons/assassination-classroom.png), center;
+    background-size: cover;
+    width: 26px;
+    height: 26px;
+}
+
 a[href="/VoirAnimes/black-clover/"]:before {
     content: "";
     background: url(../images/icons/black-clover.png), center;

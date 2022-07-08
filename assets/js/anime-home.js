@@ -18,6 +18,10 @@ $("#epselect-overlay-close")[0].addEventListener("click", () => {
   closeOverlay();
 });
 
+if (window.location.pathname === "/VoirAnimes/assassination-classroom/") {
+  $(".lastSessionSeek")[0].setAttribute("href", localStorage.getItem("PathWatchAss"));
+}
+
 if (window.location.pathname === "/VoirAnimes/black-clover/") {
   $(".lastSessionSeek")[0].setAttribute("href", localStorage.getItem("PathWatchBla"));
 }
