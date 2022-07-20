@@ -110,14 +110,32 @@
     background: rgba(255, 255, 255, 0.04);
 }
 
-/* #leftmenu-center-2 a[href="/VoirAnimes/assassination-classroom/"]:before {
+#leftmenu-center-2 a[href="/VoirAnimes/ao-no-exorcist/"]:before {
+    content: "";
+    background: url(../images/icons/ao-no-exorcist.png), center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+
+#leftmenu-center-2 a[href="/VoirAnimes/assassination-classroom/"]:before {
     content: "";
     background: url(../images/icons/assassination-classroom.png), center;
     background-size: cover;
     width: 23px;
     height: 23px;
     display: block;
-} */
+}
+
+#leftmenu-center-2 a[href="/VoirAnimes/berserk/"]:before {
+    content: "";
+    background: url(../images/icons/berserk.png), center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    display: block;
+}
 
 #leftmenu-center-2 a[href="/VoirAnimes/black-clover/"]:before {
     content: "";
@@ -149,6 +167,24 @@
 #leftmenu-center-2 a[href="/VoirAnimes/dr-stone/"]:before {
     content: "";
     background: url(../images/icons/dr-stone.png), center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+
+#leftmenu-center-2 a[href="/VoirAnimes/fire-force/"]:before {
+    content: "";
+    background: url(../images/icons/fire-force.png), center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+
+#leftmenu-center-2 a[href="/VoirAnimes/great-teacher-onizuka/"]:before {
+    content: "";
+    background: url(../images/icons/great-teacher-onizuka.png), center;
     background-size: cover;
     width: 23px;
     height: 23px;
@@ -208,6 +244,15 @@
     display: block;
 }
 
+#leftmenu-center-2 a[href="/VoirAnimes/my-dress-up-darling/"]:before {
+    content: "";
+    background: url(../images/icons/my-dress-up-darling.png), center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+
 #leftmenu-center-2 a[href="/VoirAnimes/my-hero-academia/"]:before {
     content: "";
     background: url(../images/icons/my-hero-academia.png), center;
@@ -220,6 +265,15 @@
 #leftmenu-center-2 a[href="/VoirAnimes/naruto/"]:before {
     content: "";
     background: url(../images/icons/naruto.png), center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+
+#leftmenu-center-2 a[href="/VoirAnimes/neon-genesis-evangelion/"]:before {
+    content: "";
+    background: url(../images/icons/neon-genesis-evangelion.png), center;
     background-size: cover;
     width: 23px;
     height: 23px;

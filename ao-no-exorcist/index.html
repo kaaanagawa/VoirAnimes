@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html translate="no" lang="fr">
+
+<head>
+  <!-- HTML Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>VoirAnimes - Dr. Stone</title>
+  <meta name="description" content="VoirAnimes - Dr. Stone" />
+  <link rel="shortcut icon" href="/VoirAnimes/assets/images/favicon.webp" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/VoirAnimes/assets/images/favicon.webp" />
+  <meta name="theme-color" content="#121212" />
+  <link rel="manifest" href="/VoirAnimes/manifest.json" />
+
+  <!-- Register the service worker -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/VoirAnimes/assets/js/service-worker.js");
+      });
+    }
+  </script>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content="VoirAnimes - Dr. Stone" />
+  <meta itemprop="description" content="VoirAnimes - Dr. Stone" />
+  <meta itemprop="image" content="/VoirAnimes/assets/images/image.webp" />
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://voiranimes.xyz" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="VoirAnimes - Dr. Stone" />
+  <meta property="og:description" content="VoirAnimes - Dr. Stone" />
+  <meta property="og:image" content="/VoirAnimes/assets/images/image.webp" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="VoirAnimes - Dr. Stone" />
+  <meta name="twitter:description" content="VoirAnimes - Dr. Stone" />
+  <meta name="twitter:image" content="/VoirAnimes/assets/images/image.webp" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/VoirAnimes/assets/css/dark.css" id="darkmodestylesheet" />
+  <link rel="stylesheet" type="text/css" href="/VoirAnimes/assets/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/VoirAnimes/assets/css/menu.css" />
+  <link rel="stylesheet" type="text/css" href="/VoirAnimes/assets/css/right-click.css" />
+  <link rel="stylesheet" type="text/css" href="/VoirAnimes/assets/css/scrollbar.css" />
+  <link rel="stylesheet" type="text/css" href="/VoirAnimes/assets/css/searchbar.css" />
+  <link rel="stylesheet" type="text/css" href="/VoirAnimes/assets/css/wayyx-video.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/custom.css" />
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="/VoirAnimes/assets/js/common.js"></script>
+  <script defer src="/VoirAnimes/assets/js/darkmode.js"></script>
+  <script defer src="/VoirAnimes/assets/js/menu.js"></script>
+  <script defer src="/VoirAnimes/assets/js/searchbar.js"></script>
+  <script defer src="/VoirAnimes/assets/js/rightclick.js"></script>
+  <script defer src="/VoirAnimes/assets/js/anime-home.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Custom Video Player -->
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+  <script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+</head>
+
+<body>
+  <!-- Context Menu -->
+  <div class="context-menu"></div>
+
+  <!-- Left Menu -->
+  <div id="leftmenu-container">
+    <div id="leftmenu"></div>
+    <div id="leftmenu-empty"></div>
+  </div>
+
+  <!-- Searchbar List -->
+  <ol id="anime-list"></ol>
+
+  <!-- Settings -->
+  <div id="settings-container"></div>
+
+  <!-- Apps -->
+  <div id="apps-container"></div>
+
+  <!-- Navbar -->
+  <header></header>
+
+  <div class="others">
+    <div class="otherscontainer"></div>
+  </div>
+
+  <!-- Ep Selector Overlay -->
+  <div id="epselect-overlay">
+    <div class="epselect-overlay-top">
+      <h1>Choisissez un episode :</h1>
+      <ion-icon id="epselect-overlay-close" name="close-outline"></ion-icon>
+    </div>
+    <div class="epselect-overlay-content">
+      <div class="epselect-overlay-card">
+        <a href="anime/1.html">
+          <img src="/VoirAnimes/assets/images/empty.png" alt="img">
+          <div class="separating-line"></div>
+          <p>Episode 1</p>
+        </a>
+      </div>
+      <div class="epselect-overlay-card">
+        <a href="anime/2.html">
+          <img src="/VoirAnimes/assets/images/empty.png" alt="img">
+          <div class="separating-line"></div>
+          <p>Episode 2</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="presentation">
+    <div id="cover" style="background: url(/VoirAnimes/assets/images/cover/dr-stone.webp)"></div>
+    <div id="presentation-about">
+      <h1 class="title">Dr. Stone</h1>
+      <p>Shōnen</p>
+      <p>
+        Taiju, un lycéen comme les autres, raconte à son meilleur ami Senku, un génie des sciences, qu'il est sur le
+        point de révéler ses sentiments à Yuzuriha, une fille dont il est secrètement amoureux depuis quelques années.
+        Alors que le jeune homme s'apprête à lui déclarer
+        sa flamme, une lumière brillante apparaît dans le ciel et transforme toute l'humanité en statues de pierres.
+      </p>
+      <p>★★★★☆ 4.1/5 - IMDb</p>
+      <p>2019 - 2023 | 2 Sagas</p>
+      <a class="lastSessionSeek"><button><ion-icon name="play-outline"></ion-icon> Reprendre la lecture</button></a>
+      <div class="scrolldown" onclick="window.scrollTo(0, document.body.scrollHeight);">
+        <div id="scrolldown">
+          <ion-icon name="chevron-down-outline" style="transform: translateY(3.5px)"></ion-icon>
+          <ion-icon name="chevron-down-outline" style="transform: translateY(-3.5px)"></ion-icon>
+        </div>
+        <p>Regarder</p>
+      </div>
+    </div>
+  </div>
+  <div id="seasons">
+    <div class="seasons-image" style="background: url('assets/images/dr-stone.webp')"></div>
+    <div id="seasons-content">
+      <h1>Saisons</h1>
+      <a href="/VoirAnimes/dr-stone/anime/stone-world/">
+        <button class="season">
+          Stone World
+          <p class="season-indicator">(Saison 1)</p>
+        </button>
+      </a>
+      <a href="/VoirAnimes/dr-stone/anime/stone-wars/">
+        <button class="season">
+          Stone Wars
+          <p class="season-indicator">(Saison 2)</p>
+        </button>
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>

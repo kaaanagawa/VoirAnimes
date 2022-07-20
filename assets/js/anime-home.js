@@ -22,6 +22,10 @@ if (window.location.pathname === "/VoirAnimes/assassination-classroom/") {
   $(".lastSessionSeek")[0].setAttribute("href", localStorage.getItem("PathWatchAss"));
 }
 
+if (window.location.pathname === "/VoirAnimes/berserk/") {
+  $(".lastSessionSeek")[0].setAttribute("href", localStorage.getItem("PathWatchBer"));
+}
+
 if (window.location.pathname === "/VoirAnimes/black-clover/") {
   $(".lastSessionSeek")[0].setAttribute("href", localStorage.getItem("PathWatchBla"));
 }
@@ -36,6 +40,10 @@ if (window.location.pathname === "/VoirAnimes/demon-slayer/") {
 
 if (window.location.pathname === "/VoirAnimes/dr-stone/") {
   $(".lastSessionSeek")[0].setAttribute("href", localStorage.getItem("PathWatchDrS"));
+}
+
+if (window.location.pathname === "/VoirAnimes/great-teacher-onizuka/") {
+  $(".lastSessionSeek")[0].setAttribute("href", localStorage.getItem("PathWatchGTO"));
 }
 
 if (window.location.pathname === "/VoirAnimes/haikyu/") {
@@ -62,12 +70,20 @@ if (window.location.pathname === "/VoirAnimes/jujutsu-kaisen/") {
   $(".lastSessionSeek")[0].setAttribute("href", localStorage.getItem("PathWatchJJK"));
 }
 
+if (window.location.pathname === "/VoirAnimes/my-dress-up-darling/") {
+  $(".lastSessionSeek")[0].setAttribute("href", localStorage.getItem("PathWatchMDD"));
+}
+
 if (window.location.pathname === "/VoirAnimes/my-hero-academia/") {
   $(".lastSessionSeek")[0].setAttribute("href", localStorage.getItem("PathWatchMHA"));
 }
 
 if (window.location.pathname === "/VoirAnimes/naruto/") {
   $(".lastSessionSeek")[0].setAttribute("href", localStorage.getItem("PathWatchNar"));
+}
+
+if (window.location.pathname === "/VoirAnimes/neon-genesis-evangelion/") {
+  $(".lastSessionSeek")[0].setAttribute("href", localStorage.getItem("PathWatchNGE"));
 }
 
 if (window.location.pathname === "/VoirAnimes/one-piece/") {
