@@ -1,317 +1,328 @@
 @media screen and (max-width: 1080px) {
-    #leftmenu {
-        width: 500px !important;
-    }
+  #leftmenu {
+    width: 500px !important;
+  }
 }
 
 #leftmenu-container {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    z-index: -1;
-    opacity: 0;
-    background: linear-gradient(to right, var(--bodybg), transparent);
-    display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  background: linear-gradient(to right, var(--bodybg), transparent);
+  display: flex;
 }
 
 #leftmenu {
-    background: var(--bodybg-transparent);
-    border-right: 1px solid var(--fourth);
-    width: 340px;
-    height: 100vh;
-    overflow-y: scroll;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transform: translateX(-500px);
-    padding-bottom: 10px;
+  background: var(--bodybg-transparent);
+  border-right: 1px solid var(--fourth);
+  width: 340px;
+  height: 100vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(-500px);
+  padding-bottom: 10px;
 }
 
 #leftmenu div.logo-container {
-    border-bottom: 1px solid var(--fourth);
+  border-bottom: 1px solid var(--fourth);
 }
 
 #leftmenu .logo-container a,
 #leftmenu .logo-container .logo {
-    width: fit-content;
+  width: fit-content;
 }
 
 #leftmenu .logo-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
 
 #close-leftmenu {
-    font-size: 30px;
-    cursor: var(--link-cursor);
+  font-size: 30px;
+  cursor: var(--link-cursor);
 }
 
 #open-leftmenu {
-    font-size: 30px;
-    cursor: var(--link-cursor);
+  font-size: 30px;
+  cursor: var(--link-cursor);
 }
 
 #leftmenu-empty {
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
 }
 
 #alternative-sites {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
 }
 
 #alternative-sites a {
-    width: 95%;
+  width: 95%;
 }
 
 #alternative-sites button {
-    width: 100%;
+  width: 100%;
 }
 
-#alternative-sites #leftmenu-center-2 a[href="https://mega.nz/folder/QsYEGLKC#PxSU43LJ_ddAb2KhgET5OQ"] button:before {
-    content: "⭐";
+#alternative-sites #leftmenu-center-2 a[href="https://mega.nz/folder/QsYEGLKC#PxSU43LJ_ddAb2KhgET5OQ"] button:before
+{
+  content: "⭐";
 }
 
-#alternative-sites #leftmenu-center-2 a[href="https://mega.nz/folder/XZ8n0QSA#hTTi6m3xdE6_rkRNpkxSdQ"] button:before {
-    content: "❤️";
+#alternative-sites #leftmenu-center-2 a[href="https://mega.nz/folder/XZ8n0QSA#hTTi6m3xdE6_rkRNpkxSdQ"] button:before
+{
+  content: "❤️";
 }
 
 #leftmenu-center {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #leftmenu-center ion-icon {
-    font-size: 23px;
+  font-size: 23px;
 }
 
 #leftmenu-center section {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #leftmenu-center section a {
-    font-size: 1.1rem;
-    padding: 12px 22px;
-    display: flex;
-    align-items: center;
-    gap: 7px;
+  font-size: 1.1rem;
+  padding: 12px 22px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
 }
 
 #leftmenu-center section a:hover {
-    background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 #leftmenu-center-2 a[href="/VoirAnimes/ao-no-exorcist/"]:before {
-    content: "";
-    background: url(../images/icons/ao-no-exorcist.png), center;
-    background-size: cover;
-    width: 23px;
-    height: 23px;
-    display: block;
+  content: "";
+  background: url(../images/icons/ao-no-exorcist.png), center;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  display: block;
 }
 
 #leftmenu-center-2 a[href="/VoirAnimes/assassination-classroom/"]:before {
-    content: "";
-    background: url(../images/icons/assassination-classroom.png), center;
-    background-size: cover;
-    width: 23px;
-    height: 23px;
-    display: block;
+  content: "";
+  background: url(../images/icons/assassination-classroom.png), center;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  display: block;
 }
 
 #leftmenu-center-2 a[href="/VoirAnimes/berserk/"]:before {
-    content: "";
-    background: url(../images/icons/berserk.png), center;
-    background-size: cover;
-    width: 23px;
-    height: 23px;
-    display: block;
+  content: "";
+  background: url(../images/icons/berserk.png), center;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  display: block;
 }
 
 #leftmenu-center-2 a[href="/VoirAnimes/black-clover/"]:before {
-    content: "";
-    background: url(../images/icons/black-clover.png), center;
-    background-size: cover;
-    width: 23px;
-    height: 23px;
-    display: block;
+  content: "";
+  background: url(../images/icons/black-clover.png), center;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  display: block;
 }
 
 #leftmenu-center-2 a[href="/VoirAnimes/blend-s/"]:before {
-    content: "";
-    background: url(../images/icons/blend-s.png), center;
-    background-size: cover;
-    width: 23px;
-    height: 23px;
-    display: block;
+  content: "";
+  background: url(../images/icons/blend-s.png), center;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  display: block;
 }
 
 #leftmenu-center-2 a[href="/VoirAnimes/demon-slayer/"]:before {
-    content: "";
-    background: url(../images/icons/demon-slayer.png), center;
-    background-size: cover;
-    width: 23px;
-    height: 23px;
-    display: block;
+  content: "";
+  background: url(../images/icons/demon-slayer.png), center;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  display: block;
 }
 
 #leftmenu-center-2 a[href="/VoirAnimes/dr-stone/"]:before {
-    content: "";
-    background: url(../images/icons/dr-stone.png), center;
-    background-size: cover;
-    width: 23px;
-    height: 23px;
-    display: block;
+  content: "";
+  background: url(../images/icons/dr-stone.png), center;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  display: block;
 }
 
 #leftmenu-center-2 a[href="/VoirAnimes/fire-force/"]:before {
-    content: "";
-    background: url(../images/icons/fire-force.png), center;
-    background-size: cover;
-    width: 23px;
-    height: 23px;
-    display: block;
+  content: "";
+  background: url(../images/icons/fire-force.png), center;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  display: block;
 }
 
 #leftmenu-center-2 a[href="/VoirAnimes/great-teacher-onizuka/"]:before {
-    content: "";
-    background: url(../images/icons/great-teacher-onizuka.png), center;
-    background-size: cover;
-    width: 23px;
-    height: 23px;
-    display: block;
+  content: "";
+  background: url(../images/icons/great-teacher-onizuka.png), center;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  display: block;
 }
 
 #leftmenu-center-2 a[href="/VoirAnimes/haikyu/"]:before {
-    content: "";
-    background: url(../images/icons/haikyuu.png), center;
-    background-size: cover;
-    width: 23px;
-    height: 23px;
-    display: block;
+  content: "";
+  background: url(../images/icons/haikyuu.png), center;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  display: block;
 }
 
 #leftmenu-center-2 a[href="/VoirAnimes/horimiya/"]:before {
-    content: "";
-    background: url(../images/icons/horimiya.png), center;
-    background-size: cover;
-    width: 23px;
-    height: 23px;
+  content: "";
+  background: url(../images/icons/horimiya.png), center;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
 }
 
 #leftmenu-center-2 a[href="/VoirAnimes/hunter-x-hunter/"]:before {
-    content: "";
-    background: url(../images/icons/hunter-x-hunter.png), center;
-    background-size: cover;
-    width: 23px;
-    height: 23px;
-    display: block;
+  content: "";
+  background: url(../images/icons/hunter-x-hunter.png), center;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  display: block;
 }
 
 #leftmenu-center-2 a[href="/VoirAnimes/initial-d/"]:before {
-    content: "";
-    background: url(../images/icons/initial-d.png), center;
-    background-size: cover;
-    width: 23px;
-    height: 23px;
-    display: block;
+  content: "";
+  background: url(../images/icons/initial-d.png), center;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  display: block;
 }
 
 #leftmenu-center-2 a[href="/VoirAnimes/jojos-bizarre-adventure/"]:before {
-    content: "";
-    background: url(../images/icons/jojos-bizarre-adventure.png), center;
-    background-size: cover;
-    width: 23px;
-    height: 23px;
-    display: block;
+  content: "";
+  background: url(../images/icons/jojos-bizarre-adventure.png), center;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  display: block;
 }
 
 #leftmenu-center-2 a[href="/VoirAnimes/jujutsu-kaisen/"]:before {
-    content: "";
-    background: url(../images/icons/jujutsu-kaisen.png), center;
-    background-size: cover;
-    width: 23px;
-    height: 23px;
-    display: block;
+  content: "";
+  background: url(../images/icons/jujutsu-kaisen.png), center;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  display: block;
 }
 
 #leftmenu-center-2 a[href="/VoirAnimes/my-dress-up-darling/"]:before {
-    content: "";
-    background: url(../images/icons/my-dress-up-darling.png), center;
-    background-size: cover;
-    width: 23px;
-    height: 23px;
-    display: block;
+  content: "";
+  background: url(../images/icons/my-dress-up-darling.png), center;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  display: block;
 }
 
 #leftmenu-center-2 a[href="/VoirAnimes/my-hero-academia/"]:before {
-    content: "";
-    background: url(../images/icons/my-hero-academia.png), center;
-    background-size: cover;
-    width: 23px;
-    height: 23px;
-    display: block;
+  content: "";
+  background: url(../images/icons/my-hero-academia.png), center;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  display: block;
 }
 
 #leftmenu-center-2 a[href="/VoirAnimes/naruto/"]:before {
-    content: "";
-    background: url(../images/icons/naruto.png), center;
-    background-size: cover;
-    width: 23px;
-    height: 23px;
-    display: block;
+  content: "";
+  background: url(../images/icons/naruto.png), center;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  display: block;
 }
 
 #leftmenu-center-2 a[href="/VoirAnimes/neon-genesis-evangelion/"]:before {
-    content: "";
-    background: url(../images/icons/neon-genesis-evangelion.png), center;
-    background-size: cover;
-    width: 23px;
-    height: 23px;
-    display: block;
+  content: "";
+  background: url(../images/icons/neon-genesis-evangelion.png), center;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  display: block;
 }
 
 #leftmenu-center-2 a[href="/VoirAnimes/one-piece/"]:before {
-    content: "";
-    background: url(../images/icons/one-piece.png), center;
-    background-size: cover;
-    width: 23px;
-    height: 23px;
-    display: block;
+  content: "";
+  background: url(../images/icons/one-piece.png), center;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  display: block;
+}
+
+#leftmenu-center-2 a[href="/VoirAnimes/one-piece-kai/"]:before {
+  content: "";
+  background: url(../images/icons/one-piece.png), center;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  display: block;
 }
 
 #leftmenu-center-2 a[href="/VoirAnimes/shingeki-no-kyojin/"]:before {
-    content: "";
-    background: url(../images/icons/shingeki-no-kyojin.png), center;
-    background-size: cover;
-    width: 23px;
-    height: 23px;
-    display: block;
+  content: "";
+  background: url(../images/icons/shingeki-no-kyojin.png), center;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  display: block;
 }
 
 #leftmenu-center-2 a[href="/VoirAnimes/spy-x-family/"]:before {
-    content: "";
-    background: url(../images/icons/spy-x-family.png), center;
-    background-size: cover;
-    width: 23px;
-    height: 23px;
-    display: block;
+  content: "";
+  background: url(../images/icons/spy-x-family.png), center;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  display: block;
 }
 
 #leftmenu-center-2 a[href="/VoirAnimes/vinland-saga/"]:before {
-    content: "";
-    background: url(../images/icons/vinland-saga.webp), center;
-    background-size: cover;
-    width: 23px;
-    height: 23px;
-    display: block;
+  content: "";
+  background: url(../images/icons/vinland-saga.webp), center;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
+  display: block;
 }

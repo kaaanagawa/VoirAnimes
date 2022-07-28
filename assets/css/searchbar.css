@@ -288,6 +288,15 @@ a[href="/VoirAnimes/one-piece/"] li:before {
     display: block;
 }
 
+a[href="/VoirAnimes/one-piece-kai/"] li:before {
+    content: "";
+    background: url(../images/icons/one-piece.png), center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+
 a[href="/VoirAnimes/shingeki-no-kyojin/"] li:before {
     content: "";
     background: url(../images/icons/shingeki-no-kyojin.png), center;

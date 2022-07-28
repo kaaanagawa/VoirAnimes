@@ -37,9 +37,10 @@ $(".watch")[14].innerHTML = "(Ep. " + localStorage.getItem('watchMHA') + ")";
 $(".watch")[15].innerHTML = "(Ep. " + localStorage.getItem('watchNar') + ")";
 $(".watch")[16].innerHTML = "(Ep. " + localStorage.getItem('watchNGE') + ")";
 $(".watch")[17].innerHTML = "(Ep. " + localStorage.getItem('watchOP') + ")";
-$(".watch")[18].innerHTML = "(Ep. " + localStorage.getItem('watchSNK') + ")";
-$(".watch")[19].innerHTML = "(Ep. " + localStorage.getItem('watchSxF') + ")";
-$(".watch")[20].innerHTML = "(Ep. " + localStorage.getItem('watchVin') + ")";
+$(".watch")[18].innerHTML = "(Ep. " + localStorage.getItem('watchOPK') + ")";
+$(".watch")[19].innerHTML = "(Ep. " + localStorage.getItem('watchSNK') + ")";
+$(".watch")[20].innerHTML = "(Ep. " + localStorage.getItem('watchSxF') + ")";
+$(".watch")[21].innerHTML = "(Ep. " + localStorage.getItem('watchVin') + ")";
 
 for (const div of document.querySelectorAll('.watch')) {
   if (div.textContent.includes('(Ep. null)')) {

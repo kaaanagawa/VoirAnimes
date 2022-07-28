@@ -1,8 +1,7 @@
 :root {
---accent-color: #3dbbff;
+--accent-color: #3dbbff !important;
 }
 
-.container {
-align-content: flex-start !important;
-height: unset !important;
+.videocontainer .otherscontainer:before {
+content: "Autres Animes:";
 }

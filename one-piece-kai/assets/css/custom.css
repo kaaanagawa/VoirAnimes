@@ -1,0 +1,8 @@
+:root {
+--accent-color: #3dbbff;
+}
+
+.container {
+align-content: flex-start !important;
+height: unset !important;
+}
