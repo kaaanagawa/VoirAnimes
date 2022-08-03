@@ -5,7 +5,7 @@ pageNumber = page.slice(0, page.length - 5);
 shortUrl = pageNumber + ".html";
 length = shortUrl.length *= -1;
 var url = window.location.pathname + window.location.search;
-season = url.slice(30, length);
+season = url.slice(28, length);
 
 animeName = "One Piece";
 $(".title")[0].innerHTML = animeName;
@@ -15,11 +15,6 @@ $('a[href="/VoirAnimes/one-piece/"]')[2].innerHTML = "<div class='object active'
 
 $("#previous-ep")[0].href = Number(pageNumber) - 1 + ".html";
 $("#next-ep")[0].href = Number(pageNumber) + 1 + ".html";
-
-// $("#fr-sub")[0].src = "../../assets/sub/" + season + pageNumber + "-fr.vtt";
-
-localStorage.setItem("watchOP", pageNumber);
-localStorage.setItem("PathWatchOP", path);
 
 try {
   $.ajax({
@@ -34,332 +29,1178 @@ try {
   });
 } catch (e) {}
 
+try {
+  $.ajax({
+    url: "../../assets/sub/" + season + pageNumber + "-en.vtt",
+    type: "HEAD",
+    error: function () {
+      console.log("Les sous titres sont incrustes");
+    },
+    success: function () {
+      $("#en-sub")[0].src = "../../assets/sub/" + season + pageNumber + "-en.vtt";
+    },
+  });
+} catch (e) {}
+
+localStorage.setItem("watchOP", pageNumber);
+localStorage.setItem("PathWatchOP", path);
+
 const episodesS1 = {
-  1: "https://link.eu1.storjshare.io/jx357yulrz7riqusnh23xzk7qsaa/animes/one-piece/east-blue/1.mp4",
-  2: "https://link.eu1.storjshare.io/jud55tmf43qhuo6etmd75pktuyxq/animes/one-piece/east-blue/2.mp4",
-  3: "https://link.eu1.storjshare.io/jx5hdysm6u6ma4647vkimlxb6gra/animes/one-piece/east-blue/3.mp4",
-  4: "https://link.eu1.storjshare.io/jvpftgsvmqn6se6bsgxu75vgauca/animes/one-piece/east-blue/4.mp4",
-  5: "https://link.eu1.storjshare.io/jucovp7d5g5h53junbh2slvdd2ha/animes/one-piece/east-blue/5.mp4",
-  6: "https://link.eu1.storjshare.io/jxe33mfizhskxmzrg6d7t7uzeqaq/animes/one-piece/east-blue/6.mp4",
-  7: "https://link.eu1.storjshare.io/jw5jnj5xmsmc4tt4nwai2k4ij6iq/animes/one-piece/east-blue/7.mp4",
+  1: "https://link.storjshare.io/juatcjbgicu3xbfdoggu3o6fe44q/voiranimes%2Fone-piece%2F1-east-blue%2F1.mp4",
+  2: "",
+  3: "",
+  4: "",
+  5: "",
+  6: "",
+  7: "",
+  8: "",
+  9: "",
+  10: "",
+  11: "",
+  12: "",
+  13: "",
+  14: "",
+  15: "",
+  16: "",
+  17: "",
+  18: "",
+  19: "",
+  20: "",
+  21: "",
+  22: "",
+  23: "",
+  24: "",
+  25: "",
+  26: "",
+  27: "",
+  28: "",
+  29: "",
+  30: "",
+  31: "",
+  32: "",
+  33: "",
+  34: "",
+  35: "",
+  36: "",
+  37: "",
+  38: "",
+  39: "",
+  40: "",
+  41: "",
+  42: "",
+  43: "",
+  44: "",
+  45: "",
+  46: "",
+  47: "",
+  48: "",
+  49: "",
+  50: "",
+  51: "",
+  52: "",
+  53: "",
+  54: "",
+  55: "",
+  56: "",
+  57: "",
+  58: "",
+  59: "",
+  60: "",
+  61: "",
 };
 
 const episodesS2 = {
-  1: "https://link.eu1.storjshare.io/jxdms5refvjdg653vi5pwmye2opq/animes/one-piece/alabasta/8.mp4",
-  2: "https://link.eu1.storjshare.io/jvnplyxym6ucgq6txbfa4htavxda/animes/one-piece/alabasta/9.mp4",
-  3: "https://link.eu1.storjshare.io/jugttf6ths7thylbe26o7hwggaja/animes/one-piece/alabasta/10.mp4",
-  4: "https://link.eu1.storjshare.io/jx5jwjkdp25pkgne5yhhqkv2lqia/animes/one-piece/alabasta/11.mp4",
-  5: "https://link.eu1.storjshare.io/jwo3tc5rf4bfgcihpgea2ldv5cqa/animes/one-piece/alabasta/12.mp4",
-  6: "https://link.eu1.storjshare.io/jwyopm4edyvkjnk43fopf3b2xdgq/animes/one-piece/alabasta/13.mp4",
-  7: "https://link.eu1.storjshare.io/jxxy7rzfwka4f3hlqwydqipd7hka/animes/one-piece/alabasta/14.mp4",
-  8: "https://link.eu1.storjshare.io/jungntw5mmied4woctkhmago644q/animes/one-piece/alabasta/15.mp4",
-  9: "https://link.eu1.storjshare.io/ju6hsa4o5cusqmcey376aqugjroa/animes/one-piece/alabasta/16.mp4",
+  1: "https://link.storjshare.io/jvkhx2innbjk5jmog3poa3hnsdpa/voiranimes%2Fone-piece%2F2-alabasta%2F62.mp4",
+  2: "",
+  3: "",
+  4: "",
+  5: "",
+  6: "",
+  7: "",
+  8: "",
+  9: "",
+  10: "",
+  11: "",
+  12: "",
+  13: "",
+  14: "",
+  15: "",
+  16: "",
+  17: "",
+  18: "",
+  19: "",
+  20: "",
+  21: "",
+  22: "",
+  23: "",
+  24: "",
+  25: "",
+  26: "",
+  27: "",
+  28: "",
+  29: "",
+  30: "",
+  31: "",
+  32: "",
+  33: "",
+  34: "",
+  35: "",
+  36: "",
+  37: "",
+  38: "",
+  39: "",
+  40: "",
+  41: "",
+  42: "",
+  43: "",
+  44: "",
+  45: "",
+  46: "",
+  47: "",
+  48: "",
+  49: "",
+  50: "",
+  51: "",
+  52: "",
+  53: "",
+  54: "",
+  55: "",
+  56: "",
+  57: "",
+  58: "",
+  59: "",
+  60: "",
+  61: "",
+  62: "",
+  63: "",
+  64: "",
+  65: "",
+  66: "",
+  67: "",
+  68: "",
+  69: "",
+  70: "",
+  71: "",
+  72: "",
+  73: "",
+  74: "",
 };
 
 const episodesS3 = {
-  1: "https://link.eu1.storjshare.io/jxabikcg45mc5rihlujgzrehuaua/animes/one-piece/skypiea/17.mp4",
-  2: "https://link.eu1.storjshare.io/juydt5xal5q2n735rqhg4yy7jh2q/animes/one-piece/skypiea/18.mp4",
-  3: "https://link.eu1.storjshare.io/jue5xw7fydkeji4fjmtvqrcnv6la/animes/one-piece/skypiea/19.mp4",
-  4: "https://link.eu1.storjshare.io/jwhhas7tnvc3gt67tw2fwhxpnlcq/animes/one-piece/skypiea/20.mp4",
-  5: "https://link.eu1.storjshare.io/junqnode2iez6xqkkdonvr2uk4pa/animes/one-piece/skypiea/21.mp4",
-  6: "https://link.eu1.storjshare.io/jxwzpr2j7ztxu7bztvosl5ztds7a/animes/one-piece/skypiea/22.mp4",
+  1: "",
+  2: "",
+  3: "",
+  4: "",
+  5: "",
+  6: "",
+  7: "",
+  8: "",
+  9: "",
+  10: "",
+  11: "",
+  12: "",
+  13: "",
+  14: "",
+  15: "",
+  16: "",
+  17: "",
+  18: "",
+  19: "",
+  20: "",
+  21: "",
+  22: "",
+  23: "",
+  24: "",
+  25: "",
+  26: "",
+  27: "",
+  28: "",
+  29: "",
+  30: "",
+  31: "",
+  32: "",
+  33: "",
+  34: "",
+  35: "",
+  36: "",
+  37: "",
+  38: "",
+  39: "",
+  40: "",
+  41: "",
+  42: "",
+  43: "",
+  44: "",
+  45: "",
+  46: "",
+  47: "",
+  48: "",
+  49: "",
+  50: "",
+  51: "",
+  52: "",
+  53: "",
+  54: "",
+  55: "",
+  56: "",
+  57: "",
+  58: "",
+  59: "",
+  60: "",
+  61: "",
+  62: "",
+  63: "",
+  64: "",
+  65: "",
+  66: "",
+  67: "",
+  68: "",
+  69: "",
+  70: "",
+  71: "",
 };
 
 const episodesS4 = {
-  1: "https://link.eu1.storjshare.io/jw7caq5ou5hygzjvi7n3jwy3bmqq/animes/one-piece/water-seven/23.mp4",
-  2: "https://link.eu1.storjshare.io/jv2dtqhvmmvgioimm4voccpqq4tq/animes/one-piece/water-seven/24.mp4",
-  3: "https://link.eu1.storjshare.io/jv4gt47ssnhc23fbcwh4jqbra3oq/animes/one-piece/water-seven/25.mp4",
-  4: "https://link.eu1.storjshare.io/jx43bl52zyy5n5z4hbru5wcxglqq/animes/one-piece/water-seven/26.mp4",
-  5: "https://link.eu1.storjshare.io/jxnoi5suw2z5eayehpesq6rqcnpq/animes/one-piece/water-seven/27.mp4",
-  6: "https://link.eu1.storjshare.io/jviz7wycpbrwe7yozwbldxhwij3a/animes/one-piece/water-seven/28.mp4",
-  7: "https://link.eu1.storjshare.io/jwvd6u55xnpy4cdxjjgd42bahhta/animes/one-piece/water-seven/29.mp4",
-  8: "https://link.eu1.storjshare.io/jvzp3spzmhxvp6btjfy5mnbkxqnq/animes/one-piece/water-seven/30.mp4",
-  9: "https://link.eu1.storjshare.io/jw3obo3nadkbfajdyeidrl5unaqq/animes/one-piece/water-seven/31.mp4",
-  10: "https://link.eu1.storjshare.io/jw2pe25vgp7dkx6zqebceckt4akq/animes/one-piece/water-seven/32.mp4",
-  11: "https://link.eu1.storjshare.io/jvllcy7lcxhxl3p5sbnrwzqgvq4a/animes/one-piece/water-seven/33.mp4",
-  12: "https://link.eu1.storjshare.io/jva3tdfpm6wjvlfmavqqxhkqjpna/animes/one-piece/water-seven/34.mp4",
-  13: "https://link.eu1.storjshare.io/jvvqlkxsspijiax5tlf5pevpnzgq/animes/one-piece/water-seven/35.mp4",
-  14: "https://link.eu1.storjshare.io/jxc3udpqhl5fatpgf6jsbr2hbila/animes/one-piece/water-seven/36.mp4",
-  15: "https://link.eu1.storjshare.io/jxkcwhzpopj6pgactyo5zkuwkeyq/animes/one-piece/water-seven/37.mp4",
+  1: "",
+  2: "",
+  3: "",
+  4: "",
+  5: "",
+  6: "",
+  7: "",
+  8: "",
+  9: "",
+  10: "",
+  11: "",
+  12: "",
+  13: "",
+  14: "",
+  15: "",
+  16: "",
+  17: "",
+  18: "",
+  19: "",
+  20: "",
+  21: "",
+  22: "",
+  23: "",
+  24: "",
+  25: "",
+  26: "",
+  27: "",
+  28: "",
+  29: "",
+  30: "",
+  31: "",
+  32: "",
+  33: "",
+  34: "",
+  35: "",
+  36: "",
+  37: "",
+  38: "",
+  39: "",
+  40: "",
+  41: "",
+  42: "",
+  43: "",
+  44: "",
+  45: "",
+  46: "",
+  47: "",
+  48: "",
+  49: "",
+  50: "",
+  51: "",
+  52: "",
+  53: "",
+  54: "",
+  55: "",
+  56: "",
+  57: "",
+  58: "",
+  59: "",
+  60: "",
+  61: "",
+  62: "",
+  63: "",
+  64: "",
+  65: "",
+  66: "",
+  67: "",
+  68: "",
+  69: "",
+  70: "",
+  71: "",
+  72: "",
+  73: "",
+  74: "",
+  75: "",
+  76: "",
+  77: "",
+  78: "",
+  79: "",
+  80: "",
+  81: "",
+  82: "",
+  83: "",
+  84: "",
+  85: "",
+  86: "",
+  87: "",
+  88: "",
+  89: "",
+  90: "",
+  91: "",
+  92: "",
+  93: "",
+  94: "",
+  95: "",
+  96: "",
+  97: "",
+  98: "",
+  99: "",
+  100: "",
+  101: "",
+  102: "",
+  103: "",
+  104: "",
+  105: "",
+  106: "",
+  107: "",
+  108: "",
+  109: "",
+  110: "",
+  111: "",
+  112: "",
+  113: "",
+  114: "",
+  115: "",
+  116: "",
+  117: "",
+  118: "",
+  119: "",
 };
 
 const episodesS5 = {
-  1: "https://link.eu1.storjshare.io/ju7nmctyftv6wdtmme5zsztswvpa/animes/one-piece/thriller-bark/38.mp4",
-  2: "https://link.eu1.storjshare.io/junxzqmncortpps2e5shczff43qq/animes/one-piece/thriller-bark/39.mp4",
-  3: "https://link.eu1.storjshare.io/jwpyxssu2wm66krydjxovkakrr6q/animes/one-piece/thriller-bark/40.mp4",
-  4: "https://link.eu1.storjshare.io/jw6utlcin6jks6orqiifpbqdu4sq/animes/one-piece/thriller-bark/41.mp4",
-  5: "https://link.eu1.storjshare.io/jwp4xh7pjtzut5qryguc6cpjfr4q/animes/one-piece/thriller-bark/42.mp4",
+  1: "",
+  2: "",
+  3: "",
+  4: "",
+  5: "",
+  6: "",
+  7: "",
+  8: "",
+  9: "",
+  10: "",
+  11: "",
+  12: "",
+  13: "",
+  14: "",
+  15: "",
+  16: "",
+  17: "",
+  18: "",
+  19: "",
+  20: "",
+  21: "",
+  22: "",
+  23: "",
+  24: "",
+  25: "",
+  26: "",
+  27: "",
+  28: "",
+  29: "",
+  30: "",
+  31: "",
+  32: "",
+  33: "",
+  34: "",
+  35: "",
+  36: "",
+  37: "",
+  38: "",
+  39: "",
+  40: "",
+  41: "",
+  42: "",
+  43: "",
+  44: "",
+  45: "",
+  46: "",
+  47: "",
+  48: "",
+  49: "",
+  50: "",
+  51: "",
+  52: "",
+  53: "",
+  54: "",
+  55: "",
+  56: "",
+  57: "",
+  58: "",
+  59: "",
 };
 
 const episodesS6 = {
-  1: "https://link.eu1.storjshare.io/jxgzu4og7qrihwyxbbax5we4fu5q/animes/one-piece/guerre-au-sommet/43.mp4",
-  2: "https://link.eu1.storjshare.io/juyeqcylvwqo7avf5a2a4l2snw2a/animes/one-piece/guerre-au-sommet/44.mp4",
-  3: "https://link.eu1.storjshare.io/jwvuqxtlekzvjhtotuqxctood4fa/animes/one-piece/guerre-au-sommet/45.mp4",
-  4: "https://link.eu1.storjshare.io/jvouff277r2yym64l3mfvvwaewza/animes/one-piece/guerre-au-sommet/46.mp4",
-  5: "https://link.eu1.storjshare.io/jukvripa577zo5xgce4ngqbogxxq/animes/one-piece/guerre-au-sommet/47.mp4",
-  6: "https://link.eu1.storjshare.io/jvqrdeljexee4y6htiqwc37lrb7a/animes/one-piece/guerre-au-sommet/48.mp4",
-  7: "https://link.eu1.storjshare.io/jx2bphw75uond55pmf56dlt2oifa/animes/one-piece/guerre-au-sommet/49.mp4",
-  8: "https://link.eu1.storjshare.io/jx765mkrrf7qrbrhsycjul432diq/animes/one-piece/guerre-au-sommet/50.mp4",
-  9: "https://link.eu1.storjshare.io/jvtojggmlgbsyvch7f43kwaopdjq/animes/one-piece/guerre-au-sommet/51.mp4",
-  10: "https://link.eu1.storjshare.io/jxrropig4omfgry3ei4mbvft2bnq/animes/one-piece/guerre-au-sommet/52.mp4",
-  11: "https://link.eu1.storjshare.io/juwu3r256ua6yfqp37qha6dwmlga/animes/one-piece/guerre-au-sommet/53.mp4",
-  12: "https://link.eu1.storjshare.io/jwy467yufjpfy5akua2hbbgv3dea/animes/one-piece/guerre-au-sommet/54.mp4",
-  13: "https://link.eu1.storjshare.io/juwdtianx6gt3nz64ygswhqxmhtq/animes/one-piece/guerre-au-sommet/55.mp4",
-  14: "https://link.eu1.storjshare.io/jwwpn7e5acqbietggbtwzt372icq/animes/one-piece/guerre-au-sommet/56.mp4",
-  15: "https://link.eu1.storjshare.io/jv4g52khyhz2uivh23vjoujiz4pq/animes/one-piece/guerre-au-sommet/57.mp4",
-  16: "https://link.eu1.storjshare.io/jvuolh5y74wvliojte7lbjs3hhpa/animes/one-piece/guerre-au-sommet/58.mp4",
-  17: "https://link.eu1.storjshare.io/jwaufsws3mfc36nbfav5fas5ghbq/animes/one-piece/guerre-au-sommet/59.mp4",
-  18: "https://link.eu1.storjshare.io/jwyrjcgss2yp6ufw5hv3mejhmija/animes/one-piece/guerre-au-sommet/60.mp4",
+  1: "",
+  2: "",
+  3: "",
+  4: "",
+  5: "",
+  6: "",
+  7: "",
+  8: "",
+  9: "",
+  10: "",
+  11: "",
+  12: "",
+  13: "",
+  14: "",
+  15: "",
+  16: "",
+  17: "",
+  18: "",
+  19: "",
+  20: "",
+  21: "",
+  22: "",
+  23: "",
+  24: "",
+  25: "",
+  26: "",
+  27: "",
+  28: "",
+  29: "",
+  30: "",
+  31: "",
+  32: "",
+  33: "",
+  34: "",
+  35: "",
+  36: "",
+  37: "",
+  38: "",
+  39: "",
+  40: "",
+  41: "",
+  42: "",
+  43: "",
+  44: "",
+  45: "",
+  46: "",
+  47: "",
+  48: "",
+  49: "",
+  50: "",
+  51: "",
+  52: "",
+  53: "",
+  54: "",
+  55: "",
+  56: "",
+  57: "",
+  58: "",
+  59: "",
+  60: "",
+  61: "",
+  62: "",
+  63: "",
+  64: "",
+  65: "",
+  66: "",
+  67: "",
+  68: "",
+  69: "",
+  70: "",
+  71: "",
+  72: "",
+  73: "",
+  74: "",
+  75: "",
+  76: "",
+  77: "",
+  78: "",
+  79: "",
+  80: "",
+  81: "",
+  82: "",
+  83: "",
+  84: "",
+  85: "",
+  86: "",
+  87: "",
+  88: "",
+  89: "",
+  90: "",
+  91: "",
+  92: "",
+  93: "",
+  94: "",
+  95: "",
+  96: "",
+  97: "",
+  98: "",
+  99: "",
+  100: "",
+  101: "",
+  102: "",
+  103: "",
+  104: "",
+  105: "",
+  106: "",
+  107: "",
+  108: "",
+  109: "",
+  110: "",
+  111: "",
+  112: "",
+  113: "",
+  114: "",
+  115: "",
+  116: "",
+  117: "",
+  118: "",
+  119: "",
+  120: "",
+  121: "",
+  122: "",
+  123: "",
+  124: "",
+  125: "",
+  126: "",
+  127: "",
+  128: "",
+  129: "",
+  130: "",
+  131: "",
+  132: "",
 };
 
 const episodesS7 = {
-  1: "https://link.eu1.storjshare.io/jvlzyoh34muuo55mpqvl3sb3tz6a/animes/one-piece/ile-des-hommes-poissons/61.mp4",
-  2: "https://link.eu1.storjshare.io/jwcvdinn3syrvb47up67j7c7qeiq/animes/one-piece/ile-des-hommes-poissons/62.mp4",
-  3: "https://link.eu1.storjshare.io/jvgdui6cqjlegpun76zsuf2d3taq/animes/one-piece/ile-des-hommes-poissons/63.mp4",
-  4: "https://link.eu1.storjshare.io/ju53vxpkvakj66tyskmqptb2mmjq/animes/one-piece/ile-des-hommes-poissons/64.mp4",
-  5: "https://link.eu1.storjshare.io/jwfxgfr2phr5gjxybzwym5engwiq/animes/one-piece/ile-des-hommes-poissons/65.mp4",
-  6: "https://link.eu1.storjshare.io/juqvn3tq3mkfk7bygr55hbxqkxea/animes/one-piece/ile-des-hommes-poissons/66.mp4",
-  7: "https://link.eu1.storjshare.io/jus34dv35mi32fi2r3y6aqjnxgja/animes/one-piece/ile-des-hommes-poissons/67.mp4",
-  8: "https://link.eu1.storjshare.io/jvcwaskgbksb6s57cce6uyiz7ywq/animes/one-piece/ile-des-hommes-poissons/68.mp4",
-  9: "https://link.eu1.storjshare.io/jxsrdlbkbjab22ubak3lqtspbeta/animes/one-piece/ile-des-hommes-poissons/69.mp4",
+  1: "",
+  2: "",
+  3: "",
+  4: "",
+  5: "",
+  6: "",
+  7: "",
+  8: "",
+  9: "",
+  10: "",
+  11: "",
+  12: "",
+  13: "",
+  14: "",
+  15: "",
+  16: "",
+  17: "",
+  18: "",
+  19: "",
+  20: "",
+  21: "",
+  22: "",
+  23: "",
+  24: "",
+  25: "",
+  26: "",
+  27: "",
+  28: "",
+  29: "",
+  30: "",
+  31: "",
+  32: "",
+  33: "",
+  34: "",
+  35: "",
+  36: "",
+  37: "",
+  38: "",
+  39: "",
+  40: "",
+  41: "",
+  42: "",
+  43: "",
+  44: "",
+  45: "",
+  46: "",
+  47: "",
+  48: "",
+  49: "",
+  50: "",
+  51: "",
+  52: "",
+  53: "",
+  54: "",
+  55: "",
+  56: "",
+  57: "",
+  58: "",
 };
 
 const episodesS8 = {
-  1: "https://link.eu1.storjshare.io/jwgerbvpaehnuobjffpl7blx6zca/animes/one-piece/dressrosa/70.mp4",
-  2: "https://link.eu1.storjshare.io/jvcojgcfguganxwteabbinjtrbxa/animes/one-piece/dressrosa/71.mp4",
-  3: "https://link.eu1.storjshare.io/jugdwdxroododubmyivhvqfp2l5a/animes/one-piece/dressrosa/72.mp4",
-  4: "https://link.eu1.storjshare.io/jxuqqvkwhppwnuc6lotaluxpwzwa/animes/one-piece/dressrosa/73.mp4",
-  5: "https://link.eu1.storjshare.io/jxv5udxo6kfc5tjr63hxnn7lghmq/animes/one-piece/dressrosa/74.mp4",
-  6: "https://link.eu1.storjshare.io/jvxys4qmwadgyyqqawxismabvl2a/animes/one-piece/dressrosa/75.mp4",
-  7: "https://link.eu1.storjshare.io/ju6fulozetqurxm4lx5qn5lw5lsq/animes/one-piece/dressrosa/76.mp4",
-  8: "https://link.eu1.storjshare.io/jv2k5dxn23u34colpvnt2n4h2xfq/animes/one-piece/dressrosa/77.mp4",
-  9: "https://link.eu1.storjshare.io/jw4maia7aqdziqzwlhbh7lerlh3a/animes/one-piece/dressrosa/78.mp4",
-  10: "https://link.eu1.storjshare.io/jwv2536lbguxt66yclorus46wt6a/animes/one-piece/dressrosa/79.mp4",
-  11: "https://link.eu1.storjshare.io/jxrmt6o6m3tagcp6aaiffu63vn6q/animes/one-piece/dressrosa/80.mp4",
-  12: "https://link.eu1.storjshare.io/jwmedqorhzet5ykepb3ugna7npha/animes/one-piece/dressrosa/81.mp4",
-  13: "https://link.eu1.storjshare.io/jwncxt5rlqj3s4pjtngy3h723ovq/animes/one-piece/dressrosa/82.mp4",
-  14: "https://link.eu1.storjshare.io/jurvj4ubyo7elupkh2lfqgefkzva/animes/one-piece/dressrosa/83.mp4",
-  15: "https://link.eu1.storjshare.io/jucvwme4v2ggmkiyxezt4ed4wcha/animes/one-piece/dressrosa/84.mp4",
-  16: "https://link.eu1.storjshare.io/jxtk5wje6eq2ww7xcijts7f5ko2a/animes/one-piece/dressrosa/85.mp4",
-  17: "https://link.eu1.storjshare.io/jx54qf2ollkuswijx4igzqamprcq/animes/one-piece/dressrosa/86.mp4",
-  18: "https://link.eu1.storjshare.io/jx2sedwt3yp6u7wmfavgsmazzoeq/animes/one-piece/dressrosa/87.mp4",
-  19: "https://link.eu1.storjshare.io/jxcuiafwfy4itqeupzinucsdb5tq/animes/one-piece/dressrosa/88.mp4",
-  20: "https://link.eu1.storjshare.io/jwvelco6vgawisekhsvapiismwhq/animes/one-piece/dressrosa/89.mp4",
-  21: "https://link.eu1.storjshare.io/jue6z6j7qvsnqp67rdat2ljkv6ga/animes/one-piece/dressrosa/90.mp4",
-  22: "https://link.eu1.storjshare.io/jwnijtbypqmsw7dpupdm266bjhaa/animes/one-piece/dressrosa/91.mp4",
-  23: "https://link.eu1.storjshare.io/jx4xwedd5m52c3ju2xitvfp6hyma/animes/one-piece/dressrosa/92.mp4",
-  24: "https://link.eu1.storjshare.io/juwjtmxidb7itdhxff5b22coxwda/animes/one-piece/dressrosa/93.mp4",
-  25: "https://link.eu1.storjshare.io/juqvwg7b2cni4f6nloeapgccex5a/animes/one-piece/dressrosa/94.mp4",
-  26: "https://link.eu1.storjshare.io/judyxquvncjsnkxwgotxflqtu3la/animes/one-piece/dressrosa/95.mp4",
-  27: "https://link.eu1.storjshare.io/jwmxch3dg6bk4fadyt5knaxtvbna/animes/one-piece/dressrosa/96.mp4",
-  28: "https://link.eu1.storjshare.io/jxmfrl7udowekwr4d2xjw2fpxumq/animes/one-piece/dressrosa/97.mp4",
+  1: "https://link.storjshare.io/jxr4ojpjd4bexlpjdith3hl3jfcq/voiranimes%2Fone-piece%2Falliance-pirate%2F575.mp4",
+  2: "https://link.storjshare.io/juoesj54p52ismh4qvkwp6tddbtq/voiranimes%2Fone-piece%2Falliance-pirate%2F576.mp4",
+  3: "https://link.storjshare.io/juul2wairaargy7t5of4yempapsa/voiranimes%2Fone-piece%2Falliance-pirate%2F577.mp4",
+  4: "https://link.storjshare.io/jvwpk7uvi7xgldlnm54dnt4zm6rq/voiranimes%2Fone-piece%2Falliance-pirate%2F578.mp4",
+  5: "https://link.storjshare.io/jukmtsnfssj7c653dqjcqvsojnxa/voiranimes%2Fone-piece%2Falliance-pirate%2F579.mp4",
+  6: "https://link.storjshare.io/jwku4xlhpyu2kvc6pmzw2g37dyba/voiranimes%2Fone-piece%2Falliance-pirate%2F580.mp4",
+  7: "https://link.storjshare.io/jwymumbyog32flm7g3avypplvbla/voiranimes%2Fone-piece%2Falliance-pirate%2F581.mp4",
+  8: "https://link.storjshare.io/jxvgitj46uhvverwwlolqqwj2uqa/voiranimes%2Fone-piece%2Falliance-pirate%2F582.mp4",
+  9: "https://link.storjshare.io/jx6g7pu3kx2eznje2o2s4afkp67q/voiranimes%2Fone-piece%2Falliance-pirate%2F583.mp4",
+  10: "https://link.storjshare.io/jxl6tfefzpksig5vuz6bceqceaea/voiranimes%2Fone-piece%2Falliance-pirate%2F584.mp4",
+  11: "https://link.storjshare.io/jv2fl3vd3hyal7bdbcv6iqcynqga/voiranimes%2Fone-piece%2Falliance-pirate%2F585.mp4",
+  12: "https://link.storjshare.io/jw55ctymecs5fhieajw23kdrobka/voiranimes%2Fone-piece%2Falliance-pirate%2F586.mp4",
+  13: "https://link.storjshare.io/just4g5xgbmro7bs4c52witywf7q/voiranimes%2Fone-piece%2Falliance-pirate%2F587.mp4",
+  14: "https://link.storjshare.io/jvfryzb74zmbv7bvs43xbrynrtfq/voiranimes%2Fone-piece%2Falliance-pirate%2F588.mp4",
+  15: "https://link.storjshare.io/juzrybb6f4ng6cb66iksreerhsia/voiranimes%2Fone-piece%2Falliance-pirate%2F589.mp4",
+  16: "https://link.storjshare.io/jw5uuzwu5lb2xal7ynmudu2ccdka/voiranimes%2Fone-piece%2Falliance-pirate%2F590.mp4",
+  17: "https://link.storjshare.io/jwuqd65oe2xzyhuqk7kax2ozvqaa/voiranimes%2Fone-piece%2Falliance-pirate%2F591.mp4",
+  18: "https://link.storjshare.io/jwmimg3naecvciok7t7eck7yw7ia/voiranimes%2Fone-piece%2Falliance-pirate%2F592.mp4",
+  19: "https://link.storjshare.io/jwkwz7fi656xqjfwuvpr3reaagkq/voiranimes%2Fone-piece%2Falliance-pirate%2F593.mp4",
+  20: "https://link.storjshare.io/jxeso3jontrasltz7zws2m5sewjq/voiranimes%2Fone-piece%2Falliance-pirate%2F594.mp4",
+  21: "https://link.storjshare.io/jxq3mp7yehqqvca27eheky6giu2q/voiranimes%2Fone-piece%2Falliance-pirate%2F595.mp4",
+  22: "https://link.storjshare.io/juln4h3g2shjux5f527czu37frda/voiranimes%2Fone-piece%2Falliance-pirate%2F596.mp4",
+  23: "https://link.storjshare.io/jxrbjirhtqai4fweed5y6zjj3m2a/voiranimes%2Fone-piece%2Falliance-pirate%2F597.mp4",
+  24: "https://link.storjshare.io/jwixj7qgc5iiau4nq47ovrta3oua/voiranimes%2Fone-piece%2Falliance-pirate%2F598.mp4",
+  25: "https://link.storjshare.io/jwqmifon3jxfv273aoc2rqy6v4ea/voiranimes%2Fone-piece%2Falliance-pirate%2F599.mp4",
+  26: "https://link.storjshare.io/jwz7zdcdru5gjttoj2yoczu7rpoq/voiranimes%2Fone-piece%2Falliance-pirate%2F600.mp4",
+  27: "https://link.storjshare.io/jwyemzjub7zu7vpz7mowsukgufsq/voiranimes%2Fone-piece%2Falliance-pirate%2F601.mp4",
+  28: "https://link.storjshare.io/jx5ortevljqnzppzhzkegaki7d3a/voiranimes%2Fone-piece%2Falliance-pirate%2F602.mp4",
+  29: "https://link.storjshare.io/jxao25e2k462c2c4jtf3bqnkakfa/voiranimes%2Fone-piece%2Falliance-pirate%2F603.mp4",
+  30: "https://link.storjshare.io/jx274cmb7dyrv26zfyscqqisjzpa/voiranimes%2Fone-piece%2Falliance-pirate%2F604.mp4",
+  31: "https://link.storjshare.io/juoakhofukhsjxkfrp4nadfybg2q/voiranimes%2Fone-piece%2Falliance-pirate%2F605.mp4",
+  32: "https://link.storjshare.io/jwcbr2srpt4vkelcc44pkyy4cpka/voiranimes%2Fone-piece%2Falliance-pirate%2F606.mp4",
+  33: "https://link.storjshare.io/jv7vim53bfx6md4q6m7sfvit4haa/voiranimes%2Fone-piece%2Falliance-pirate%2F607.mp4",
+  34: "https://link.storjshare.io/ju4rlctm7m55huraihkobffnkf5q/voiranimes%2Fone-piece%2Falliance-pirate%2F608.mp4",
+  35: "https://link.storjshare.io/jw4noqvku7xss64eba4e45ymi6oq/voiranimes%2Fone-piece%2Falliance-pirate%2F609.mp4",
+  36: "https://link.storjshare.io/jwumqfyx4omjf2pf2z3wgdsd52ga/voiranimes%2Fone-piece%2Falliance-pirate%2F610.mp4",
+  37: "https://link.storjshare.io/jw7rrmfipmk6cmdkgzjkcbvgepqa/voiranimes%2Fone-piece%2Falliance-pirate%2F611.mp4",
+  38: "https://link.storjshare.io/jufdmexijforn6ulh7ajtl74zw2q/voiranimes%2Fone-piece%2Falliance-pirate%2F612.mp4",
+  39: "https://link.storjshare.io/ju7moafuy4pkkkbatkk3btxov5dq/voiranimes%2Fone-piece%2Falliance-pirate%2F613.mp4",
+  40: "https://link.storjshare.io/jx23yhiglt35bfa2cjr2xvqwn3kq/voiranimes%2Fone-piece%2Falliance-pirate%2F614.mp4",
+  41: "https://link.storjshare.io/jutyfymr7jj5v7kkhg2f5rotepra/voiranimes%2Fone-piece%2Falliance-pirate%2F615.mp4",
+  42: "https://link.storjshare.io/jwzyccmaziiizp2oidqmrbu7am3a/voiranimes%2Fone-piece%2Falliance-pirate%2F616.mp4",
+  43: "https://link.storjshare.io/jxajsgfca2yiu63zafo43rrpeoya/voiranimes%2Fone-piece%2Falliance-pirate%2F617.mp4",
+  44: "https://link.storjshare.io/jx72c3pxd2gyhtzbxv4t3zcsckwa/voiranimes%2Fone-piece%2Falliance-pirate%2F618.mp4",
+  45: "https://link.storjshare.io/jumepioi4jrhulogjcc23mnu4ppa/voiranimes%2Fone-piece%2Falliance-pirate%2F619.mp4",
+  46: "https://link.storjshare.io/jxbw6zysmxy5cgqss5ce6afnw6za/voiranimes%2Fone-piece%2Falliance-pirate%2F620.mp4",
+  47: "https://link.storjshare.io/jw5cako5v2ohomrspdjhfhnjwhgq/voiranimes%2Fone-piece%2Falliance-pirate%2F621.mp4",
+  48: "https://link.storjshare.io/julxzebckg6snebs2yd4raf5afqq/voiranimes%2Fone-piece%2Falliance-pirate%2F622.mp4",
+  49: "https://link.storjshare.io/jwmmupd4cjdwe4p4vpr657j25cqq/voiranimes%2Fone-piece%2Falliance-pirate%2F623.mp4",
+  50: "https://link.storjshare.io/jwnwe6cf5wtc7czmyencf6e4pr3q/voiranimes%2Fone-piece%2Falliance-pirate%2F624.mp4",
+  51: "https://link.storjshare.io/jv5tgsjcgm4tpgaogn7u6euyisnq/voiranimes%2Fone-piece%2Falliance-pirate%2F625.mp4",
+  52: "https://link.storjshare.io/jweo2x3du6kaeqn6tusch6i5fdaa/voiranimes%2Fone-piece%2Falliance-pirate%2F626.mp4",
+  53: "https://link.storjshare.io/ju2bft6kxsccplf3ehtphf5jqdeq/voiranimes%2Fone-piece%2Falliance-pirate%2F627.mp4",
+  54: "https://link.storjshare.io/jwkorjx2yjtbwuutbpqbz54qa25q/voiranimes%2Fone-piece%2Falliance-pirate%2F628.mp4",
+  55: "https://link.storjshare.io/juxxkdytce47lz35bdu2sct4pvaa/voiranimes%2Fone-piece%2Falliance-pirate%2F629.mp4",
+  56: "https://link.storjshare.io/jv3bfhz24dlpb7c6xar7bb3tj2fa/voiranimes%2Fone-piece%2Falliance-pirate%2F630.mp4",
+  57: "https://link.storjshare.io/jx4wodpkcyuflrhhsj54jlrhhefa/voiranimes%2Fone-piece%2Falliance-pirate%2F631.mp4",
+  58: "https://link.storjshare.io/ju3wcomkq5aoo5khbbfwp3tgdzwq/voiranimes%2Fone-piece%2Falliance-pirate%2F632.mp4",
+  59: "https://link.storjshare.io/jv2hm3kiuu6jmiwqvaqpim24p6rq/voiranimes%2Fone-piece%2Falliance-pirate%2F633.mp4",
+  60: "https://link.storjshare.io/ju752nwo45o2a4ji6wt7do3bf3ha/voiranimes%2Fone-piece%2Falliance-pirate%2F634.mp4",
+  61: "https://link.storjshare.io/jvfjhggypth5sr4u5j5cuqg3szpq/voiranimes%2Fone-piece%2Falliance-pirate%2F635.mp4",
+  62: "https://link.storjshare.io/jvem5bckpx7ogep5g6vh6hywvxza/voiranimes%2Fone-piece%2Falliance-pirate%2F636.mp4",
+  63: "https://link.storjshare.io/jwxm4u5j56vs74jkryhfirhq4yia/voiranimes%2Fone-piece%2Falliance-pirate%2F637.mp4",
+  64: "https://link.storjshare.io/jw7h3p7j6i56uzmy6beydp2a4goq/voiranimes%2Fone-piece%2Falliance-pirate%2F638.mp4",
+  65: "https://link.storjshare.io/jutrgyyjcjc5skvusd3spee3sgga/voiranimes%2Fone-piece%2Falliance-pirate%2F639.mp4",
+  66: "https://link.storjshare.io/jx2clgbyxvdqtn6fghsrcyohrb5a/voiranimes%2Fone-piece%2Falliance-pirate%2F640.mp4",
+  67: "https://link.storjshare.io/juttujhi4vo7tqrckcqx42fnr7mq/voiranimes%2Fone-piece%2Falliance-pirate%2F641.mp4",
+  68: "https://link.storjshare.io/jwg7cegkgbt6f7gorvt5tzfbopka/voiranimes%2Fone-piece%2Falliance-pirate%2F642.mp4",
+  69: "https://link.storjshare.io/jxa5ckuodxisy4uancad2ayjwvja/voiranimes%2Fone-piece%2Falliance-pirate%2F643.mp4",
+  70: "https://link.storjshare.io/jurvkijt35qyzmzs6kmbmkz4cyca/voiranimes%2Fone-piece%2Falliance-pirate%2F644.mp4",
+  71: "https://link.storjshare.io/jwnqa4qnyx2fzntac4rnow3ppova/voiranimes%2Fone-piece%2Falliance-pirate%2F645.mp4",
+  72: "https://link.storjshare.io/juv2q57mzqxfcwofoefnc2cwg6nq/voiranimes%2Fone-piece%2Falliance-pirate%2F646.mp4",
+  73: "https://link.storjshare.io/jubolgytja7pusjzo3jpuz25mbma/voiranimes%2Fone-piece%2Falliance-pirate%2F647.mp4",
+  74: "https://link.storjshare.io/jwjgix6pwy556qhca6gafhgg5igq/voiranimes%2Fone-piece%2Falliance-pirate%2F648.mp4",
+  75: "https://link.storjshare.io/juakh5oy4ptez4hgwp6f2e3zjy7q/voiranimes%2Fone-piece%2Falliance-pirate%2F649.mp4",
+  76: "https://link.storjshare.io/jxwswcovuxkggae7u2x6tpgfxnva/voiranimes%2Fone-piece%2Falliance-pirate%2F650.mp4",
+  77: "https://link.storjshare.io/jxqvhxiqzru2s7lhdmbxkkdpu4vq/voiranimes%2Fone-piece%2Falliance-pirate%2F651.mp4",
+  78: "https://link.storjshare.io/jxftrsrn4lln7r6hk5pe4yehqlxq/voiranimes%2Fone-piece%2Falliance-pirate%2F652.mp4",
+  79: "https://link.storjshare.io/ju5tu6khxecgqzp32j5exr5ia47q/voiranimes%2Fone-piece%2Falliance-pirate%2F653.mp4",
+  80: "https://link.storjshare.io/juvcdkl4b573siqopkinzaxd47ma/voiranimes%2Fone-piece%2Falliance-pirate%2F654.mp4",
+  81: "https://link.storjshare.io/jxi3uhog34dutibwch2lrlzszcsa/voiranimes%2Fone-piece%2Falliance-pirate%2F655.mp4",
+  82: "https://link.storjshare.io/jwwkp27g4xhgnftcbuulzrk7zncq/voiranimes%2Fone-piece%2Falliance-pirate%2F656.mp4",
+  83: "https://link.storjshare.io/jvn375njihvnsq6oq4eorcofacoa/voiranimes%2Fone-piece%2Falliance-pirate%2F657.mp4",
+  84: "https://link.storjshare.io/jwz2ffqeoqat2pcswxmk5zhvm7ra/voiranimes%2Fone-piece%2Falliance-pirate%2F658.mp4",
+  85: "https://link.storjshare.io/jvoltvxiwgj4ruv6upsb4mq26waa/voiranimes%2Fone-piece%2Falliance-pirate%2F659.mp4",
+  86: "https://link.storjshare.io/jvikkqfpbz2fhn7vpqwvyt32t6ia/voiranimes%2Fone-piece%2Falliance-pirate%2F660.mp4",
+  87: "https://link.storjshare.io/juninobjklsfticz3ukq65n5toxq/voiranimes%2Fone-piece%2Falliance-pirate%2F661.mp4",
+  88: "https://link.storjshare.io/ju7ibk2tamwcw7yaybyjqaalb5eq/voiranimes%2Fone-piece%2Falliance-pirate%2F662.mp4",
+  89: "https://link.storjshare.io/jwxkfnttrn4uz4nnzs6kkpishkya/voiranimes%2Fone-piece%2Falliance-pirate%2F663.mp4",
+  90: "https://link.storjshare.io/julu2agstmlnkiqhnxwlgtcrdiba/voiranimes%2Fone-piece%2Falliance-pirate%2F664.mp4",
+  91: "https://link.storjshare.io/jx2pgm6vnkusarlaian464gjco7a/voiranimes%2Fone-piece%2Falliance-pirate%2F665.mp4",
+  92: "https://link.storjshare.io/jvkkkxzd3ah364rofqrg4nhotnaa/voiranimes%2Fone-piece%2Falliance-pirate%2F666.mp4",
+  93: "https://link.storjshare.io/jx3wsj4zukhf3wybllhf5mrlcita/voiranimes%2Fone-piece%2Falliance-pirate%2F667.mp4",
+  94: "https://link.storjshare.io/juhlymhzlid6w5n43iqi5uiedcua/voiranimes%2Fone-piece%2Falliance-pirate%2F668.mp4",
+  95: "https://link.storjshare.io/jxnqynwhjatun6hvux5ynfxtu6kq/voiranimes%2Fone-piece%2Falliance-pirate%2F669.mp4",
+  96: "https://link.storjshare.io/ju52bvwaobn4m72n7lebdzxoazfq/voiranimes%2Fone-piece%2Falliance-pirate%2F670.mp4",
+  97: "https://link.storjshare.io/jvwyz72zed2vu7h42cft6x7knzdq/voiranimes%2Fone-piece%2Falliance-pirate%2F671.mp4",
+  98: "https://link.storjshare.io/jv3wgnakelqpfrovg4px6xrtzx3q/voiranimes%2Fone-piece%2Falliance-pirate%2F672.mp4",
+  99: "https://link.storjshare.io/jxafprbg7pgumkjircgzwlnmcjta/voiranimes%2Fone-piece%2Falliance-pirate%2F673.mp4",
+  100: "https://link.storjshare.io/juxdttxwem2kaugl2g73qoz7lcca/voiranimes%2Fone-piece%2Falliance-pirate%2F674.mp4",
+  101: "https://link.storjshare.io/jx4wd4lx6wfy4ahnqkpgnn24t7eq/voiranimes%2Fone-piece%2Falliance-pirate%2F675.mp4",
+  102: "https://link.storjshare.io/jxse46skssb6drb63ksztqrtfh5a/voiranimes%2Fone-piece%2Falliance-pirate%2F676.mp4",
+  103: "https://link.storjshare.io/ju2qkfpa7awut34ekhra3us3sjqa/voiranimes%2Fone-piece%2Falliance-pirate%2F677.mp4",
+  104: "https://link.storjshare.io/jv4o5vw57g3whnkln5lsudefhxaa/voiranimes%2Fone-piece%2Falliance-pirate%2F678.mp4",
+  105: "https://link.storjshare.io/ju2knnzs5wciwwlgf72crlyodnqq/voiranimes%2Fone-piece%2Falliance-pirate%2F679.mp4",
+  106: "https://link.storjshare.io/jwskb3rlug6hehr7lvftpb7ycllq/voiranimes%2Fone-piece%2Falliance-pirate%2F680.mp4",
+  107: "https://link.storjshare.io/jxmjnlj4jxfgzjphpicmsfeovpfq/voiranimes%2Fone-piece%2Falliance-pirate%2F681.mp4",
+  108: "https://link.storjshare.io/juew2nosyte3wamqst3i67zv4zoa/voiranimes%2Fone-piece%2Falliance-pirate%2F682.mp4",
+  109: "https://link.storjshare.io/jvfszzqrjp5bxabj4ziw34aq5nua/voiranimes%2Fone-piece%2Falliance-pirate%2F683.mp4",
+  110: "https://link.storjshare.io/jvihcni7ivak53yk4zh6loyne3na/voiranimes%2Fone-piece%2Falliance-pirate%2F684.mp4",
+  111: "https://link.storjshare.io/ju6gtq2ynyuhsg32imympvg3yxka/voiranimes%2Fone-piece%2Falliance-pirate%2F685.mp4",
+  112: "https://link.storjshare.io/jxreammovnklpxqtc3y3u552ptga/voiranimes%2Fone-piece%2Falliance-pirate%2F686.mp4",
+  113: "https://link.storjshare.io/jvxbpn4oddpnxbd2h2xcb7uclrua/voiranimes%2Fone-piece%2Falliance-pirate%2F687.mp4",
+  114: "https://link.storjshare.io/jxos5cu3ehshkmegbndonraz3a5a/voiranimes%2Fone-piece%2Falliance-pirate%2F688.mp4",
+  115: "https://link.storjshare.io/jxum2obkdfklzpylswpa5tatetoq/voiranimes%2Fone-piece%2Falliance-pirate%2F689.mp4",
+  116: "https://link.storjshare.io/jvxhlv2lj3lddvdeticw5i4zmcea/voiranimes%2Fone-piece%2Falliance-pirate%2F690.mp4",
+  117: "https://link.storjshare.io/jx2apwvwzowbeulabf4r7yrqelva/voiranimes%2Fone-piece%2Falliance-pirate%2F691.mp4",
+  118: "https://link.storjshare.io/jxniuyzh2ckqq66jtpsikqek7zxa/voiranimes%2Fone-piece%2Falliance-pirate%2F692.mp4",
+  119: "https://link.storjshare.io/jxtm5moz3233q52hzur4vl5gesvq/voiranimes%2Fone-piece%2Falliance-pirate%2F693.mp4",
+  120: "https://link.storjshare.io/jwodeepjlczjnk5gq4uqioyzb67q/voiranimes%2Fone-piece%2Falliance-pirate%2F694.mp4",
+  121: "https://link.storjshare.io/jxsaqx37ghbcdthimdfm6lnn2bja/voiranimes%2Fone-piece%2Falliance-pirate%2F695.mp4",
+  122: "https://link.storjshare.io/jvwtpow5x6hlyhxcnyql4qcejtmq/voiranimes%2Fone-piece%2Falliance-pirate%2F696.mp4",
+  123: "https://link.storjshare.io/jv6bifqe27loxoxazkeelwveqo4a/voiranimes%2Fone-piece%2Falliance-pirate%2F697.mp4",
+  124: "https://link.storjshare.io/jvy3zlwf6gi6kisfovgrmbtmaq3q/voiranimes%2Fone-piece%2Falliance-pirate%2F698.mp4",
+  125: "https://link.storjshare.io/jwhgm7zpbumszobsmgu3lj2fzg3q/voiranimes%2Fone-piece%2Falliance-pirate%2F699.mp4",
+  126: "https://link.storjshare.io/jwt4n5nsnvzxpekmkmehgnbtwbka/voiranimes%2Fone-piece%2Falliance-pirate%2F700.mp4",
+  127: "",
+  128: "",
+  129: "",
+  130: "",
+  131: "",
+  132: "",
+  133: "",
+  134: "",
+  135: "",
+  136: "",
+  137: "",
+  138: "",
+  139: "",
+  140: "",
+  141: "",
+  142: "",
+  143: "",
+  144: "",
+  145: "",
+  146: "",
+  147: "",
+  148: "",
+  149: "",
+  150: "",
+  151: "",
+  152: "",
+  153: "",
+  154: "",
+  155: "",
+  156: "",
+  157: "",
+  158: "",
+  159: "",
+  160: "",
+  161: "",
+  162: "",
+  163: "",
+  164: "",
+  165: "",
+  166: "",
+  167: "",
+  168: "",
+  169: "",
+  170: "",
+  171: "",
+  172: "",
+  173: "",
+  174: "",
+  175: "",
+  176: "",
 };
 
 const episodesS9 = {
-  1: "https://link.eu1.storjshare.io/justpw3ddjpr4v67bjmiuj5rmlsa/animes/one-piece/quatre-empereurs/98.mp4",
-  2: "https://link.eu1.storjshare.io/jwxeout5mgw3637a3l2siolejo4q/animes/one-piece/quatre-empereurs/99.mp4",
-  3: "https://link.eu1.storjshare.io/jxupylihw2ti4pj4w755b4ij7gra/animes/one-piece/quatre-empereurs/100.mp4",
-  4: "https://link.eu1.storjshare.io/jxeb66fzxlirm5uqkcqhza3z5xbq/animes/one-piece/quatre-empereurs/101.mp4",
-  5: "https://link.eu1.storjshare.io/jv47gik2ewoqty4cb6ovnnikhpca/animes/one-piece/quatre-empereurs/102.mp4",
-  6: "https://link.eu1.storjshare.io/jvg7o4csafie6djvhgpra36f3wva/animes/one-piece/quatre-empereurs/103.mp4",
-  7: "https://link.eu1.storjshare.io/jxyrutgyjtversfwy5vx4drdsi6q/animes/one-piece/quatre-empereurs/104.mp4",
-  8: "https://link.eu1.storjshare.io/jw6iizyt2htnv7wn6wqu43x5hn3q/animes/one-piece/quatre-empereurs/105.mp4",
-  9: "https://link.eu1.storjshare.io/junqpqwzv5aevxxwspwmtp3kdjqa/animes/one-piece/quatre-empereurs/106.mp4",
-  10: "https://link.eu1.storjshare.io/jvdohzu5exx2zdgwwgb6fgmzmyaq/animes/one-piece/quatre-empereurs/107.mp4",
-  11: "https://link.eu1.storjshare.io/jwb2ukd7uiymbrk7okhq5zqc7ryq/animes/one-piece/quatre-empereurs/108.mp4",
-  12: "https://link.eu1.storjshare.io/jwpzlfxzkrgepjsrtwvqoeouturq/animes/one-piece/quatre-empereurs/109.mp4",
-  13: "https://link.eu1.storjshare.io/jxaaxbjxr6qhtng6jblngau36zwq/animes/one-piece/quatre-empereurs/110.mp4",
-  14: "https://link.eu1.storjshare.io/jvd5ql5bi2hickbbudthgokmpdyq/animes/one-piece/quatre-empereurs/111.mp4",
-  15: "https://link.eu1.storjshare.io/jupmevybvdsrwo6wc7rizz7hcwoa/animes/one-piece/quatre-empereurs/112.mp4",
-  16: "https://link.eu1.storjshare.io/jwgmpnq6tw2ibkwpp2wv56ynbjdq/animes/one-piece/quatre-empereurs/113.mp4",
-  17: "https://link.eu1.storjshare.io/jvcgwajzv7spgyxc5yugieaf25ia/animes/one-piece/quatre-empereurs/114.mp4",
-  18: "https://link.eu1.storjshare.io/jxdc4aaoti3fd7zg6r6xpbsmhvpq/animes/one-piece/quatre-empereurs/115.mp4",
-  19: "https://link.eu1.storjshare.io/jxbmru5brol4sgzmmgtl22zwpshq/animes/one-piece/quatre-empereurs/116.mp4",
-  20: "https://link.eu1.storjshare.io/julay42ecjj7sxvoeg7wcqdeuycq/animes/one-piece/quatre-empereurs/117.mp4",
-  21: "https://link.eu1.storjshare.io/jw2bttuoc4whf5qs4ezumsjiocza/animes/one-piece/quatre-empereurs/118.mp4",
-  22: "https://link.eu1.storjshare.io/jw34gbhbg6tfxd4x64az6uhrgejq/animes/one-piece/quatre-empereurs/119.mp4",
-  23: "https://link.eu1.storjshare.io/jxsuoq6s6zu23uumjcxarcqb6gpa/animes/one-piece/quatre-empereurs/120.mp4",
-  24: "https://link.eu1.storjshare.io/jvlgirl4vxwct64ru25c4kh77gka/animes/one-piece/quatre-empereurs/121.mp4",
-  25: "https://link.eu1.storjshare.io/jv5bgvo3exl3vlibijeabmimthwq/animes/one-piece/quatre-empereurs/122.mp4",
-  26: "https://link.eu1.storjshare.io/jure6juqlu4k2oflc7dvyk24x7ia/animes/one-piece/quatre-empereurs/123.mp4",
-  27: "https://link.eu1.storjshare.io/jwzdy7y4nz3u6yqz5kt4gcqwno2a/animes/one-piece/quatre-empereurs/124.mp4",
-  28: "https://link.eu1.storjshare.io/jxxkirbnzojpdpbwoojwc3rexgda/animes/one-piece/quatre-empereurs/125.mp4",
-  29: "https://link.eu1.storjshare.io/jwfk3wuqbp746awf77oct25yxuza/animes/one-piece/quatre-empereurs/126.mp4",
-  30: "https://link.eu1.storjshare.io/jw5rlqv3y3jmidgvg7hfvf4esiba/animes/one-piece/quatre-empereurs/127.mp4",
+  1: "https://link.storjshare.io/jwp5nblncj4xuhc2kkdihfqf3taq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F751.mp4",
+  2: "https://link.storjshare.io/jwvnbzm553ok6de2qspxwngf4cga/voiranimes%2Fone-piece%2Fquatre-empereurs%2F752.mp4",
+  3: "https://link.storjshare.io/jwkrmwy454xyr233kpudysqtjkua/voiranimes%2Fone-piece%2Fquatre-empereurs%2F753.mp4",
+  4: "https://link.storjshare.io/jxdwf5p3q4frkdo5637cz6wikmxa/voiranimes%2Fone-piece%2Fquatre-empereurs%2F754.mp4",
+  5: "https://link.storjshare.io/jwzefh44dipz3znxueiuikfnegqa/voiranimes%2Fone-piece%2Fquatre-empereurs%2F755.mp4",
+  6: "https://link.storjshare.io/jvrqvwsegrkmrt35ia5it2szr5pq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F756.mp4",
+  7: "https://link.storjshare.io/jwo5s5lxmtuo3wrjzw33jsilopra/voiranimes%2Fone-piece%2Fquatre-empereurs%2F757.mp4",
+  8: "https://link.storjshare.io/jvigyj3gjd4bz4dawtfisatx32ka/voiranimes%2Fone-piece%2Fquatre-empereurs%2F758.mp4",
+  9: "https://link.storjshare.io/jx74ys7nujy2ucfcm6qo73r44gma/voiranimes%2Fone-piece%2Fquatre-empereurs%2F759.mp4",
+  10: "https://link.storjshare.io/jvhs3x44x3knjoygiwysms3j7ria/voiranimes%2Fone-piece%2Fquatre-empereurs%2F760.mp4",
+  11: "https://link.storjshare.io/jwrhhh3iq22yaoxx736obe7xvtyq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F761.mp4",
+  12: "https://link.storjshare.io/jugj23phg3qhaiz2r5vgvqaihhpq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F762.mp4",
+  13: "https://link.storjshare.io/jugeinnl6mzlhgzskqkhmeycnkpq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F763.mp4",
+  14: "https://link.storjshare.io/jxnjrb24sjujozc2ghfdar2nzucq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F764.mp4",
+  15: "https://link.storjshare.io/jvhnqeahue7h7frgudjtplprakoa/voiranimes%2Fone-piece%2Fquatre-empereurs%2F765.mp4",
+  16: "https://link.storjshare.io/jxx5j3u3fowwiqwokvmtwwrkog5a/voiranimes%2Fone-piece%2Fquatre-empereurs%2F767.mp4",
+  17: "https://link.storjshare.io/jvranzeb2b4ildxbs2xxvy5fkljq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F768.mp4",
+  18: "https://link.storjshare.io/jw5jc5rtb55p5jy63f7arz3bpg3a/voiranimes%2Fone-piece%2Fquatre-empereurs%2F769.mp4",
+  19: "https://link.storjshare.io/jx4ddn35vzhtgm3qf6z4nqbasnva/voiranimes%2Fone-piece%2Fquatre-empereurs%2F770.mp4",
+  20: "https://link.storjshare.io/jur6zawknm7nhuqkf7ziumpwa6ba/voiranimes%2Fone-piece%2Fquatre-empereurs%2F771.mp4",
+  21: "https://link.storjshare.io/jwvad7cifexodchmjaavckdeb3ra/voiranimes%2Fone-piece%2Fquatre-empereurs%2F772.mp4",
+  22: "https://link.storjshare.io/jw2szvfi5zh2xx56hkimxvazs3za/voiranimes%2Fone-piece%2Fquatre-empereurs%2F773.mp4",
+  23: "https://link.storjshare.io/jv4khoeosq3jqvvptqmofchkzxjq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F774.mp4",
+  24: "https://link.storjshare.io/jx334ky2imp2nyeb6kkdeu27oh3q/voiranimes%2Fone-piece%2Fquatre-empereurs%2F775.mp4",
+  25: "https://link.storjshare.io/jvzmletolmr2fon62rypa7ckbbpa/voiranimes%2Fone-piece%2Fquatre-empereurs%2F776.mp4",
+  26: "https://link.storjshare.io/julnsaqxuccdi2pmnpe2oo62vi5a/voiranimes%2Fone-piece%2Fquatre-empereurs%2F777.mp4",
+  27: "https://link.storjshare.io/jvadc2wrb3wdtjx42uswrpxumwfq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F778.mp4",
+  28: "https://link.storjshare.io/jwa36kyezbbsgljvs7glvewiflga/voiranimes%2Fone-piece%2Fquatre-empereurs%2F779.mp4",
+  29: "https://link.storjshare.io/jvflx7nmb6icox6c4uwsl3ayct7q/voiranimes%2Fone-piece%2Fquatre-empereurs%2F780.mp4",
+  30: "https://link.storjshare.io/jxgivzw65je3mnfpcbdijc4ebraq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F781.mp4",
+  31: "https://link.storjshare.io/jwwnjezysrfs4tldyr2pnrf7wvyq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F782.mp4",
+  32: "https://link.storjshare.io/jw5crr3qhkrpmxi2i5wmxkqd6mea/voiranimes%2Fone-piece%2Fquatre-empereurs%2F783.mp4",
+  33: "https://link.storjshare.io/ju27jsqmljtpe6zmq7zcwi6arueq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F784.mp4",
+  34: "https://link.storjshare.io/jxwgtw7znvw4hn5qc5xpwuf2ct7a/voiranimes%2Fone-piece%2Fquatre-empereurs%2F785.mp4",
+  35: "https://link.storjshare.io/jwyc2zblfxzessigyzahjoouvreq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F786.mp4",
+  36: "https://link.storjshare.io/jxn6omjkkhb2dqogjiraasbvln5a/voiranimes%2Fone-piece%2Fquatre-empereurs%2F787.mp4",
+  37: "https://link.storjshare.io/jwwcte33citxh6e7pniy3bp7kt3a/voiranimes%2Fone-piece%2Fquatre-empereurs%2F788.mp4",
+  38: "https://link.storjshare.io/jx5qqvevrbqhbnvjim3rczvano5a/voiranimes%2Fone-piece%2Fquatre-empereurs%2F789.mp4",
+  39: "https://link.storjshare.io/jvzdg5um3ch543s6yghgwdvnodiq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F790.mp4",
+  40: "https://link.storjshare.io/jufctkmauhd7qoc36th3js7up5jq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F791.mp4",
+  41: "https://link.storjshare.io/jvxu54agagmop2wres2ywx7rwmkq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F792.mp4",
+  42: "https://link.storjshare.io/jv4fl6bwwljcljara5emkksn7jjq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F794.mp4",
+  43: "https://link.storjshare.io/juttg4obyxoevmcfqx2ocn5xq5qq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F795.mp4",
+  44: "https://link.storjshare.io/jvdfwtd6hyod7dwc63gq2yue3xca/voiranimes%2Fone-piece%2Fquatre-empereurs%2F796.mp4",
+  45: "https://link.storjshare.io/jv6jedzpcjs54vm3mcif6kujahhq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F797.mp4",
+  46: "https://link.storjshare.io/jw2fwfimcitw45f3zqvvklvp7p5a/voiranimes%2Fone-piece%2Fquatre-empereurs%2F798.mp4",
+  47: "https://link.storjshare.io/jx25mhtifuov5lvvmjhjyclvbpha/voiranimes%2Fone-piece%2Fquatre-empereurs%2F799.mp4",
+  48: "https://link.storjshare.io/jvz3v4ymbhp352ysqodoawsqbpuq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F800.mp4",
+  49: "https://link.storjshare.io/jugtbtbw2vvain6ixazurrwcmsda/voiranimes%2Fone-piece%2Fquatre-empereurs%2F801.mp4",
+  50: "https://link.storjshare.io/jxvve6uvzlx3zjxmxchvbvpyajlq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F802.mp4",
+  51: "https://link.storjshare.io/juffjananubho6kg37wprjregvsq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F803.mp4",
+  52: "https://link.storjshare.io/jvagbyewtile2na34q6qlyrrbdcq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F804.mp4",
+  53: "https://link.storjshare.io/jwpe62pfbg5ag4a7lubi7kxpnncq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F805.mp4",
+  54: "https://link.storjshare.io/juaakbizrvsclcwzal5aiuchjnaa/voiranimes%2Fone-piece%2Fquatre-empereurs%2F806.mp4",
+  55: "https://link.storjshare.io/jwdp5a7i4v4vizfpd6bilh35jfiq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F807.mp4",
+  56: "https://link.storjshare.io/jx37valtzewbzksusfgsp7weubfa/voiranimes%2Fone-piece%2Fquatre-empereurs%2F808.mp4",
+  57: "https://link.storjshare.io/jwvo6norjaqqjoy5ywr2ypctf5ha/voiranimes%2Fone-piece%2Fquatre-empereurs%2F809.mp4",
+  58: "https://link.storjshare.io/juudqzwv6djlmw7sudd2emn3jk2q/voiranimes%2Fone-piece%2Fquatre-empereurs%2F810.mp4",
+  59: "https://link.storjshare.io/jvmuwhlcd7w5tvek7zt5lcorwvvq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F811.mp4",
+  60: "https://link.storjshare.io/jxjkra6lax5hwjy4vu5mnsjqd3ra/voiranimes%2Fone-piece%2Fquatre-empereurs%2F812.mp4",
+  61: "https://link.storjshare.io/jwmcrjonpu3fgqapces2ixeselga/voiranimes%2Fone-piece%2Fquatre-empereurs%2F813.mp4",
+  62: "https://link.storjshare.io/jxzu6ptbqcy2tapjusb4p5qlpxxa/voiranimes%2Fone-piece%2Fquatre-empereurs%2F814.mp4",
+  63: "https://link.storjshare.io/jwf2tvzspkj2kd3vmsbylmvlibdq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F815.mp4",
+  64: "https://link.storjshare.io/jveed4jpxhmvnobtbmgj4ou6rayq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F816.mp4",
+  65: "https://link.storjshare.io/jxwxkrx77g4mv3oswho54z2mzioq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F817.mp4",
+  66: "https://link.storjshare.io/jugq62j3u4dprf66m6jatgbhfxaa/voiranimes%2Fone-piece%2Fquatre-empereurs%2F818.mp4",
+  67: "https://link.storjshare.io/jwehxqomlbubmao6r5m63cxhp4ba/voiranimes%2Fone-piece%2Fquatre-empereurs%2F819.mp4",
+  68: "https://link.storjshare.io/jwxdi4feablffvzms7ybu2macd3a/voiranimes%2Fone-piece%2Fquatre-empereurs%2F820.mp4",
+  69: "https://link.storjshare.io/jwt7xkojflrn7wlb7kakon3n2eoa/voiranimes%2Fone-piece%2Fquatre-empereurs%2F821.mp4",
+  70: "https://link.storjshare.io/jwv3q3l3vwl23jionw4cyipchlra/voiranimes%2Fone-piece%2Fquatre-empereurs%2F822.mp4",
+  71: "https://link.storjshare.io/jxsg7y75yp7bke4go4zkcyykzgbq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F823.mp4",
+  72: "https://link.storjshare.io/jv6p3bqotemsvvikdgqvmwpq7l7q/voiranimes%2Fone-piece%2Fquatre-empereurs%2F824.mp4",
+  73: "https://link.storjshare.io/jvmu4poyhzaa2thamzkhfadkarzq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F825.mp4",
+  74: "https://link.storjshare.io/jvgfah5ftuygknmyc5kmbp5pynua/voiranimes%2Fone-piece%2Fquatre-empereurs%2F826.mp4",
+  75: "https://link.storjshare.io/jxgwyov2jqix45up2dktnu46xqaa/voiranimes%2Fone-piece%2Fquatre-empereurs%2F827.mp4",
+  76: "https://link.storjshare.io/jwf4a4yb34zl6erq3iqsorruosvq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F828.mp4",
+  77: "https://link.storjshare.io/jx6xe75naqj73dxpm2kqb73irqbq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F829.mp4",
+  78: "https://link.storjshare.io/jvak2kjsws35riulxriq2szajmtq/voiranimes%2Fone-piece%2Fquatre-empereurs%2F830.mp4",
+  79: "https://link.storjshare.io/jua6i33hxncny7kirgzp7g4exdha/voiranimes%2Fone-piece%2Fquatre-empereurs%2F831.mp4",
+  80: "https://link.storjshare.io/jxeyd2syh3cjpeeeajlpf3x7ms4q/voiranimes%2Fone-piece%2Fquatre-empereurs%2F832.mp4",
+  81: "",
+  82: "",
+  83: "",
+  84: "",
+  85: "",
+  86: "",
+  87: "",
+  88: "",
+  89: "",
+  90: "",
+  91: "",
+  92: "",
+  93: "",
+  94: "",
+  95: "",
+  96: "",
+  97: "",
+  98: "",
+  99: "",
+  100: "",
+  101: "",
+  102: "",
+  103: "",
+  104: "",
+  105: "",
+  106: "",
+  107: "",
+  108: "",
+  109: "",
+  110: "",
+  111: "",
+  112: "",
+  113: "",
+  114: "",
+  115: "",
+  116: "",
+  117: "",
+  118: "",
+  119: "",
+  120: "",
+  121: "",
+  122: "",
+  123: "",
+  124: "",
+  125: "",
+  126: "",
+  127: "",
+  128: "",
+  129: "",
+  130: "",
+  131: "",
+  132: "",
+  133: "",
+  134: "",
+  135: "",
+  136: "",
+  137: "",
+  138: "",
+  139: "",
+  140: "",
+  141: "",
+  142: "",
+  143: "",
+  144: "",
+  145: "",
+  146: "",
+  147: "",
+  148: "",
+  149: "",
+  150: "",
+  151: "",
+  152: "",
+  153: "",
+  154: "",
+  155: "",
+  156: "",
+  157: "",
+  158: "",
+  159: "",
+  160: "",
+  161: "",
+  162: "",
+  163: "",
+  164: "",
+  165: "",
+  166: "",
+  167: "",
+  168: "",
+  169: "",
+  170: "",
+  171: "",
+  172: "",
+  173: "",
+  174: "",
+  175: "",
+  176: "",
+  177: "",
+  178: "",
+  179: "",
+  180: "",
+  181: "",
+  182: "",
+  183: "",
+  184: "",
 };
 
-const episodesS10 = {
-  1: "https://link.eu1.storjshare.io/jwu4znheegchelgmu3hztqgpkjoq/animes/one-piece/movies/1.mp4",
-  2: "https://link.eu1.storjshare.io/jvliwnj7njn4vlt4gpvxj2cwhwla/animes/one-piece/movies/2.mp4",
-  3: "https://link.eu1.storjshare.io/jxeucy4bhtn6drn5w327s4tw6weq/animes/one-piece/movies/3.mp4",
-  4: "https://link.eu1.storjshare.io/jva3l7tdsrmpapiprtz3csspjnvq/animes/one-piece/movies/4.mp4",
-  5: "https://link.eu1.storjshare.io/ju3jfqm4oio3cmbqhn3oiclm6tda/animes/one-piece/movies/5.mp4",
-  6: "https://link.eu1.storjshare.io/jxsjabhq7lungkkc7y22xzvh4uxq/animes/one-piece/movies/6.mp4",
-  7: "https://link.eu1.storjshare.io/ju7endylbxlzmkqgydcy4pvc75ga/animes/one-piece/movies/7.mp4",
-  8: "https://link.eu1.storjshare.io/jxgumbsjjwbwqokxk6nx4l7ldvdq/animes/one-piece/movies/8.mp4",
-  9: "https://link.eu1.storjshare.io/jxn6ird5emjrudk7fr7hsbhb6u5a/animes/one-piece/movies/9.mp4",
-  10: "https://link.eu1.storjshare.io/juvscwessor6cumsffuj7nqcmmha/animes/one-piece/movies/10.mp4",
-  11: "https://link.eu1.storjshare.io/jwgom4etdvrufoznv6ow5rrvg6vq/animes/one-piece/movies/11.mp4",
-  12: "https://link.eu1.storjshare.io/juxr65vihhecz2jyrbooeigqlfpa/animes/one-piece/movies/12.mp4",
-  13: "https://link.eu1.storjshare.io/jwxwbbxcwr6ufpe6erij3xqjznwa/animes/one-piece/movies/13.mp4",
-  14: "https://link.eu1.storjshare.io/jwkpf7eb7imffq3eqb3pvty7fjya/animes/one-piece/movies/14.mp4",
+const episodesMovies = {
+  1: "",
+  2: "",
+  3: "",
+  4: "",
+  5: "",
+  6: "",
+  7: "",
+  8: "",
+  9: "",
+  10: "",
+  11: "",
+  12: "",
+  13: "",
+  14: "",
+};
+
+const episodesEpSpe = {
+  1: "",
+  2: "",
+  3: "",
+  4: "",
+  5: "",
+  6: "",
+  7: "",
+  8: "",
+  9: "",
+  10: "",
+  11: "",
+  12: "",
+  13: "",
 };
 
 seasonLessSlash = season.slice(0, -1);
 
-if (seasonLessSlash === "east-blue") {
-  $(".epnumber")[0].innerHTML = "East Blue - Ep. " + pageNumber;
-  document.title = "East Blue - " + animeName + " - VoirAnimes";
+if (seasonLessSlash === "1-east-blue") {
+  $(".epnumber")[0].innerHTML = "East Blue (S1) - Ep. " + pageNumber;
+  document.title = "East Blue (S1) - " + animeName + " - VoirAnimes";
   $("video")[0].src = episodesS1[window["pageNumber"]] + "?wrap=0";
   if (pageNumber === "1") {
-    $("#previous-ep")[0].innerHTML = "<button class='locked'><ion-icon name='chevron-back-outline'></ion-icon> Saison Précédente</button>";
     $("#previous-ep")[0].href = "javascript:void(0)";
   }
 
-  if (pageNumber === "7") {
+  if (pageNumber === "61") {
     $("#next-ep")[0].innerHTML = "<button>Saison Suivante <ion-icon name='chevron-forward-outline'></ion-icon></button>";
     $("#next-ep")[0].href = "../2-alabasta/";
   }
 }
 
-if (seasonLessSlash === "alabasta") {
-  $(".epnumber")[0].innerHTML = "Alabasta - Ep. " + pageNumber;
-  document.title = "Alabasta - " + animeName + " - VoirAnimes";
+if (seasonLessSlash === "2-alabasta") {
+  $(".epnumber")[0].innerHTML = "Alabasta (S2) - Ep. " + pageNumber;
+  document.title = "Alabasta (S2) - " + animeName + " - VoirAnimes";
   $("video")[0].src = episodesS2[window["pageNumber"]] + "?wrap=0";
   if (pageNumber === "1") {
     $("#previous-ep")[0].innerHTML = "<button><ion-icon name='chevron-back-outline'></ion-icon> Saison Précédente</button>";
-    $("#previous-ep")[0].href = "../1-east-blue/7.html";
+    $("#previous-ep")[0].href = "../1-east-blue/61.html";
   }
 
-  if (pageNumber === "9") {
+  if (pageNumber === "74") {
     $("#next-ep")[0].innerHTML = "<button>Saison Suivante <ion-icon name='chevron-forward-outline'></ion-icon></button>";
-    $("#next-ep")[0].href = "../3-ile-celeste/";
+    $("#next-ep")[0].href = "../3-skypiea/";
   }
 }
 
-if (seasonLessSlash === "ile-celeste") {
-  $(".epnumber")[0].innerHTML = "Ile Celeste - Ep. " + pageNumber;
-  document.title = "Ile Celeste - " + animeName + " - VoirAnimes";
+if (seasonLessSlash === "3-skypiea") {
+  $(".epnumber")[0].innerHTML = "Skypiea (S3) - Ep. " + pageNumber;
+  document.title = "Skypiea (S3) - " + animeName + " - VoirAnimes";
   $("video")[0].src = episodesS3[window["pageNumber"]] + "?wrap=0";
   if (pageNumber === "1") {
     $("#previous-ep")[0].innerHTML = "<button><ion-icon name='chevron-back-outline'></ion-icon> Saison Précédente</button>";
-    $("#previous-ep")[0].href = "../2-alabasta/9.html";
+    $("#previous-ep")[0].href = "../2-alabasta/74.html";
   }
 
-  if (pageNumber === "6") {
+  if (pageNumber === "74") {
     $("#next-ep")[0].innerHTML = "<button>Saison Suivante <ion-icon name='chevron-forward-outline'></ion-icon></button>";
     $("#next-ep")[0].href = "../4-water-seven/";
   }
 }
 
-if (seasonLessSlash === "water-seven") {
-  $(".epnumber")[0].innerHTML = "Water Seven - Ep. " + pageNumber;
-  document.title = "Water Seven - " + animeName + " - VoirAnimes";
+if (seasonLessSlash === "4-water-seven") {
+  $(".epnumber")[0].innerHTML = "Water Seven (S4) - Ep. " + pageNumber;
+  document.title = "Water Seven (S4) - " + animeName + " - VoirAnimes";
   $("video")[0].src = episodesS4[window["pageNumber"]] + "?wrap=0";
   if (pageNumber === "1") {
     $("#previous-ep")[0].innerHTML = "<button><ion-icon name='chevron-back-outline'></ion-icon> Saison Précédente</button>";
-    $("#previous-ep")[0].href = "../3-ile-celeste/6.html";
+    $("#previous-ep")[0].href = "../3-skypiea/71.html";
   }
 
-  if (pageNumber === "15") {
+  if (pageNumber === "74") {
     $("#next-ep")[0].innerHTML = "<button>Saison Suivante <ion-icon name='chevron-forward-outline'></ion-icon></button>";
     $("#next-ep")[0].href = "../5-thriller-bark/";
   }
 }
 
-if (seasonLessSlash === "thriller-bark") {
-  $(".epnumber")[0].innerHTML = "Thriller Bark - Ep. " + pageNumber;
-  document.title = "Thriller Bark - " + animeName + " - VoirAnimes";
+if (seasonLessSlash === "5-thriller-bark") {
+  $(".epnumber")[0].innerHTML = "Thriller Bark (S5) - Ep. " + pageNumber;
+  document.title = "Thriller Bark (S5) - " + animeName + " - VoirAnimes";
   $("video")[0].src = episodesS5[window["pageNumber"]] + "?wrap=0";
   if (pageNumber === "1") {
     $("#previous-ep")[0].innerHTML = "<button><ion-icon name='chevron-back-outline'></ion-icon> Saison Précédente</button>";
-    $("#previous-ep")[0].href = "../4-water-seven/15.html";
+    $("#previous-ep")[0].href = "../4-water-seven/119.html";
   }
 
-  if (pageNumber === "5") {
+  if (pageNumber === "74") {
     $("#next-ep")[0].innerHTML = "<button>Saison Suivante <ion-icon name='chevron-forward-outline'></ion-icon></button>";
     $("#next-ep")[0].href = "../6-guerre-au-sommet/";
   }
 }
 
-if (seasonLessSlash === "guerre-au-sommet") {
-  $(".epnumber")[0].innerHTML = "Guerre au sommet - Ep. " + pageNumber;
-  document.title = "Guerre au sommet - " + animeName + " - VoirAnimes";
+if (seasonLessSlash === "6-guerre-au-sommet") {
+  $(".epnumber")[0].innerHTML = "Guerre au Sommet (S6) - Ep. " + pageNumber;
+  document.title = "Guerre au Sommet (S6) - " + animeName + " - VoirAnimes";
   $("video")[0].src = episodesS6[window["pageNumber"]] + "?wrap=0";
   if (pageNumber === "1") {
     $("#previous-ep")[0].innerHTML = "<button><ion-icon name='chevron-back-outline'></ion-icon> Saison Précédente</button>";
-    $("#previous-ep")[0].href = "../5-thriller-bark/5.html";
+    $("#previous-ep")[0].href = "../5-thriller-bark/59.html";
   }
 
-  if (pageNumber === "18") {
+  if (pageNumber === "74") {
     $("#next-ep")[0].innerHTML = "<button>Saison Suivante <ion-icon name='chevron-forward-outline'></ion-icon></button>";
     $("#next-ep")[0].href = "../7-ile-des-hommes-poissons/";
   }
 }
 
-if (seasonLessSlash === "ile-des-hommes-poissons") {
-  $(".epnumber")[0].innerHTML = "Ile des Hommes-Poissons - Ep. " + pageNumber;
-  document.title = "Ile des Hommes-Poissons - " + animeName + " - VoirAnimes";
+if (seasonLessSlash === "7-ile-des-hommes-poissons") {
+  $(".epnumber")[0].innerHTML = "Ile des Hommes-Poissons (S7) - Ep. " + pageNumber;
+  document.title = "Ile des Hommes-Poissons (S7) - " + animeName + " - VoirAnimes";
   $("video")[0].src = episodesS7[window["pageNumber"]] + "?wrap=0";
   if (pageNumber === "1") {
     $("#previous-ep")[0].innerHTML = "<button><ion-icon name='chevron-back-outline'></ion-icon> Saison Précédente</button>";
-    $("#previous-ep")[0].href = "../6-guerre-au-sommet/18.html";
+    $("#previous-ep")[0].href = "../6-guerre-au-sommet/132.html";
   }
 
-  if (pageNumber === "9") {
+  if (pageNumber === "74") {
     $("#next-ep")[0].innerHTML = "<button>Saison Suivante <ion-icon name='chevron-forward-outline'></ion-icon></button>";
-    $("#next-ep")[0].href = "../8-dressrosa/";
+    $("#next-ep")[0].href = "../8-alliance-pirate/";
   }
 }
 
-if (seasonLessSlash === "dressrosa") {
-  $(".epnumber")[0].innerHTML = "Dressrosa - Ep. " + pageNumber;
-  document.title = "Dressrosa - " + animeName + " - VoirAnimes";
+if (seasonLessSlash === "8-alliance-pirate") {
+  $(".epnumber")[0].innerHTML = "Alliance Pirate (S2) - Ep. " + pageNumber;
+  document.title = "Alliance Pirate (S8) - " + animeName + " - VoirAnimes";
   $("video")[0].src = episodesS8[window["pageNumber"]] + "?wrap=0";
   if (pageNumber === "1") {
     $("#previous-ep")[0].innerHTML = "<button><ion-icon name='chevron-back-outline'></ion-icon> Saison Précédente</button>";
-    $("#previous-ep")[0].href = "../7-ile-des-hommes-poissons/9.html";
+    $("#previous-ep")[0].href = "../7-ile-des-hommes-poissons/58.html";
   }
 
-  if (pageNumber === "28") {
+  if (pageNumber === "74") {
     $("#next-ep")[0].innerHTML = "<button>Saison Suivante <ion-icon name='chevron-forward-outline'></ion-icon></button>";
     $("#next-ep")[0].href = "../9-quatre-empereurs/";
   }
 }
 
-if (seasonLessSlash === "quatre-empereurs") {
-  $(".epnumber")[0].innerHTML = "Quatre Empereurs - Ep. " + pageNumber;
-  document.title = "Quatre Empereurs - " + animeName + " - VoirAnimes";
+if (seasonLessSlash === "9-quatre-empereurs") {
+  $(".epnumber")[0].innerHTML = "Quatre Empereurs (S9) - Ep. " + pageNumber;
+  document.title = "Quatre Empereurs (S9) - " + animeName + " - VoirAnimes";
   $("video")[0].src = episodesS9[window["pageNumber"]] + "?wrap=0";
   if (pageNumber === "1") {
     $("#previous-ep")[0].innerHTML = "<button><ion-icon name='chevron-back-outline'></ion-icon> Saison Précédente</button>";
-    $("#previous-ep")[0].href = "../8-dressrosa/28.html";
+    $("#previous-ep")[0].href = "../8-alliance-pirate/176.html";
   }
 
-  if (pageNumber === "30") {
+  if (pageNumber === "12") {
     $("#next-ep")[0].innerHTML = "<button class='locked'>Saison Suivante <ion-icon name='chevron-forward-outline'></ion-icon></button>";
     $("#next-ep")[0].href = "javascript:void(0)";
   }
 }
 
-if (season === "vies/") {
-  seasonForMovies = url.slice(28, length);
-  seasonForMoviesThen = seasonForMovies.slice(0, -1);
+if (seasonLessSlash === "episodes-speciaux") {
+  $(".epnumber")[0].innerHTML = "Episodes Speciaux - Ep. " + pageNumber;
+  document.title = "Episodes Speciaux - " + animeName + " - VoirAnimes";
+  $("video")[0].src = episodesEpSpe[window["pageNumber"]] + "?wrap=0";
+  if (pageNumber === "1") {
+    $("#previous-ep")[0].innerHTML = "<button><ion-icon name='chevron-back-outline'></ion-icon> Saison Précédente</button>";
+    $("#previous-ep")[0].href = "javascript:void(0)";
+  }
 
-  $("#fr-sub")[0].src = "../../assets/sub/" + seasonForMovies + pageNumber + "-fr.vtt";
+  if (pageNumber === "12") {
+    $("#next-ep")[0].innerHTML = "<button class='locked'>Saison Suivante <ion-icon name='chevron-forward-outline'></ion-icon></button>";
+    $("#next-ep")[0].href = "javascript:void(0)";
+  }
+}
 
-  if (seasonForMoviesThen === "movies") {
-    $(".epnumber")[0].innerHTML = "Films - Ep. " + pageNumber;
-    document.title = "Films - " + animeName + " - VoirAnimes";
-    $("video")[0].src = episodesS10[window["pageNumber"]] + "?wrap=0";
-    if (pageNumber === "1") {
-      $("#previous-ep")[0].innerHTML = "<button class='locked'><ion-icon name='chevron-back-outline'></ion-icon> Saison Précédente</button>";
-      $("#previous-ep")[0].href = "javascript:void(0)";
-    }
+if (seasonLessSlash === "movies") {
+  $(".epnumber")[0].innerHTML = "Films - Ep. " + pageNumber;
+  document.title = "Films - " + animeName + " - VoirAnimes";
+  $("video")[0].src = episodesMovies[window["pageNumber"]] + "?wrap=0";
+  if (pageNumber === "1") {
+    $("#previous-ep")[0].innerHTML = "<button><ion-icon name='chevron-back-outline'></ion-icon> Saison Précédente</button>";
+    $("#previous-ep")[0].href = "javascript:void(0)";
+  }
 
-    if (pageNumber === "14") {
-      $("#next-ep")[0].innerHTML = "<button class='locked'>Saison Suivante <ion-icon name='chevron-forward-outline'></ion-icon></button>";
-      $("#next-ep")[0].href = "javascript:void(0)";
-    }
+  if (pageNumber === "12") {
+    $("#next-ep")[0].innerHTML = "<button class='locked'>Saison Suivante <ion-icon name='chevron-forward-outline'></ion-icon></button>";
+    $("#next-ep")[0].href = "javascript:void(0)";
   }
 }

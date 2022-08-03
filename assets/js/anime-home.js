@@ -90,6 +90,10 @@ if (window.location.pathname === "/VoirAnimes/one-piece/") {
   $(".lastSessionSeek")[0].setAttribute("href", localStorage.getItem("PathWatchOP"));
 }
 
+if (window.location.pathname === "/VoirAnimes/one-piece-kai/") {
+  $(".lastSessionSeek")[0].setAttribute("href", localStorage.getItem("PathWatchOPK"));
+}
+
 if (window.location.pathname === "/VoirAnimes/shingeki-no-kyojin/") {
   $(".lastSessionSeek")[0].setAttribute("href", localStorage.getItem("PathWatchSNK"));
 }
