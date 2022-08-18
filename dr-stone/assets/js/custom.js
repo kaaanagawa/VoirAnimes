@@ -65,6 +65,10 @@ const episodesS2 = {
   11: "https://link.eu1.storjshare.io/juhxmrjncjigiaotp33sx3h6qmvq/animes/dr-stone/stone-wars/11.mp4",
 };
 
+const episodesS3 = {
+  1: "https://link.storjshare.io/jx5lkdb65kgihxy7x7dg7aghygzq/animes%2Fdr-stone%2Foav%2F1.mp4",
+};
+
 seasonLessSlash = season.slice(0, -1);
 
 if (seasonLessSlash === "stone-world") {
@@ -83,7 +87,7 @@ if (seasonLessSlash === "stone-world") {
 
 if (seasonLessSlash === "stone-wars") {
   $(".epnumber")[0].innerHTML = "Stone Wars - Ep. " + pageNumber;
-  document.title = "Stone World - " + animeName + " - VoirAnimes";
+  document.title = "Stone Wars - " + animeName + " - VoirAnimes";
   $("video")[0].src = episodesS2[window["pageNumber"]] + "?wrap=0";
   if (pageNumber === "1") {
     $("#previous-ep")[0].innerHTML = "<button><ion-icon name='chevron-back-outline'></ion-icon> Saison Précédente</button>";
@@ -92,6 +96,21 @@ if (seasonLessSlash === "stone-wars") {
 
   if (pageNumber === "48") {
     $("#next-ep")[0].innerHTML = "<button>Saison Suivante <ion-icon name='chevron-forward-outline'></ion-icon></button>";
+    $("#next-ep")[0].href = "../ryuusui/1.html";
+  }
+}
+
+if (seasonLessSlash === "ryuusui") {
+  $(".epnumber")[0].innerHTML = "Ryuusui - Ep. " + pageNumber;
+  document.title = "Ryuusui - " + animeName + " - VoirAnimes";
+  $("video")[0].src = episodesS3[window["pageNumber"]] + "?wrap=0";
+  if (pageNumber === "1") {
+    $("#previous-ep")[0].innerHTML = "<button><ion-icon name='chevron-back-outline'></ion-icon> Saison Précédente</button>";
+    $("#previous-ep")[0].href = "../stone-wars/11.html";
+  }
+
+  if (pageNumber === "48") {
+    $("#next-ep")[0].innerHTML = "<button class='locked'>Saison Suivante <ion-icon name='chevron-forward-outline'></ion-icon></button>";
     $("#next-ep")[0].href = "javascript:void(0)";
   }
 }

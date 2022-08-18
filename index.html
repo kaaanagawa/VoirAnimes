@@ -1,340 +1,337 @@
 <!DOCTYPE html>
 <html translate="no" lang="fr">
+  <head>
+    <!-- HTML Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>VoirAnimes - Accueil</title>
+    <meta name="description" content="VoirAnimes" />
+    <link rel="shortcut icon" href="/VoirAnimes/assets/images/favicon.webp" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/VoirAnimes/assets/images/favicon.webp" />
+    <meta name="theme-color" content="#121212" />
+    <link rel="manifest" href="manifest.json" />
 
-<head>
-  <!-- HTML Meta Tags -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>VoirAnimes - Accueil</title>
-  <meta name="description" content="VoirAnimes" />
-  <link rel="shortcut icon" href="/VoirAnimes/assets/images/favicon.webp" type="image/x-icon" />
-  <link rel="apple-touch-icon" href="/VoirAnimes/assets/images/favicon.webp" />
-  <meta name="theme-color" content="#121212" />
-  <link rel="manifest" href="manifest.json" />
+    <!-- Register the service worker -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("assets/js/service-worker.js");
+        });
+      }
+    </script>
 
-  <!-- Register the service worker -->
-  <script>
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker.register("assets/js/service-worker.js");
-      });
-    }
-  </script>
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="VoirAnimes" />
+    <meta itemprop="description" content="VoirAnimes" />
+    <meta itemprop="image" content="/VoirAnimes/assets/images/image.webp" />
 
-  <!-- Google / Search Engine Tags -->
-  <meta itemprop="name" content="VoirAnimes" />
-  <meta itemprop="description" content="VoirAnimes" />
-  <meta itemprop="image" content="/VoirAnimes/assets/images/image.webp" />
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://voiranimes.xyz" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="VoirAnimes" />
+    <meta property="og:description" content="VoirAnimes" />
+    <meta property="og:image" content="/VoirAnimes/assets/images/image.webp" />
 
-  <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="https://voiranimes.xyz" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="VoirAnimes" />
-  <meta property="og:description" content="VoirAnimes" />
-  <meta property="og:image" content="/VoirAnimes/assets/images/image.webp" />
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="VoirAnimes" />
+    <meta name="twitter:description" content="VoirAnimes" />
+    <meta name="twitter:image" content="/VoirAnimes/assets/images/image.webp" />
 
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="VoirAnimes" />
-  <meta name="twitter:description" content="VoirAnimes" />
-  <meta name="twitter:image" content="/VoirAnimes/assets/images/image.webp" />
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/VoirAnimes/assets/css/dark.css" id="darkmodestylesheet" />
+    <link rel="stylesheet" type="text/css" href="/VoirAnimes/assets/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/VoirAnimes/assets/css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="/VoirAnimes/assets/css/right-click.css" />
+    <link rel="stylesheet" type="text/css" href="/VoirAnimes/assets/css/scrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="/VoirAnimes/assets/css/searchbar.css" />
+    <link rel="stylesheet" type="text/css" href="/VoirAnimes/assets/css/wayyx-video.css" />
+    <link rel="stylesheet" type="text/css" href="/VoirAnimes/assets/css/custom.css" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="/VoirAnimes/assets/css/dark.css" id="darkmodestylesheet" />
-  <link rel="stylesheet" type="text/css" href="/VoirAnimes/assets/css/styles.css" />
-  <link rel="stylesheet" type="text/css" href="/VoirAnimes/assets/css/menu.css" />
-  <link rel="stylesheet" type="text/css" href="/VoirAnimes/assets/css/right-click.css" />
-  <link rel="stylesheet" type="text/css" href="/VoirAnimes/assets/css/scrollbar.css" />
-  <link rel="stylesheet" type="text/css" href="/VoirAnimes/assets/css/searchbar.css" />
-  <link rel="stylesheet" type="text/css" href="/VoirAnimes/assets/css/wayyx-video.css" />
-  <link rel="stylesheet" type="text/css" href="/VoirAnimes/assets/css/custom.css" />
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="/VoirAnimes/assets/js/common.js"></script>
+    <script defer src="/VoirAnimes/assets/js/darkmode.js"></script>
+    <script defer src="/VoirAnimes/assets/js/menu.js"></script>
+    <script defer src="/VoirAnimes/assets/js/searchbar.js"></script>
+    <script defer src="/VoirAnimes/assets/js/rightclick.js"></script>
+    <script defer src="/VoirAnimes/assets/js/custom.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-  <!-- JS -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script defer src="/VoirAnimes/assets/js/common.js"></script>
-  <script defer src="/VoirAnimes/assets/js/darkmode.js"></script>
-  <script defer src="/VoirAnimes/assets/js/menu.js"></script>
-  <script defer src="/VoirAnimes/assets/js/searchbar.js"></script>
-  <script defer src="/VoirAnimes/assets/js/rightclick.js"></script>
-  <script defer src="/VoirAnimes/assets/js/custom.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Custom Video Player -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+    <script defer src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+  </head>
 
-  <!-- Custom Video Player -->
-  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
-  <script defer src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
-</head>
+  <body>
+    <!-- Context Menu -->
+    <div class="context-menu"></div>
 
-<body>
-  <!-- Context Menu -->
-  <div class="context-menu"></div>
+    <!-- Left Menu -->
+    <div id="leftmenu-container">
+      <div id="leftmenu"></div>
+      <div id="leftmenu-empty"></div>
+    </div>
 
-  <!-- Left Menu -->
-  <div id="leftmenu-container">
-    <div id="leftmenu"></div>
-    <div id="leftmenu-empty"></div>
-  </div>
-
-  <!-- Pop Up -->
-  <div id="pop-up-container">
-    <div id="pop-up">
-      <h1>Nouveau !<ion-icon name="close-outline" id="pop-up-button"></ion-icon>
-      </h1>
-      <div id="pop-up-new">
-        <p>La barre de recherche fonctionne a nouveau.</p>
-        <p>Black Clover a ete ajoute au catalogue.</p>
-        <a href="/VoirAnimes/black-clover/"><button>Voir</button></a>
+    <!-- Pop Up -->
+    <div id="pop-up-container">
+      <div id="pop-up">
+        <h1>Nouveau !<ion-icon name="close-outline" id="pop-up-button"></ion-icon></h1>
+        <div id="pop-up-new">
+          <p>La barre de recherche fonctionne a nouveau.</p>
+          <p>Black Clover a ete ajoute au catalogue.</p>
+          <a href="/VoirAnimes/black-clover/"><button>Voir</button></a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Searchbar List -->
-  <ol id="anime-list"></ol>
+    <!-- Searchbar List -->
+    <ol id="anime-list"></ol>
 
-  <!-- Settings -->
-  <div id="settings-container">
-    <p>Le sexe c'est bien</p>
-  </div>
+    <!-- Settings -->
+    <div id="settings-container">
+      <p>Le sexe c'est bien</p>
+    </div>
 
-  <!-- Apps -->
-  <div id="apps-container"></div>
+    <!-- Apps -->
+    <div id="apps-container"></div>
 
-  <!-- Navbar -->
-  <header></header>
+    <!-- Navbar -->
+    <header></header>
 
-  <div class="others">
-    <div class="otherscontainer"></div>
-  </div>
-  <div class="container">
-    <a href="/VoirAnimes/ao-no-exorcist/">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="assets/images/cover/ao-no-exorcist.webp">
-        <div class="card-info">
-          <p class="cardtitle">Ao No Exorcist<span class="watch"></span></p>
-          <p class="type">Shōnen</p>
+    <div class="others">
+      <div class="otherscontainer"></div>
+    </div>
+    <div class="container">
+      <a href="/VoirAnimes/ao-no-exorcist/">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="assets/images/cover/ao-no-exorcist.webp" />
+          <div class="card-info">
+            <p class="cardtitle">Ao No Exorcist<span class="watch"></span></p>
+            <p class="type">Shōnen</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="/VoirAnimes/assassination-classroom/">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="assets/images/cover/assassination-classroom.webp">
-        <div class="card-info">
-          <p class="cardtitle">Assassination Classroom<span class="watch"></span></p>
-          <p class="type">Shōnen</p>
+      </a>
+      <a href="/VoirAnimes/assassination-classroom/">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="assets/images/cover/assassination-classroom.webp" />
+          <div class="card-info">
+            <p class="cardtitle">Assassination Classroom<span class="watch"></span></p>
+            <p class="type">Shōnen</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="/VoirAnimes/berserk/">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="assets/images/cover/berserk.webp">
-        <div class="card-info">
-          <p class="cardtitle">Berserk<span class="watch"></span></p>
-          <p class="type">Seinen</p>
+      </a>
+      <a href="/VoirAnimes/berserk/">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="assets/images/cover/berserk.webp" />
+          <div class="card-info">
+            <p class="cardtitle">Berserk<span class="watch"></span></p>
+            <p class="type">Seinen</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="/VoirAnimes/black-clover/">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="assets/images/cover/black-clover.webp">
-        <div class="card-info">
-          <p class="cardtitle">Black Clover<span class="watch"></span></p>
-          <p class="type">Shōnen</p>
+      </a>
+      <a href="/VoirAnimes/black-clover/">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="assets/images/cover/black-clover.webp" />
+          <div class="card-info">
+            <p class="cardtitle">Black Clover<span class="watch"></span></p>
+            <p class="type">Shōnen</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="/VoirAnimes/blend-s/">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="assets/images/cover/blend-s.webp">
-        <div class="card-info">
-          <p class="cardtitle">Blend S<span class="watch"></span></p>
-          <p class="type">Seinen</p>
+      </a>
+      <a href="/VoirAnimes/blend-s/">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="assets/images/cover/blend-s.webp" />
+          <div class="card-info">
+            <p class="cardtitle">Blend S<span class="watch"></span></p>
+            <p class="type">Seinen</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="/VoirAnimes/demon-slayer/">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="assets/images/cover/demon-slayer.webp">
-        <div class="card-info">
-          <p class="cardtitle">Demon Slayer<span class="watch"></span></p>
-          <p class="type">Shōnen</p>
+      </a>
+      <a href="/VoirAnimes/demon-slayer/">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="assets/images/cover/demon-slayer.webp" />
+          <div class="card-info">
+            <p class="cardtitle">Demon Slayer<span class="watch"></span></p>
+            <p class="type">Shōnen</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="/VoirAnimes/dr-stone/">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="assets/images/cover/dr-stone.webp">
-        <div class="card-info">
-          <p class="cardtitle">Dr. Stone<span class="watch"></span></p>
-          <p class="type">Shōnen</p>
+      </a>
+      <a href="/VoirAnimes/dr-stone/">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="assets/images/cover/dr-stone.webp" />
+          <div class="card-info">
+            <p class="cardtitle">Dr. Stone<span class="watch"></span></p>
+            <p class="type">Shōnen</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="/VoirAnimes/fire-force/">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="assets/images/cover/fire-force.webp">
-        <div class="card-info">
-          <p class="cardtitle">Fire Force<span class="watch"></span></p>
-          <p class="type">Shōnen</p>
+      </a>
+      <a href="/VoirAnimes/fire-force/">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="assets/images/cover/fire-force.webp" />
+          <div class="card-info">
+            <p class="cardtitle">Fire Force<span class="watch"></span></p>
+            <p class="type">Shōnen</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="/VoirAnimes/great-teacher-onizuka/">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="assets/images/cover/great-teacher-onizuka.webp">
-        <div class="card-info">
-          <p class="cardtitle">Great Teacher Onizuka<span class="watch"></span></p>
-          <p class="type">Shōnen</p>
+      </a>
+      <a href="/VoirAnimes/great-teacher-onizuka/">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="assets/images/cover/great-teacher-onizuka.webp" />
+          <div class="card-info">
+            <p class="cardtitle">Great Teacher Onizuka<span class="watch"></span></p>
+            <p class="type">Shōnen</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="/VoirAnimes/haikyu/">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="assets/images/cover/haikyu.webp">
-        <div class="card-info">
-          <p class="cardtitle">Haikyu!!<span class="watch"></span></p>
-          <p class="type">Shōnen</p>
+      </a>
+      <a href="/VoirAnimes/haikyu/">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="assets/images/cover/haikyu.webp" />
+          <div class="card-info">
+            <p class="cardtitle">Haikyu!!<span class="watch"></span></p>
+            <p class="type">Shōnen</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="/VoirAnimes/horimiya/">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="assets/images/cover/horimiya.webp">
-        <div class="card-info">
-          <p class="cardtitle">Horimiya<span class="watch"></span></p>
-          <p class="type">Shōjo</p>
+      </a>
+      <a href="/VoirAnimes/horimiya/">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="assets/images/cover/horimiya.webp" />
+          <div class="card-info">
+            <p class="cardtitle">Horimiya<span class="watch"></span></p>
+            <p class="type">Shōjo</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="/VoirAnimes/hunter-x-hunter/">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="assets/images/cover/hunter-x-hunter.webp">
-        <div class="card-info">
-          <p class="cardtitle">Hunter × Hunter<span class="watch"></span></p>
-          <p class="type">Shōnen</p>
+      </a>
+      <a href="/VoirAnimes/hunter-x-hunter/">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="assets/images/cover/hunter-x-hunter.webp" />
+          <div class="card-info">
+            <p class="cardtitle">Hunter × Hunter<span class="watch"></span></p>
+            <p class="type">Shōnen</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="/VoirAnimes/initial-d/">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="assets/images/cover/initial-d.webp">
-        <div class="card-info">
-          <p class="cardtitle">Initial D<span class="watch"></span></p>
-          <p class="type">Seinen</p>
+      </a>
+      <a href="/VoirAnimes/initial-d/">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="assets/images/cover/initial-d.webp" />
+          <div class="card-info">
+            <p class="cardtitle">Initial D<span class="watch"></span></p>
+            <p class="type">Seinen</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="/VoirAnimes/jujutsu-kaisen/">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="assets/images/cover/jujutsu-kaisen.webp">
-        <div class="card-info">
-          <p class="cardtitle">Jujutsu Kaisen<span class="watch"></span></p>
-          <p class="type">Shōnen</p>
+      </a>
+      <a href="/VoirAnimes/jujutsu-kaisen/">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="assets/images/cover/jujutsu-kaisen.webp" />
+          <div class="card-info">
+            <p class="cardtitle">Jujutsu Kaisen<span class="watch"></span></p>
+            <p class="type">Shōnen</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="/VoirAnimes/jojos-bizarre-adventure/">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="assets/images/cover/jojos-bizarre-adventure.webp">
-        <div class="card-info">
-          <p class="cardtitle">Jojo's Bizarre Adventure<span class="watch"></span></p>
-          <p class="type">Seinen</p>
+      </a>
+      <a href="/VoirAnimes/jojos-bizarre-adventure/">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="assets/images/cover/jojos-bizarre-adventure.webp" />
+          <div class="card-info">
+            <p class="cardtitle">Jojo's Bizarre Adventure<span class="watch"></span></p>
+            <p class="type">Seinen</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="/VoirAnimes/my-dress-up-darling/">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="assets/images/cover/my-dress-up-darling.webp">
-        <div class="card-info">
-          <p class="cardtitle">My Dress-Up Darling<span class="watch"></span></p>
-          <p class="type">Shōjo</p>
+      </a>
+      <a href="/VoirAnimes/my-dress-up-darling/">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="assets/images/cover/my-dress-up-darling.webp" />
+          <div class="card-info">
+            <p class="cardtitle">My Dress-Up Darling<span class="watch"></span></p>
+            <p class="type">Shōjo</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="/VoirAnimes/my-hero-academia/">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="assets/images/cover/my-hero-academia.webp">
-        <div class="card-info">
-          <p class="cardtitle">My Hero Academia<span class="watch"></span></p>
-          <p class="type">Shōnen</p>
+      </a>
+      <a href="/VoirAnimes/my-hero-academia/">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="assets/images/cover/my-hero-academia.webp" />
+          <div class="card-info">
+            <p class="cardtitle">My Hero Academia<span class="watch"></span></p>
+            <p class="type">Shōnen</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="/VoirAnimes/naruto/">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="assets/images/cover/naruto.webp">
-        <div class="card-info">
-          <p class="cardtitle">Naruto<span class="watch"></span></p>
-          <p class="type">Shōnen</p>
+      </a>
+      <a href="/VoirAnimes/naruto/">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="assets/images/cover/naruto.webp" />
+          <div class="card-info">
+            <p class="cardtitle">Naruto<span class="watch"></span></p>
+            <p class="type">Shōnen</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="/VoirAnimes/neon-genesis-evangelion/">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="assets/images/cover/neon-genesis-evangelion.webp">
-        <div class="card-info">
-          <p class="cardtitle">Neon Genesis Evangelion<span class="watch"></span></p>
-          <p class="type">Shōnen</p>
+      </a>
+      <a href="/VoirAnimes/neon-genesis-evangelion/">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="assets/images/cover/neon-genesis-evangelion.webp" />
+          <div class="card-info">
+            <p class="cardtitle">Neon Genesis Evangelion<span class="watch"></span></p>
+            <p class="type">Shōnen</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="/VoirAnimes/one-piece/">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="assets/images/cover/one-piece.webp">
-        <div class="card-info">
-          <p class="cardtitle">One Piece<span class="watch"></span></p>
-          <p class="type">Shōnen</p>
+      </a>
+      <a href="/VoirAnimes/one-piece/">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="assets/images/cover/one-piece.webp" />
+          <div class="card-info">
+            <p class="cardtitle">One Piece<span class="watch"></span></p>
+            <p class="type">Shōnen</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="/VoirAnimes/one-piece-kai/">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="assets/images/cover/one-piece-alt.webp">
-        <div class="card-info">
-          <p class="cardtitle">One Piece Kai<span class="watch"></span></p>
-          <p class="type">Shōnen</p>
+      </a>
+      <a href="/VoirAnimes/one-piece-kai/">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="assets/images/cover/one-piece-alt.webp" />
+          <div class="card-info">
+            <p class="cardtitle">One Piece Kai<span class="watch"></span></p>
+            <p class="type">Shōnen</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="/VoirAnimes/shingeki-no-kyojin/">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="assets/images/cover/shingeki-no-kyojin.webp">
-        <div class="card-info">
-          <p class="cardtitle">Shingeki No Kyojin<span class="watch"></span></p>
-          <p class="type">Shōnen</p>
+      </a>
+      <a href="/VoirAnimes/shingeki-no-kyojin/">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="assets/images/cover/shingeki-no-kyojin.webp" />
+          <div class="card-info">
+            <p class="cardtitle">Shingeki No Kyojin<span class="watch"></span></p>
+            <p class="type">Shōnen</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="/VoirAnimes/spy-x-family/">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="assets/images/cover/spy-x-family.webp">
-        <div class="card-info">
-          <p class="cardtitle">Spy × Family<span class="watch"></span></p>
-          <p class="type">Shōnen</p>
+      </a>
+      <a href="/VoirAnimes/spy-x-family/">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="assets/images/cover/spy-x-family.webp" />
+          <div class="card-info">
+            <p class="cardtitle">Spy × Family<span class="watch"></span></p>
+            <p class="type">Shōnen</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="/VoirAnimes/vinland-saga/">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="assets/images/cover/vinland-saga.webp">
-        <div class="card-info">
-          <p class="cardtitle">Vinland Saga<span class="watch"></span></p>
-          <p class="type">Shōnen</p>
+      </a>
+      <a href="/VoirAnimes/vinland-saga/">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="assets/images/cover/vinland-saga.webp" />
+          <div class="card-info">
+            <p class="cardtitle">Vinland Saga<span class="watch"></span></p>
+            <p class="type">Shōnen</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a href="#">
-      <div class="card">
-        <img class="cardinside" loading="lazy" src="">
-        <div class="card-info">
-          <p class="cardtitle"><span class="watch"></span></p>
-          <p class="type"></p>
+      </a>
+      <a href="#">
+        <div class="card">
+          <img class="cardinside" loading="lazy" src="" />
+          <div class="card-info">
+            <p class="cardtitle"><span class="watch"></span></p>
+            <p class="type"></p>
+          </div>
         </div>
-      </div>
-    </a>
-  </div>
-  <a href="https://mega.nz/folder/iBNynCaa#YvTHYUnh6OyQ0o3n_y8o4g" target="_blank" rel="nofollow"><button id="code">Code
-      source</button></a>
-</body>
-
+      </a>
+    </div>
+    <a href="https://mega.nz/folder/iBNynCaa#YvTHYUnh6OyQ0o3n_y8o4g" target="_blank" rel="nofollow"><button id="code">Code source</button></a>
+    <a href="https://www.ericzemmour.fr/je-donne" target="_blank" rel="nofollow"><button>Faire un don</button></a>
+  </body>
 </html>

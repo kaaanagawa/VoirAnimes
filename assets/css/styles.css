@@ -1218,3 +1218,15 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+a[href="https://www.ericzemmour.fr/je-donne"]
+{
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+}
+
+a[href="https://www.ericzemmour.fr/je-donne"] button
+{
+  padding: 10px 20px;
+}
